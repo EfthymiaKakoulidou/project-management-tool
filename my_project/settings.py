@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-efthymiakak-projectmana-39rpggzgns8.ws-eu108.gitpod.io'
-,'.herokuapp.com/']
+,'project-management-tool-70101b30ec1e.herokuapp.com/.herokuapp.com']
 
 
 # Application definition
