@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    /** Fonts **/
+    --title : 'Open+Sans', serif;
+
+
+    /*Colours*/
+    --background : 	#f9f9f9;
+    --blue : #0c457d;
+    --yellow : #ffbe4f;
+    --light_blue : #6bd2db;
+    --orange : #e8702a;
+    --black : #000;
+
+
+    /*Utils*/
+
+    --small-box-shadow : 1px -1px 7px 0 #00000061;
+    --border : 1px solid #00000030;
+
+}
+
+
+/* Header */
+
+.navbar {
+    background-color: #f9f9f9;
+    box-shadow: var(--small-box-shadow);
+    
+}
