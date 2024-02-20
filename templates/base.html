@@ -18,6 +18,10 @@
 </head>
 <body>
     {% include 'includes/header.html' %}
-    <p>New home page</p>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    {% include 'includes/footer.html' %}
 </body>
 </html>

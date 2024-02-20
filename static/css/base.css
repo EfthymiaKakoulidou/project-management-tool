@@ -2,7 +2,7 @@
 
 :root{
     /** Fonts **/
-    --title : 'Open+Sans', serif;
+    --main-font : 'Open+Sans', serif;
 
 
     /*Colours*/
@@ -20,12 +20,49 @@
     --border : 1px solid #00000030;
 
 }
+/* Main*/
 
+html, body {
+    height: 100%;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--main-font);
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--background);
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--border);
+}
 
 /* Header */
 
 .navbar {
     background-color: #f9f9f9;
     box-shadow: var(--small-box-shadow);
-    
+}
+
+.nav-link {
+    color: var(--black);
+}
+
+.logo {
+    width: 80px;
 }
