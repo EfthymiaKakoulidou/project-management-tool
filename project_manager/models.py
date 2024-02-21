@@ -1,16 +1,36 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-STATUS = ((0, "Draft"), (1, "Published"))
+STATUS = (('To do', "To do"), ('In progress', "In progress"), ('Done', "Done"))
 
 # Create your models here.
 class Project(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
+    title = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    owner = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="project_creation")
-    content = models.TextField()
+    description = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    excerpt = models.TextField(blank=True)
+    deadline = models.DateTimeField(null=False, blank=False)
+
+    def __str__(self):
+        return self.title
+
+
+class Task(models.Model):
+    project = models.ForeignKey(
+        Project, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200, null=False, blank=False)
+    owned_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="task_owner")
+    created_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="task_creator")
+    description = models.TextField(null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    status = models.CharField(
+        max_length=20, choices=STATUS, default='To do',
+        null=False, blank=False)
+    deadline = models.DateTimeField(null=False, blank=False)
+
+    def __str__(self):
+        return self.title
