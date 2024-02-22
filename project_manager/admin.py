@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, Task, Comment
+from .models import Project, Task, Note
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
@@ -10,6 +10,6 @@ class ProjectAdmin(admin.ModelAdmin):
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('title', 'owned_by', 'created_by', 'deadline')
 
-@admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
+@admin.register(Note)
+class NoteAdmin(admin.ModelAdmin):
     list_display = ('author', 'message', 'created_on')

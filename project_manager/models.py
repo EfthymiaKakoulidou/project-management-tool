@@ -36,9 +36,9 @@ class Task(models.Model):
         return self.title
 
 
-class Comment(models.Model):
+class Note(models.Model):
     task = models.ForeignKey(
-        Task, on_delete=models.CASCADE, related_name="task_comment")
+        Task, on_delete=models.CASCADE, related_name="task_note")
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="task_author")
     message = models.TextField(null=False, blank=False)
