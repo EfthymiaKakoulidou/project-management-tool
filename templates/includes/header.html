@@ -16,7 +16,7 @@
               <a class="nav-link" href="#">My Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">New Project</a>
+              <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
