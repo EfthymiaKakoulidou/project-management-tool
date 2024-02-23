@@ -1,4 +1,4 @@
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
 from .forms import ProjectForm
@@ -7,6 +7,13 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
+
+class Projects(ListView):
+    """Create List of Projects"""
+    template_name = 'project_manager/projects.html'
+    model = Project
+    context_object_name = 'projects'
+    
 
 class AddProject(LoginRequiredMixin, CreateView):
     """Create project view"""

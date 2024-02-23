@@ -78,3 +78,18 @@ footer {
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
 }
+
+
+.card {
+    height: 90%;
+    margin-top: 1 rem;
+}
+
+.projects {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.projects.hover {
+    cursor:pointer;
+}
