@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Project Details - {{project.title}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="project_info mt-3 p-1"></div>
+    <div class="project_detail">
+        <h1 class="text-center">{{project.title}}</h1>
+        <p class="text-center">Created by {{project.user}}on {{project.created_on.date}}</p>
+        <p>Task {{task.description}}</p>
+        
+
+        {% if request.user == project.user %}
+        <div class="text-center">
+            <a href="" class="btn btn-primary w-25">Edit</a>
+            <a href="" class="btn btn-primary w-25">Delete</a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="project_container">
+        <div class="description p-3">
+            <h2>Description</h2>
+            <p>{{project.description|safe}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

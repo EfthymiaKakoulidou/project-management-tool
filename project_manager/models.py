@@ -1,13 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-STATUS = (('To do', "To do"), ('In progress', "In progress"), ('Done', "Done"))
+STATUS = (("To do", "To do"), ("In progress", "In progress"), ("Done", "Done"))
+
 
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=200, unique=True, null=False, blank=False)
     owner = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="project_creation")
+        User, on_delete=models.CASCADE, related_name="project_creation"
+    )
     description = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     deadline = models.DateTimeField(null=False, blank=False)
@@ -17,19 +19,20 @@ class Project(models.Model):
 
 
 class Task(models.Model):
-    project = models.ForeignKey(
-        Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, null=False, blank=False)
     owned_by = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="task_owner")
+        User, on_delete=models.CASCADE, related_name="task_owner"
+    )
     created_by = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="task_creator")
+        User, on_delete=models.CASCADE, related_name="task_creator"
+    )
     description = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.CharField(
-        max_length=20, choices=STATUS, default='To do',
-        null=False, blank=False)
+        max_length=20, choices=STATUS, default="To do", null=False, blank=False
+    )
     deadline = models.DateTimeField(null=False, blank=False)
 
     def __str__(self):
@@ -37,12 +40,13 @@ class Task(models.Model):
 
 
 class Note(models.Model):
-    task = models.ForeignKey(
-        Task, on_delete=models.CASCADE, related_name="task_note")
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name="task_note")
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="task_author")
+        User, on_delete=models.CASCADE, related_name="task_author"
+    )
     message = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
 
 def __str__(self):
     return self.author
