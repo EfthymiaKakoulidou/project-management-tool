@@ -20,11 +20,11 @@ class Project(models.Model):
 class Task(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, null=False, blank=False)
+    owner = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="task_creator"
+    )
     owned_by = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="task_owner"
-    )
-    created_by = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="task_creator"
     )
     description = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)

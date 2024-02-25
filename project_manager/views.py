@@ -3,7 +3,8 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
-from .forms import ProjectForm
+from .models import Task
+from .forms import ProjectForm, TaskForm
 from django.shortcuts import render
 
 from django.contrib.auth.mixins import (
@@ -41,6 +42,17 @@ class AddProject(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(AddProject, self).form_valid(form)
 
+class AddTask(LoginRequiredMixin, CreateView):
+    """Create task view"""
+
+    template_name = "project_manager/add_task.html"
+    model = Task
+    success_url = "/project_detail"
+    form_class = TaskForm
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(AddTask, self).form_valid(form)
 
 class DeleteProject(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Project"""
