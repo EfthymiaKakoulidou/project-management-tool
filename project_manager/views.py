@@ -58,3 +58,10 @@ class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     form_class = ProjectForm
     def test_func(self):
         return self.request.user == self.get_object().owner
+
+
+class MyProfile(ListView):
+    """Profiles"""
+    template_name = "project_manager/my_profile.html"
+    model = Project
+    

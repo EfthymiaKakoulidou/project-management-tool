@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (
     AddProject, Projects, Projectdetail, 
-    DeleteProject, EditProject
+    DeleteProject, EditProject, MyProfile
 )
 
 urlpatterns = [
@@ -10,4 +10,6 @@ urlpatterns = [
     path("<slug:pk>", Projectdetail.as_view(), name="project_detail"),
     path("delete/<slug:pk>", DeleteProject.as_view(), name="delete_project"),
     path("edit/<slug:pk>", EditProject.as_view(), name="edit_project"),
+    path("my_profile", MyProfile.as_view(), name="my_profile"),
+
 ]

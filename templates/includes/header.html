@@ -10,23 +10,32 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav me-auto mb-2">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My Profile</a>
+              <a class="nav-link" href="{% url 'my_profile' %}">My Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item">
+              <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
                 Projects
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">{{'project.title'}}</a>
-              </div>
             </li>
-          </ul>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+	          <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Sign Out</a></li>
+            {% else %}
+            <li class="nav-item">
+	          <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+		        href="{% url 'account_signup' %}">Sign Up</a>
+            </li>
+            <li class="nav-item">
+	          <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
           <!---Form for Search-->
           <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

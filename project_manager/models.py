@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 STATUS = (("To do", "To do"), ("In progress", "In progress"), ("Done", "Done"))
 
 
-# Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=200, unique=True, null=False, blank=False)
     owner = models.ForeignKey(
