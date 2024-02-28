@@ -3,8 +3,8 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
-from .models import Task
-from .forms import ProjectForm, TaskForm
+from .models import Task, Profile
+from .forms import ProjectForm, TaskForm, ProfileForm
 from django.shortcuts import render
 
 from django.contrib.auth.mixins import (
@@ -42,12 +42,20 @@ class AddProject(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(AddProject, self).form_valid(form)
 
+
+class Tasks(ListView):
+    """Create List of Projects"""
+    template_name = "project_manager/projects.html"
+    model = Task
+    context_object_name = "task"
+
+
 class AddTask(LoginRequiredMixin, CreateView):
     """Create task view"""
 
     template_name = "project_manager/add_task.html"
     model = Task
-    success_url = "/project_detail"
+    success_url = "/"
     form_class = TaskForm
 
     def form_valid(self, form):
@@ -59,7 +67,7 @@ class DeleteProject(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Project
     success_url = "/project_manager/"
     def test_func(self):
-        return self.request.user == self.get_object().owner
+        return self.request.user == self.get_object().user
 
 
 class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -69,11 +77,16 @@ class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     success_url = "/project_manager/"
     form_class = ProjectForm
     def test_func(self):
-        return self.request.user == self.get_object().owner
+        return self.request.user == self.get_object().user
 
 
-class MyProfile(ListView):
+class Profile(LoginRequiredMixin, CreateView):
     """Profiles"""
-    template_name = "project_manager/my_profile.html"
-    model = Project
+    template_name = "project_manager/profile.html"
+    model = Profile
+    form_class = ProfileForm
+    context_object_name = "profile"
     
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(Profile, self).form_valid(form)

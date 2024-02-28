@@ -9,7 +9,7 @@
     <div class="d-flex justify-content-center pt-3">
         <form method="POST" class="text-center">
             {% csrf_token %}
-            <p>Are you sure you want to delete {{object.title}}?</p>
+            <p>Are you sure you want to delete {{project.title}}?</p>
             <input type="submit" value="Confirm" class="btn btn-primary w-25">
         </form>
     </div>

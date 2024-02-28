@@ -2,12 +2,12 @@
 
 {% load crispy_forms_tags %}
 
-{% block title %}Add Task to {{object.title}}{% endblock %}
+{% block title %}Add Task{% endblock %}
 
 {% block content %}
 <div class="container">
     <form method="POST" enctype="multipart/form-data" class="p-2 form">
-        <h1 class="text-center">Add Task to {{object.title}}</h1>
+        <h1 class="text-center">Add Task to {{project.title}}</h1>
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">
