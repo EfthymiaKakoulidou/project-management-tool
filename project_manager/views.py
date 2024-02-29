@@ -62,6 +62,29 @@ class AddTask(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(AddTask, self).form_valid(form)
 
+class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit Task"""
+    template_name = 'project_manager/edit_task.html'
+    model = Task
+    success_url = "/project_manager/"
+    form_class = TaskForm
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """Delete Task"""
+    model = Task
+    success_url = "/project_manager/"
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+class TaskDetail(DetailView):
+    """Creates task detail"""
+
+    template_name = "project_manager/task_detail.html"
+    model = Task
+    context_object_name = "task"
+
 class DeleteProject(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Project"""
     model = Project

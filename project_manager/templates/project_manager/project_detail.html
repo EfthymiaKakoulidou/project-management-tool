@@ -26,7 +26,7 @@
             <h2>Tasks:</h2>
             <ul>
                 {% for task in project.task_set.all %}
-                    <li>{{ task.title }}</li>
+                    <li><a href="{% url 'task_detail' task.id %}">{{ task.title }}</li></a>
                 {% endfor %}
             </ul>
             
