@@ -107,4 +107,21 @@ class AddProfile(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddProfile, self).form_valid(form)
+
+class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """Delete Profile"""
+    model = Profile
+    success_url = "/project_manager/"
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+
+class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit Profile"""
+    template_name = 'project_manager/edit_profile.html'
+    model = Profile
+    success_url = "/project_manager/"
+    form_class = ProfileForm
+    def test_func(self):
+        return self.request.user == self.get_object().user
        
