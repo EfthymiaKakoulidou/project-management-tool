@@ -14,7 +14,7 @@ class TaskAdmin(admin.ModelAdmin):
 
 @admin.register(Note)
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ("user", "message", "created_on")
+    list_display = ("user", "note", "created_on")
 
 
 @admin.register(Profile)

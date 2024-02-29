@@ -7,9 +7,9 @@ from .views import (
 )
 
 urlpatterns = [
-    path("add_project", AddProject.as_view(), name="add_project"),
     path("", Projects.as_view(), name="projects"),
     path('project_detail/<slug:pk>/', Projectdetail.as_view(), name="project_detail"),
+    path("add_project", AddProject.as_view(), name="add_project"),
     path("delete/<slug:pk>", DeleteProject.as_view(), name="delete_project"),
     path("edit/<slug:pk>", EditProject.as_view(), name="edit_project"),
     path("add_profile/", AddProfile.as_view(), name="add_profile"),

@@ -6,6 +6,7 @@ from .models import Project
 from .models import Task, Profile
 from .forms import ProjectForm, TaskForm, ProfileForm
 from django.shortcuts import render
+from django.urls import reverse_lazy
 
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin)
@@ -55,18 +56,22 @@ class AddTask(LoginRequiredMixin, CreateView):
 
     template_name = "project_manager/add_task.html"
     model = Task
-    success_url = "/<slug:pk>/"
     form_class = TaskForm
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        global project
+        project = form.instance.project
         return super(AddTask, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('project_detail', kwargs={'pk': project.pk})
 
 class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Task"""
     template_name = 'project_manager/edit_task.html'
     model = Task
-    success_url = "/project_manager/"
+    success_url = "/project_detail/"
     form_class = TaskForm
     def test_func(self):
         return self.request.user == self.get_object().user
@@ -74,7 +79,7 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Task"""
     model = Task
-    success_url = "/project_manager/"
+    success_url = "/project_detail/"
     def test_func(self):
         return self.request.user == self.get_object().user
 
@@ -88,7 +93,7 @@ class TaskDetail(DetailView):
 class DeleteProject(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Project"""
     model = Project
-    success_url = "/project_manager/"
+    success_url = "/projects/"
     def test_func(self):
         return self.request.user == self.get_object().user
 
@@ -97,7 +102,7 @@ class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Project"""
     template_name = 'project_manager/edit_project.html'
     model = Project
-    success_url = "/project_manager/"
+    success_url = "/project_detail/"
     form_class = ProjectForm
     def test_func(self):
         return self.request.user == self.get_object().user
@@ -108,7 +113,6 @@ class ProfileDetail(DetailView):
     template_name = "project_manager/profile_detail.html"
     model = Profile
     context_object_name = "profile"
-
 
 
 class Profiles(ListView):
@@ -124,7 +128,7 @@ class AddProfile(LoginRequiredMixin, CreateView):
     template_name = "project_manager/add_profile.html"
     model = Profile
     form_class = ProfileForm
-    success_url = "/project_manager/"
+    success_url = "/profile_detail/"
     context_object_name = "profile"
     
     def form_valid(self, form):
@@ -134,7 +138,7 @@ class AddProfile(LoginRequiredMixin, CreateView):
 class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Profile"""
     model = Profile
-    success_url = "/project_manager/"
+    success_url = "/profiles/"
     def test_func(self):
         return self.request.user == self.get_object().user
 
@@ -143,7 +147,7 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Profile"""
     template_name = 'project_manager/edit_profile.html'
     model = Profile
-    success_url = "/project_manager/"
+    success_url = "/profiles/"
     form_class = ProfileForm
     def test_func(self):
         return self.request.user == self.get_object().user

@@ -39,11 +39,11 @@ class Task(models.Model):
 
 
 class Note(models.Model):
-    note = models.ForeignKey(Task, on_delete=models.CASCADE, related_name="task_note")
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name="task_note")
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="note_author"
     )
-    message = models.TextField(null=False, blank=False)
+    note = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
 
