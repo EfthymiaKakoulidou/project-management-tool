@@ -135,27 +135,30 @@ class AddProfile(LoginRequiredMixin, CreateView):
     template_name = "project_manager/add_profile.html"
     model = Profile
     form_class = ProfileForm
-    success_url = "/profile_detail/"
     context_object_name = "profile"
     
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddProfile, self).form_valid(form)
+    
 
 class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Profile"""
     model = Profile
-    success_url = "/profiles/"
     def test_func(self):
         return self.request.user == self.get_object().user
+    def get_success_url(self):
+        task = self.get_object()
+        return reverse_lazy('profile_detail', kwargs={'pk': profile.pk})
 
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Profile"""
     template_name = 'project_manager/edit_profile.html'
     model = Profile
-    success_url = "/profiles/"
     form_class = ProfileForm
     def test_func(self):
         return self.request.user == self.get_object().user
-       
+   
+    def get_success_url(self):
+        return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
