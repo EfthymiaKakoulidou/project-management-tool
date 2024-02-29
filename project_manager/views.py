@@ -55,7 +55,7 @@ class AddTask(LoginRequiredMixin, CreateView):
 
     template_name = "project_manager/add_task.html"
     model = Task
-    success_url = "/"
+    success_url = "/<slug:pk>/"
     form_class = TaskForm
 
     def form_valid(self, form):
@@ -79,14 +79,32 @@ class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def test_func(self):
         return self.request.user == self.get_object().user
 
+class ProfileDetail(DetailView):
+    """Creates profile detail"""
 
-class Profile(LoginRequiredMixin, CreateView):
+    template_name = "project_manager/profile_detail.html"
+    model = Profile
+    context_object_name = "profile"
+
+
+
+class Profiles(ListView):
+    """Create List of Projects"""
+
+    template_name = "project_manager/profiles.html"
+    model = Profile
+    context_object_name = "profiles"
+
+
+class AddProfile(LoginRequiredMixin, CreateView):
     """Profiles"""
-    template_name = "project_manager/profile.html"
+    template_name = "project_manager/add_profile.html"
     model = Profile
     form_class = ProfileForm
+    success_url = "/project_manager/"
     context_object_name = "profile"
     
     def form_valid(self, form):
         form.instance.user = self.request.user
-        return super(Profile, self).form_valid(form)
+        return super(AddProfile, self).form_valid(form)
+       
