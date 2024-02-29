@@ -71,17 +71,24 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Task"""
     template_name = 'project_manager/edit_task.html'
     model = Task
-    success_url = "/project_detail/"
     form_class = TaskForm
+
     def test_func(self):
         return self.request.user == self.get_object().user
+    def get_success_url(self):
+        return reverse_lazy('task_detail', kwargs={'pk': self.object.pk})
 
 class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Task"""
     model = Task
     success_url = "/project_detail/"
+
     def test_func(self):
         return self.request.user == self.get_object().user
+
+    def get_success_url(self):
+        task = self.get_object()
+        return reverse_lazy('project_detail', kwargs={'pk': task.project.pk})
 
 class TaskDetail(DetailView):
     """Creates task detail"""
