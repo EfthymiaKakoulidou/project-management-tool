@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Tasks{% endblock %}
+
+{% block content %}
+<h1 class="text-center p-2">My Tasks</h1>
+<div class="container d-flex flex-row flex-wrap justify-content-center">
+    
+    {% for task in tasks %}
+    <a class='projects' href="{% url 'project_detail' project.id %}" aria-label="Click to view {{task.title}}">
+        <div class="card m-3" style="width: 18rem;">
+            <div class="card-body">
+              <h2 class="card-title">{{task.title}}</h2>
+              <p class="card-text">{{task.description}}</p>
+            </div>
+          </div>
+    </a>
+{% endfor %}
+</div>
+
+{% endblock %}

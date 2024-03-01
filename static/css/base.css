@@ -61,6 +61,18 @@ footer {
     color: var(--black);
 }
 
+.edit_profile {
+    position: absolute;
+    padding-right: 20px;
+    padding-left: 80vw;
+}
+
+.members {
+    position: absolute;
+    padding-right: 20px;
+    padding-left: 90vw;
+}
+
 .logo {
     width: 80px;
 }
