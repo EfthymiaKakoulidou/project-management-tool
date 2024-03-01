@@ -114,6 +114,8 @@ class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     form_class = ProjectForm
     def test_func(self):
         return self.request.user == self.get_object().user
+    def get_success_url(self):
+        return reverse_lazy('project_detail', kwargs={'pk': self.object.pk})
 
 class ProfileDetail(DetailView):
     """Creates profile detail"""
