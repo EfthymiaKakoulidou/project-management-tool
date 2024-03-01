@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'project_manager',
-    'home',
     'crispy_forms',
     'crispy_bootstrap5',
 ]

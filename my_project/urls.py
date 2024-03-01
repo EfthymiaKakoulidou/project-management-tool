@@ -19,10 +19,8 @@ from django.urls import path, include
 from project_manager import views as index_views
 
 urlpatterns = [
-    path('', include('home.urls')),
     path('admin/', admin.site.urls),
-    path('', index_views.index, name='index'),
     path("accounts/", include("allauth.urls")),
-    path('project_manager/', include('project_manager.urls')),
+    path('', include('project_manager.urls')),
     
 ]

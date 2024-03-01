@@ -1,5 +1,5 @@
 from django.views.generic import (
-    CreateView, ListView, DetailView, DeleteView, UpdateView
+    CreateView, ListView, DetailView, DeleteView, UpdateView, TemplateView
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
@@ -81,7 +81,7 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Task"""
     model = Task
-    success_url = "/project_detail/"
+    success_url = "project_manager/project_detail/"
 
     def test_func(self):
         return self.request.user == self.get_object().user
@@ -157,7 +157,7 @@ class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Profile"""
-    template_name = 'project_manager/edit_profile.html'
+    template_name = '/edit_profile.html'
     model = Profile
     form_class = ProfileForm
     def test_func(self):
@@ -165,3 +165,8 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
    
     def get_success_url(self):
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
+
+class Home(TemplateView):
+    template_name = 'home.html'
+    def get_success_url(self):
+        return reverse_lazy('home')
