@@ -7,7 +7,8 @@
 {% block content %}
 <div class="container">
     <form method="POST" enctype="multipart/form-data" class="p-2 form">
-        <h1 class="text-center">Add Profile</h1>
+        <h1 class="text-center">Hi {{ user }} </h1>
+        <h2 class="text-center">Here you can add some details into your profile</h2>
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">

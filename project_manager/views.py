@@ -21,12 +21,14 @@ class Projectdetail(DetailView):
     context_object_name = "project"
 
 
-class Projects(ListView):
+class Projects(LoginRequiredMixin, ListView):
     """Create List of Projects"""
 
     template_name = "project_manager/projects.html"
     model = Project
     context_object_name = "projects"
+    def get_queryset(self):
+        return Project.objects.filter(user=self.request.user)
 
 
 class AddProject(LoginRequiredMixin, CreateView):
