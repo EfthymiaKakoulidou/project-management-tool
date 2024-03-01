@@ -152,8 +152,7 @@ class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         return self.request.user == self.get_object().user
     def get_success_url(self):
-        profile = self.get_object()
-        return reverse_lazy('profile_detail', kwargs={'pk': profile.pk})
+        return reverse_lazy('profiles')
 
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
