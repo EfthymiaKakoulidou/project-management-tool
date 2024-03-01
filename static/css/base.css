@@ -6,8 +6,8 @@
     /*Colours*/
     --background : 	#f9f9f9;
     --blue : #0c457d;
-    --yellow : #ffbe4f;
-    --light_blue : #6bd2db;
+    --yellow : #b98a39;
+    --light_blue : #c4ebef;
     --orange : #e8702a;
     --black : #000;
 
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     flex: 1 0 auto;
-    background-color: var(--background);
+    background-color: var(--light_blue)
 }
 
 footer {
@@ -124,9 +124,14 @@ footer {
     justify-content: center;
     align-items: center;
     align-content:flex-start;
+    flex-direction: column;
     font-size: medium;
-    color: #e8702a;
+    color: var(--black);
     padding: 5vw;
     height: 50vh;
     width: 100vw;
+}
+
+.btn-primary {
+    background-color: var(--orange);
 }

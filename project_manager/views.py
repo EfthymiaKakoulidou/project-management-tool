@@ -34,7 +34,7 @@ class AddProject(LoginRequiredMixin, CreateView):
 
     template_name = "project_manager/add_project.html"
     model = Project
-    success_url = "/project_manager"
+    success_url = "projects"
     form_class = ProjectForm
 
     def form_valid(self, form):

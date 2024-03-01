@@ -9,6 +9,7 @@
         <h1 class="text-center">{{task.title}}</h1>
         <p class="text-center">Created by {{task.user}} on {{task.created_on.date}}</p>
         <p class="text-center">{{task.description}}</p>
+        <p class="text-center">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         {% if request.user == task.user %}
         <div class="text-center">
             <a href="{% url 'edit_task' task.id %}">Edit</a>
