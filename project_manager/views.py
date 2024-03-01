@@ -45,10 +45,10 @@ class AddProject(LoginRequiredMixin, CreateView):
 
 
 class Tasks(ListView):
-    """Create List of Projects"""
-    template_name = "project_manager/projects.html"
+    """Create List of Tasks"""
+    template_name = "project_manager/my_tasks.html"
     model = Task
-    context_object_name = "task"
+    context_object_name = "tasks"
 
 
 class AddTask(LoginRequiredMixin, CreateView):

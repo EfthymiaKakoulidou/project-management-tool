@@ -7,7 +7,7 @@
 <div class="container d-flex flex-row flex-wrap justify-content-center">
     
     {% for task in tasks %}
-    <a class='projects' href="{% url 'project_detail' project.id %}" aria-label="Click to view {{task.title}}">
+    <a class='tasks' href="{% url 'task_detail' task.id %}" aria-label="Click to view {{task.title}}">
         <div class="card m-3" style="width: 18rem;">
             <div class="card-body">
               <h2 class="card-title">{{task.title}}</h2>
@@ -15,7 +15,6 @@
             </div>
           </div>
     </a>
-{% endfor %}
+    {% endfor %}
 </div>
-
 {% endblock %}
