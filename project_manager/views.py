@@ -175,7 +175,6 @@ class Home(TemplateView):
         motivational_quotes = ['"The most certain way to succeed is always to try just one more time." - Thomas Edison.',
         "'The only way to do great work is to love what you do.' - Steve Jobs",
         '"In the middle of every difficulty lies opportunity." - Albert Einstein',
-        '"Success is walking from failure to failure with no loss of enthusiasm." - Winston Churchill', 
         '"The biggest risk is not taking any risk. In a world that is changing quickly, the only strategy that is guaranteed to fail is not taking risks." - Mark Zuckerberg']
         random_motivation = random.choice(motivational_quotes)
         context['random_motivation'] = random_motivation

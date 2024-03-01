@@ -118,3 +118,15 @@ footer {
 .description, project_detail {
     width: 100%;
 }
+
+.motivation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:flex-start;
+    font-size: medium;
+    color: #e8702a;
+    padding: 5vw;
+    height: 50vh;
+    width: 100vw;
+}
