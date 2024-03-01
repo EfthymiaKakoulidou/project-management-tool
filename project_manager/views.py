@@ -100,9 +100,10 @@ class TaskDetail(DetailView):
 class DeleteProject(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Project"""
     model = Project
-    success_url = "/projects/"
     def test_func(self):
         return self.request.user == self.get_object().user
+    def get_success_url(self):
+        return reverse_lazy('projects')
 
 
 class EditProject(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -140,7 +141,8 @@ class AddProfile(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddProfile, self).form_valid(form)
-    
+    def get_success_url(self):
+        return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
 class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Profile"""
@@ -148,7 +150,7 @@ class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         return self.request.user == self.get_object().user
     def get_success_url(self):
-        task = self.get_object()
+        profile = self.get_object()
         return reverse_lazy('profile_detail', kwargs={'pk': profile.pk})
 
 
