@@ -44,14 +44,14 @@
         
         </div>
         {% if user.is_authenticated %}
-        <div class="edit_profile">
-          <a class="nav-link {% if url_name == 'add_profile' %}active{% endif %}" href="{% url 'add_profile' %}">Edit Profile</a>
+        <div class="member_profiles"><div>
+          <a class="edit_profile nav-link {% if url_name == 'add_profile' %}active{% endif %}" href="{% url 'add_profile' %}">Edit Profile</a>
         </div>
-        <div class="members">
+        <div>
           <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
             Members
           </a>
-        </div>
+        </div></div>
         {% endif %}
       </nav>
 </header>
