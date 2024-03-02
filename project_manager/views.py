@@ -11,6 +11,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin)
 import random
+from django.db.models import Q
 
 
 class Projectdetail(DetailView):
@@ -28,7 +29,7 @@ class Projects(LoginRequiredMixin, ListView):
     model = Project
     context_object_name = "projects"
     def get_queryset(self):
-        return Project.objects.filter(user=self.request.user)
+        return Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
 
 
 class AddProject(LoginRequiredMixin, CreateView):
@@ -44,11 +45,13 @@ class AddProject(LoginRequiredMixin, CreateView):
         return super(AddProject, self).form_valid(form)
 
 
-class Tasks(ListView):
+class Tasks(LoginRequiredMixin, ListView):
     """Create List of Tasks"""
     template_name = "project_manager/my_tasks.html"
     model = Task
     context_object_name = "tasks"
+    def get_queryset(self):
+        return Task.objects.filter(assigned_to=self.request.user)
 
 
 class AddTask(LoginRequiredMixin, CreateView):
