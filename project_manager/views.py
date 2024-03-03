@@ -51,7 +51,7 @@ class Tasks(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = "tasks"
     def get_queryset(self):
-        return Task.objects.filter(assigned_to=self.request.user)
+        return Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
 
 
 class AddTask(LoginRequiredMixin, CreateView):
@@ -64,8 +64,16 @@ class AddTask(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         global project
-        project = form.instance.project
-        return super(AddTask, self).form_valid(form)
+        project_id = self.kwargs['project_id']
+        project = Project.objects.get(pk=project_id)
+        task = form.save(commit=False)
+        task.project = project
+        task.save()
+        return super(AddTask, self).form_valid(form) 
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        return kwargs
 
     def get_success_url(self):
         return reverse_lazy('project_detail', kwargs={'pk': project.pk})
