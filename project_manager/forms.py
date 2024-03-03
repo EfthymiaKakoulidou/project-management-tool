@@ -8,7 +8,7 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ["title", "description", "deadline", 'user']
+        fields = ["title", "description", "deadline"]
 
     labels = {"title": "Project title", "description": "Description"}
 
@@ -17,7 +17,7 @@ class TaskForm(forms.ModelForm):
    
     class Meta:
         model = Task
-        fields = ['project', "title", "description", "deadline", 'user', 'assigned_to', 'status']
+        fields = ["title", "description", "deadline", 'assigned_to', 'status']
 
 class ProfileForm(forms.ModelForm):
     """form to create profile"""
