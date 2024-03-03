@@ -135,3 +135,16 @@ footer {
 .btn-primary {
     background-color: var(--orange);
 }
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+.task-list {
+    padding: 20px;
+    width: 25%;
+}
