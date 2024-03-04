@@ -12,7 +12,7 @@
     </div>
     <div class="project_container">
         <div class="description p-3">
-            <h2>The deadline for this project is {{project.deadline}}</h2>
+            <h4>The deadline for this project is {{project.deadline}}</h4>
         </div>
         <div class="description p-3">
             <h2>Description</h2>
@@ -20,19 +20,17 @@
         </div>
         <div class="description p-3">
             <h2>Tasks:</h2>
-            <ul>
                 {% for task in project.task_set.all %}
-                    <li><a href="{% url 'task_detail' task.id %}">{{ task.title }}</li></a>
+                   <div class="tasks"> <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.title }} assigned to {{task.assigned_to}}</a></div>
                 {% endfor %}
-            </ul>
         <a href="{% url 'add_task' project.id %}">Add Task</a>
     </div>
         
     </div>
     {% if request.user == project.user %}
         <div class="text-center">
-            <a href="{% url 'edit_project' project.id %}">Edit</a>
-            <a href="{% url 'delete_project' project.id %}">Delete</a>
+            <a class="btn btn-primary" href="{% url 'edit_project' project.id %}">Edit</a>
+            <a class="btn btn-primary" href="{% url 'delete_project' project.id %}">Delete</a>
         </div>
         {% endif %}
 </div>

@@ -7,7 +7,7 @@
     <div class="project_info mt-3 p-1"></div>
     <div class="profile_detail">
         <h1 class="text-center">{{profile.first_name}} {{profile.last_name}}</h1>
-        <p class="text-center">{{profile.title}}</p>
+        <p class="text-center">{{profile.job_title}}</p>
         <p class="text-center">Created by {{profile.user}} on {{profile.created_on.date}}</p>
         
     </div>
@@ -18,8 +18,8 @@
     </div>
     {% if request.user == profile.user %}
         <div class="text-center">
-            <a href="{% url 'edit_profile' profile.id %}">Edit</a>
-            <a href="{% url 'delete_profile' profile.id %}">Delete</a>
+            <a class="btn btn-primary" href="{% url 'edit_profile' profile.id %}">Edit</a>
+            <a class="btn btn-primary" href="{% url 'delete_profile' profile.id %}">Delete</a>
         </div>
         {% endif %}
 </div>

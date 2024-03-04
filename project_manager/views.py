@@ -43,6 +43,7 @@ class AddProject(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        project = form.save()
         form.instance.title = form.cleaned_data['title']
         project.title = form.instance.title
         return super(AddProject, self).form_valid(form)
