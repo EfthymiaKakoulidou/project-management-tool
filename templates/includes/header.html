@@ -44,9 +44,11 @@
         
         </div>
         {% if user.is_authenticated %}
+
         <div class="member_profiles"><div>
-          <a class="edit_profile nav-link {% if url_name == 'add_profile' %}active{% endif %}" href="{% url 'add_profile' %}">My Profile</a>
+          <a class="edit_profile nav-link" href="{% url 'add_profile' %}">Profile</a>
         </div>
+
         <div>
           <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
             Members

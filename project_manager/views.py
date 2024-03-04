@@ -5,7 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
 from .models import Task, Profile
 from .forms import ProjectForm, TaskForm, ProfileForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
 from django.contrib.auth.mixins import (
@@ -143,17 +143,25 @@ class Profiles(ListView):
     model = Profile
     context_object_name = "profiles"
 
-
+    
 class AddProfile(LoginRequiredMixin, CreateView):
     """Profiles"""
     template_name = "project_manager/add_profile.html"
     model = Profile
     form_class = ProfileForm
     context_object_name = "profile"
+
+    def get(self, request, *args, **kwargs):
+        user_profile = Profile.objects.filter(user=request.user).first()
+        if user_profile:
+            return redirect('profile_detail', pk=user_profile.pk)
+        else:
+            return super().get(request, *args, **kwargs)
     
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddProfile, self).form_valid(form)
+
     def get_success_url(self):
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
@@ -175,7 +183,7 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user == self.get_object().user
    
     def get_success_url(self):
-        return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
+        return reverse_lazy('add_profile', kwargs={'pk': self.object.pk})
 
 class Home(TemplateView):
     template_name = 'home.html'

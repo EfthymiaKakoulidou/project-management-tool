@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <div class="motivation">
 <p>Hi {{user}} and welcome to PMT, your Project Management Tool, which will lead your way to success! </p>
 <p>{{ random_motivation }}</p>
 </div>
+{% else %}
+<div class="motivation">
+    <p>Hi Guest and welcome to PMT. Please sign up or login to continue!</p>
+    <p>{{ random_motivation }}</p>
+    </div>
+{% endif %}
 {% endblock %}
