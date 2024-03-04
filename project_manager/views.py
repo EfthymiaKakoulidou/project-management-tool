@@ -43,8 +43,9 @@ class AddProject(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        form.instance.title = form.cleaned_data['title']
+        project.title = form.instance.title
         return super(AddProject, self).form_valid(form)
-
 
 class Tasks(LoginRequiredMixin, ListView):
     """Create List of Tasks"""
