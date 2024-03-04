@@ -176,14 +176,14 @@ class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Profile"""
-    template_name = '/edit_profile.html'
+    template_name = 'project_manager/edit_profile.html'
     model = Profile
     form_class = ProfileForm
     def test_func(self):
         return self.request.user == self.get_object().user
    
     def get_success_url(self):
-        return reverse_lazy('add_profile', kwargs={'pk': self.object.pk})
+        return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
 class Home(TemplateView):
     template_name = 'home.html'
