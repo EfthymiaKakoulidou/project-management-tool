@@ -7,6 +7,7 @@ from .models import Task, Profile
 from .forms import ProjectForm, TaskForm, ProfileForm
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.contrib import messages
 
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin)
@@ -68,6 +69,9 @@ class AddTask(LoginRequiredMixin, CreateView):
         project = Project.objects.get(pk=project_id)
         task = form.save(commit=False)
         task.project = project
+        if task.project.deadline < task.deadline:
+            messages.error(self.request, "Task deadline cannot be after project deadline.")
+            return redirect('add_task', project_id=project.id)
         task.save()
         return super(AddTask, self).form_valid(form) 
 
@@ -77,6 +81,7 @@ class AddTask(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse_lazy('project_detail', kwargs={'pk': project.pk})
+
 
 class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Task"""

@@ -9,6 +9,9 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = ["title", "description", "deadline"]
+        widgets = {
+            'deadline': forms.DateInput(attrs={'type': 'date'})
+        }
 
     labels = {"title": "Project title", "description": "Description"}
 
@@ -18,7 +21,10 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = ["title", "description", "deadline", 'assigned_to', 'status']
-
+        widgets = {
+            'deadline': forms.DateInput(attrs={'type': 'date'})
+        }
+    
 class ProfileForm(forms.ModelForm):
     """form to create profile"""
    

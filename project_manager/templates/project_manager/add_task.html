@@ -5,6 +5,11 @@
 {% block title %}Add Task{% endblock %}
 
 {% block content %}
+{% for message in messages %}
+    <div class="alert alert-danger" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
 <div class="container">
     <form method="POST" enctype="multipart/form-data" class="p-2 form">
         <h1 class="text-center">Add Task to {{project.title}}</h1>
