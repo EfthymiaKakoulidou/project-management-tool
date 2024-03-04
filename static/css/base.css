@@ -4,12 +4,12 @@
 :root{
 
     /*Colours*/
-    --background : 	#f9f9f9;
-    --blue : #0c457d;
-    --yellow : #b98a39;
+    --background : rgb(247, 237, 226);
+    --green : rgb(132, 165, 157);
+    --pink : rgb(245, 202, 195);
     --light_blue : #c4ebef;
-    --orange : #e8702a;
-    --black : #000;
+    --orange : rgb(246, 189, 96);
+    --darkpink : rgb(242, 132, 130);
 
 
     /*Utils*/
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     flex: 1 0 auto;
-    background-color: var(--light_blue)
+    background-color: var(--background)
 }
 
 footer {
@@ -53,12 +53,12 @@ footer {
 /* Header */
 
 .navbar {
-    background-color: #f9f9f9;
+    background-color: var(--pink);
     box-shadow: var(--small-box-shadow);
 }
 
 .nav-link {
-    color: var(--black);
+    color: black;
 }
 
 .member_profiles{
@@ -77,7 +77,7 @@ footer {
 }
 
 .active {
-    border-bottom: 2px solid var(--blue);
+    border-bottom: 2px solid var(--black);
     font-weight: 500;
 
 }
@@ -90,6 +90,8 @@ footer {
 
 
 .card {
+    border: 1px solid;
+    background-color: var(--pink);
     height: 90%;
     margin-top: 1 rem;
 }
@@ -137,21 +139,26 @@ footer {
 }
 
 .tasks {
+    background-color: var(--pink);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
     color: #000;
-    border: solid;
+    border: 1px solid;
     border-radius: 20px;
+    margin: 5px;
+    height: 50px;
 }
 
 .task-list {
+    background-color: var(--pink);
     display: flex;
-    justify-content: center;
     align-items: center;
     border-radius: 10px;
     padding: 20px;
     width: 25%;
-}
+    margin: 5px;
+    height: 40px;
+   }

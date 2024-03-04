@@ -13,15 +13,34 @@
               <h4>{{task.project}}</h4></div>
               <div class="task-list">
               <p>{{task.title}}</p></div>
+
               {% if task.status == 'To do' %}
               <div class="task-list" style="background-color: rgb(104, 192, 145);">
               <p>{{task.status}}</p>
               </div>
               {% endif %}
-            
-              <div class="task-list">
+
+              {% if task.status == 'In progress' %}
+              <div class="task-list" style="background-color: rgb(246, 189, 96);">
+              <p>{{task.status}}</p>
+              </div>
+              {% endif %}
+
+              {% if task.status == 'Done' %}
+              <div class="task-list" style="text-decoration: line-through;">
+              <p>{{task.status}}</p>
+              </div>
+              {% endif %}
+              
+              {% if task.status == 'Done' %}
+              <div class="task-list" style="text-decoration: line-through;">
               <p>{{task.deadline}}</p></div>
-            
+              {% else %}
+              <div class="task-list">
+                <p>{{task.deadline}}</p></div>
+              {% endif %}
+
+
     </a>
     {% endfor %}
 </div>
