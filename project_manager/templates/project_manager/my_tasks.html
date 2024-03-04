@@ -13,12 +13,15 @@
               <h4>{{task.project}}</h4></div>
               <div class="task-list">
               <p>{{task.title}}</p></div>
-              <div class="task-list">
-              <p>{{task.status}}</p></div>
+              {% if task.status == 'To do' %}
+              <div class="task-list" style="background-color: rgb(104, 192, 145);">
+              <p>{{task.status}}</p>
+              </div>
+              {% endif %}
+            
               <div class="task-list">
               <p>{{task.deadline}}</p></div>
             
-        
     </a>
     {% endfor %}
 </div>
