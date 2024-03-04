@@ -162,3 +162,32 @@ footer {
     margin: 5px;
     height: 40px;
    }
+
+.profiles-container {
+    flex-direction: column;
+}
+
+.profiles {
+    background-color: var(--pink);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 5px;
+    height: 50px;
+}
+
+.profiles-list {
+background-color: var(--pink);
+display: flex;
+flex-direction: row;
+align-items: center;
+border-radius: 10px;
+padding: 20px;
+margin: 5px;
+height: 40px;
+}
