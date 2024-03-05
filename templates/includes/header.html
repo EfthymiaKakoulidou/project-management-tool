@@ -12,7 +12,17 @@
           <li class="nav-list-items"><a class="nav-list-text" href="{% url 'my_tasks' %}">My Tasks</a></li>
           <li class="nav-list-items"><a class="nav-list-text" href="{% url 'add_profile' %}">My Profile</a></li>
           <li class="nav-list-items"><a class="nav-list-text" href="{% url 'profiles' %}">Members</a></li>
+          {% if user.is_authenticated %}
           <li class="nav-list-items"><a class="nav-list-text" href="{% url 'account_logout' %}">Sign Out</a></li>
+          {% else %}
+          <li class="nav-list-items">
+          <a class="nav-list-text"
+          href="{% url 'account_signup' %}">Sign Up</a>
+          </li>
+          <li class="nav-list-items">
+          <a class="nav-list-text" href="{% url 'account_login' %}">Login</a>
+          </li>
+          {% endif %}
         </ul>
         
         <!---Navigation Items-->
