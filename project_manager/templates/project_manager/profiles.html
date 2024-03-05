@@ -10,9 +10,17 @@
     
     {% for profile in profiles %}
     <a href="{% url 'profile_detail' profile.id %}" aria-label="Click to view {{profile.first_name}}">
-        <div class="m-3" style="width: 18rem;">
+        <div class="m-3" >
             <div class="profiles">
-              
+              <div class=" image-container d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in profile.featured_image.url %}
+                <img class="profile-pic card-img-top" src="{% static 'images/default.jpg' %}"
+                  alt="placeholder image">
+                {% else %}
+                <img class="profile-pic card-img-top" src=" {{ profile.featured_image.url }}"
+                  alt="{{ profile.title }}">
+                {% endif %}
+            </div>
               <h1 class="profiles-list">{{profile.first_name}}</h1>
               <p class="profiles-list">{{profile.job_title}}</p>
             </div>
