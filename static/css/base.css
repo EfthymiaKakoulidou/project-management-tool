@@ -147,7 +147,7 @@ footer {
     height: 50px;
 }
 
-.task-list {
+.task-list, .task-list-status {
     background-color: var(--pink);
     display: flex;
     align-items: center;
@@ -156,19 +156,13 @@ footer {
     width: 25%;
     margin: 5px;
     height: 40px;
-   }
+    text-decoration: none;
+    color: var(--black);
+    }
 
-   .task-list-status {
-    background-color: var(--pink);
-    display: flex;
+.task-list-status {
     justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 20px;
-    width: 25%;
-    margin: 5px;
-    height: 40px;
-   }
+    }
 
 .profiles-container {
     flex-direction: column;
@@ -189,15 +183,15 @@ footer {
 }
 
 .profiles-list {
-background-color: var(--pink);
-display: flex;
-flex-direction: row;
-align-items: center;
-border-radius: 10px;
-padding: 20px;
-margin: 5px;
-height: 40px;
-}
+    background-color: var(--pink);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    height: 40px;
+    }
 
 .image_container{
     width: 20px;
@@ -207,4 +201,8 @@ height: 40px;
 .welcome-text{
     margin-top: 80px;
     margin-left: 80px;
+}
+
+.small-text {
+    font-size: smaller;
 }

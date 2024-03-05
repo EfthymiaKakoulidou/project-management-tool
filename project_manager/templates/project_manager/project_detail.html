@@ -6,22 +6,32 @@
 <div class="container">
     <div class="project_info mt-3 p-1"></div>
     <div class="project_detail">
-        <h1 class="text-center">{{project.title}}</h1>
-        <p class="text-center">Created by {{project.user}} on {{project.created_on.date}}</p>
+        <h3 class="text-center">{{project.title}}</h3>
+        <p class="text-center small-text">Created by {{project.user}} on {{project.created_on.date}}</p>
         
     </div>
     <div class="project_container">
         <div class="description p-3">
-            <h4>The deadline for this project is {{project.deadline}}</h4>
-        </div>
-        <div class="description p-3">
-            <h2>Description</h2>
+            <h4>Project-description</h4>
             <p>{{project.description|safe}}</p>
         </div>
         <div class="description p-3">
-            <h2>Tasks:</h2>
+            <p class="small-text">Deadline : {{project.deadline|date:"Y-m-d"}}</p>
+        </div>
+        
+        <div class="description p-3">
+            <h4>{{project.title}}'s tasks:</h4>
                 {% for task in project.task_set.all %}
-                   <div class="tasks"> <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.title }} assigned to {{task.assigned_to}}</a></div>
+                   <div class="tasks"> 
+                    <a class='task-list' href="{% url 'task_detail' task.id %}">Task : {{ task.title }}
+                    </a>
+                    <a class='task-list' href="{% url 'task_detail' task.id %}">Assigned to : {{ task.assigned_to }}
+                    </a>
+                    <a class='task-list' href="{% url 'task_detail' task.id %}">Status : {{ task.status }}
+                    </a>
+                    <a class='task-list' href="{% url 'task_detail' task.id %}">Deadline : {{ task.deadline|date:"Y-m-d" }}
+                    </a>
+                </div>
                 {% endfor %}
         <a class='btn btn-primary' href="{% url 'add_task' project.id %}">Add Task</a>
     </div>
