@@ -9,39 +9,44 @@
   {% for task in tasks %}
   {% if task.status == 'In progress' or task.status == 'To do' %}
      <div class="tasks"> 
-      <a class='task-list' href="{% url 'task_detail' task.id %}">Task : {{ task.title }}
+      <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.title }}
       </a>
-      <a class='task-list' href="{% url 'task_detail' task.id %}">Assigned to : {{ task.assigned_to }}
+      <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.assigned_to }}
       </a>
       {% if task.status == 'To do' %}
-      <div class="task-list-status" style="background-color: rgb(104, 192, 145);">
-      <p>Status : {{task.status}}</p>
-      </div>
+      <a class="task-list-status" style="background-color: rgb(104, 192, 145);">
+      {{task.status}}
+      </a>
       {% endif %}
 
       {% if task.status == 'In progress' %}
-      <div class="task-list-status" style="background-color: rgb(246, 189, 96);">
-      <p>Status : {{task.status}}</p>
-      </div>
+      <a class="task-list-status" style="background-color: rgb(246, 189, 96);">
+      Status : {{task.status}}
+      </a>
       {% endif %}
-  
-  </div>
+      <a class="task-list-status">
+        {{task.deadline|date:"Y-m-d"}}
+        </a>
+      </div>
   {% endif %}
   {% endfor %}
     {% for task in tasks %}
 
     {% if task.status == 'Done' %}
     <div class="tasks" style="background-color: lightgrey; color: gray;">
-    <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">Task : {{ task.title }}
+    <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{ task.title }}
     </a>
 
-    <a class='task-list' style="background-color: lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">Assigned to : {{ task.assigned_to }}
+    <a class='task-list' style="background-color: lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{ task.assigned_to }}
     </a>
 
-    <a class='task-list-status' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">Status : {{task.status}}
+    <a class='task-list-status' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{task.status}}
     </a>
-    </div>
 
+    <a class="task-list-status" style="background-color:lightgrey; color: gray;">
+      {{task.deadline|date:"Y-m-d"}}
+      </a>
+</div>
     {% endif %}
     {% endfor %}
 
