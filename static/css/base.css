@@ -121,6 +121,7 @@ footer {
 }
 
 .member_profiles{
+    display: none;
     position: absolute;
     right: 10vw;
     display: flex;
@@ -306,8 +307,16 @@ footer {
     background-position: center;
 }
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 376px) and (max-width:992px) {
+
+    .member_profiles{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
    
+    /* Desktop*/
     /* Main*/
     
     html, body {
@@ -356,6 +365,7 @@ footer {
     }
     
     .member_profiles{
+        display: block;
         position: absolute;
         right: 10vw;
         display: flex;
