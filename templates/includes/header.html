@@ -3,11 +3,20 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}" alt='logo' class="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span></button>
+          <ul class="nav-list" id="navbarNavDropdown">
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'home' %}">Home</a></li>
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'add_project' %}">New Project</a></li>
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'projects' %}">My Projects</a></li>
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'my_tasks' %}">My Tasks</a></li>
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'add_profile' %}">My Profile</a></li>
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'profiles' %}">Members</a></li>
+          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'account_logout' %}">Sign Out</a></li>
+        </ul>
+        
         <!---Navigation Items-->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2">
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
@@ -50,7 +59,7 @@
         </div>
 
         <div>
-          <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="members nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
             Members
           </a>
         </div></div>

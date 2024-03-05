@@ -38,13 +38,11 @@ h6 {
     font-size: 10px;
 }
 
-
-
+   
 /* Main*/
 
 html, body {
     height: 100%;
-    
 }
 
 body {
@@ -58,6 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;
     background-color: var(--background)
 }
@@ -74,6 +74,7 @@ footer {
 
 /* Header */
 
+
 .navbar {
     background-color: var(--pink);
     box-shadow: var(--small-box-shadow);
@@ -81,6 +82,42 @@ footer {
 
 .nav-link {
     color: black;
+}
+
+.nav-list {
+    display:none;
+}
+
+.nav-list.show {
+    list-style-type: none;
+    position: absolute;
+    color: var(--black);
+    margin-top: 300px;
+    margin-right: 10px;
+    right: 0;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-list-items {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.nav-list-text{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.nav-list-items:hover {
+    background-color: var(--darkpink);
 }
 
 .member_profiles{
@@ -91,7 +128,12 @@ footer {
 }
 
 .edit_profile {
+    display: none;
     padding-right: 20px;
+}
+
+.members {
+    display:none;
 }
 
 .logo {
@@ -143,11 +185,14 @@ footer {
 }
 
 .motivation {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     font-size: medium;
     color: var(--black);
     height: 50vh;
     width: 80vw;
-    margin-left: 80px;
+    margin-top: 20px;
 }
 
 .btn-primary {
@@ -224,8 +269,9 @@ footer {
 }
 
 .welcome-text{
-    margin-top: 80px;
-    margin-left: 80px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .small-text {
@@ -246,3 +292,224 @@ footer {
     flex-grow: 1;
     object-fit: cover;
 }
+
+@media only screen and (min-width: 376px) {
+   
+    /* Main*/
+    
+    html, body {
+        height: 100%;
+        
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    main {
+        flex: 1 0 auto;
+        background-color: var(--background)
+    }
+    
+    footer {
+        flex-shrink: 0;
+        background-color: var(--orange);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-top: var(--border);
+    }
+    
+    /* Header */
+    
+    .navbar {
+        background-color: var(--pink);
+        box-shadow: var(--small-box-shadow);
+    }
+    
+    .nav-link {
+        color: black;
+    }
+
+    .nav-list {
+        display:none;
+    }
+    
+    .member_profiles{
+        position: absolute;
+        right: 10vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .edit_profile {
+        display: block;
+        padding-right: 20px;
+    }
+
+    .members {
+        display:block;
+    }
+    
+    .logo {
+        width: 80px;
+    }
+    
+    .active {
+        border-bottom: 2px solid var(--black);
+        font-weight: 500;
+    
+    }
+    .form {
+        width: 100%;
+        margin: 3% auto;
+        box-shadow: var(--small-box-shadow);
+        border-radius: 5px;
+    }
+    
+    .card {
+        border: 1px solid;
+        background-color: var(--pink);
+        height: 90%;
+        margin-top: 1 rem;
+    }
+    
+    .projects {
+        text-decoration: none;
+        color: var(--black);
+    }
+    
+    .projects.hover {
+        cursor:pointer;
+    }
+    
+    .project_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .project_container, .task-container {
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .description, project_detail {
+        width: 100%;
+    }
+    
+    .motivation {
+        display:flex;
+        flex-direction: column;
+        font-size: medium;
+        color: var(--black);
+        height: 50vh;
+        width: 80vw;
+        margin-left: 80px;
+    }
+    
+    .btn-primary {
+        background-color: var(--orange);
+    }
+    
+    .tasks {
+        background-color: var(--pink);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid;
+        border-radius: 10px;
+        margin: 5px;
+        height: 50px;
+    }
+    
+    .task-list, .task-list-status {
+        background-color: var(--pink);
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px;
+        width: 25%;
+        margin: 5px;
+        height: 40px;
+        text-decoration: none;
+        color: var(--black);
+        }
+    
+    .task-list-status {
+        justify-content: center;
+        }
+    
+    .profiles-container {
+        flex-direction: column;
+    }
+    
+    .profiles {
+        background-color: var(--pink);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        border: 1px solid;
+        border-radius: 10px;
+        margin: 5px;
+        height: 50px;
+    }
+    
+    .profiles-list {
+        background-color: var(--pink);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px;
+        width: 33%;
+        margin: 5px;
+        height: 40px;
+        text-decoration: none;
+        color: var(--black);
+        }
+    
+    .profile-detail {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .welcome-text{
+        display:block;
+        margin-top: 80px;
+        margin-left: 80px;
+    }
+    
+    .small-text {
+        font-size: smaller;
+    }
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        margin-right: 20px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+    }
+    
+    .profile-pic {
+        flex-grow: 1;
+        object-fit: cover;
+    }}

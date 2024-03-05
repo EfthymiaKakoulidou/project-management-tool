@@ -2,19 +2,15 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-
-<h1 class="welcome-text">Welcome {{user}} ! </h1>
-
 <div class="motivation">
-<p>{{ random_motivation }}</p>
+<h1 class="welcome-text">Welcome {{user}} ! </h1>
+<p class="welcome-text" >{{ random_motivation }}</p>
 </div>
 
 {% else %}
-
-<h1 class="welcome-text">Hi Guest and welcome to Project Management Tool. Please sign up or login to continue!</p>
-
 <div class="motivation">
-<p>{{ random_motivation }}</p>
+<h1 class="welcome-text">Hi Guest and welcome to Project Management Tool. Please sign up or login to continue!</p>
+<p class="welcome-text">{{ random_motivation }}</p>
 </div>
 
 {% endif %}
