@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 STATUS = (("To do", "To do"), ("In progress", "In progress"), ("Done", "Done"))
 
@@ -40,6 +41,7 @@ class Task(models.Model):
 class Profile(models.Model):
     first_name = models.CharField(max_length=200, unique=True, null=False, blank=False)
     last_name = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    featured_image = CloudinaryField('image', default='placeholder')
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name="name"
     )

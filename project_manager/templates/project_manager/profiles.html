@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Profiles{% endblock %}
 
 {% block content %}
@@ -10,6 +12,7 @@
     <a href="{% url 'profile_detail' profile.id %}" aria-label="Click to view {{profile.first_name}}">
         <div class="m-3" style="width: 18rem;">
             <div class="profiles">
+              
               <h4 class="profiles-list">{{profile.first_name}}</h4>
               <p class="profiles-list">{{profile.job_title}}</p>
             </div>

@@ -23,7 +23,7 @@
                 {% for task in project.task_set.all %}
                    <div class="tasks"> <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.title }} assigned to {{task.assigned_to}}</a></div>
                 {% endfor %}
-        <a href="{% url 'add_task' project.id %}">Add Task</a>
+        <a class='btn btn-primary' href="{% url 'add_task' project.id %}">Add Task</a>
     </div>
         
     </div>
