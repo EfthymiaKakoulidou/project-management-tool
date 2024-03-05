@@ -4,15 +4,14 @@
 
 {% block content %}
 <div class="container">
-    <div class="project_info mt-3 p-1"></div>
     <div class="project_detail">
-        <h3 class="text-center">{{project.title}}</h3>
+        <h1 class="text-center">{{project.title}}</h1>
         <p class="text-center small-text">Created by {{project.user}} on {{project.created_on.date}}</p>
         
     </div>
     <div class="project_container">
         <div class="description p-3">
-            <h4>Project-description</h4>
+            <h2>Project-description</h2>
             <p>{{project.description|safe}}</p>
         </div>
         <div class="description p-3">
@@ -20,7 +19,7 @@
         </div>
         
         <div class="description p-3">
-            <h4>{{project.title}}'s tasks:</h4>
+            <h3>{{project.title}}'s tasks:</h3>
                 {% for task in project.task_set.all %}
                    <div class="tasks"> 
                     <a class='task-list' href="{% url 'task_detail' task.id %}">Task : {{ task.title }}

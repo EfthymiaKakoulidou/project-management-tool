@@ -3,22 +3,22 @@
 {% block title %}Task Details - {{task.title}}{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="project_info mt-3 p-1"></div>
-    <div class="profile_detail">
-        <h1 class="text-center">{{task.project}}</h1>
-        <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
-        <p class="text-center small-text">{{task.title}} - Status : {{task.status}}</p>
-        <p class="text-center small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
-        <h2 class="text-center">Task description : </h2>
-        <p class="text-center">{{task.description}}</p>
+<h1 class="text-center">{{task.project}}</h1>
+<p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+<p class="text-center small-text">{{task.title}} - Status : {{task.status}}</p>
 
-        {% if request.user == task.user %}
-        <div class="text-center">
-            <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit</a>
-            <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete</a>
+<div class="container">
+    <div class="description p-3">
+    <h2>Task description : </h2>
+    <p>{{task.description}}</p>
+    <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
         </div>
-        {% endif %}
+    {% if request.user == task.user %}
+    <div class="text-center">
+        <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit</a>
+        <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete</a>
     </div>
+    {% endif %}
+
 </div>
 {% endblock %}

@@ -130,7 +130,7 @@ footer {
     justify-content: center;
 }
 
-.project_container {
+.project_container, .task-container {
     display: flex;
     flex-direction: column;
 
@@ -144,7 +144,7 @@ footer {
     font-size: medium;
     color: var(--black);
     height: 50vh;
-    width: 100vw;
+    width: 80vw;
     margin-left: 80px;
 }
 
