@@ -2,14 +2,21 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+
+<h3 class="welcome-text">Welcome {{user}} ! </h3>
+
 <div class="motivation">
-<p>Hi {{user}} and welcome to PMT, your Project Management Tool, which will lead your way to success! </p>
 <p>{{ random_motivation }}</p>
 </div>
+
 {% else %}
+
+<h1 class="welcome-text">Hi Guest and welcome to Project Management Tool. Please sign up or login to continue!</p>
+
 <div class="motivation">
-    <p>Hi Guest and welcome to PMT. Please sign up or login to continue!</p>
-    <p>{{ random_motivation }}</p>
-    </div>
+<p>{{ random_motivation }}</p>
+</div>
+
 {% endif %}
+
 {% endblock %}

@@ -122,16 +122,11 @@ footer {
 }
 
 .motivation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content:flex-start;
-    flex-direction: column;
     font-size: medium;
     color: var(--black);
-    padding: 5vw;
     height: 50vh;
     width: 100vw;
+    margin-left: 80px;
 }
 
 .btn-primary {
@@ -190,4 +185,14 @@ border-radius: 10px;
 padding: 20px;
 margin: 5px;
 height: 40px;
+}
+
+.image_container{
+    width: 20px;
+    height: 20px;
+}
+
+.welcome-text{
+    margin-top: 80px;
+    margin-left: 80px;
 }

@@ -8,8 +8,8 @@
 <div class="container">
     <div class="project_info mt-3 p-1"></div>
     <div class="profile_detail">
-        <div class="image-container">
-            {% if "placeholder" in pprofile.featured_image.url %}
+        <div class="d-none d-md-block col-md-6 masthead-image">
+            {% if "placeholder" in profile.featured_image.url %}
             <img class="card-img-top" src="{% static 'images/default.jpg' %}"
               alt="placeholder image">
             {% else %}
