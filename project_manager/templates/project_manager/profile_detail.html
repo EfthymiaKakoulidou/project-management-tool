@@ -5,24 +5,28 @@
 {% block title %}Profile Details - {{project.title}}{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container" style='d-flex justify-content-center ;'>
+
     <div class="project_info mt-3 p-1"></div>
-    <div class="profile_detail">
-        <div class="d-none d-md-block col-md-6 masthead-image">
+
+    <div class="profile-detail">
+        <div class=" image-container d-none d-md-block col-md-6 masthead-image">
             {% if "placeholder" in profile.featured_image.url %}
             <img class="card-img-top" src="{% static 'images/default.jpg' %}"
               alt="placeholder image">
             {% else %}
             <img class="card-img-top" src=" {{ profile.featured_image.url }}"
               alt="{{ profile.title }}">
-            {% endif %}</div>
+            {% endif %}
+        </div>
+        <div>
         <h1 class="text-center">{{profile.first_name}} {{profile.last_name}}</h1>
         <p class="text-center">{{profile.job_title}}</p>
-        <p class="text-center">Created by {{profile.user}} on {{profile.created_on.date}}</p>
-        
+        </div>
     </div>
+
     <div class="project_container">
-        <div class="description p-3">
+        <div class="description p-3 mt-5">
             <h2>Bio</h2>
             <p>{{profile.bio}}</p>
     </div>

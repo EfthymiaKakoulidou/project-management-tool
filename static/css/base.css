@@ -107,7 +107,6 @@ footer {
     border-radius: 5px;
 }
 
-
 .card {
     border: 1px solid;
     background-color: var(--pink);
@@ -212,6 +211,12 @@ footer {
     height: 40px;
     }
 
+.profile-detail {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .image_container{
     width: 20px;
     height: 20px;
@@ -224,4 +229,10 @@ footer {
 
 .small-text {
     font-size: smaller;
+}
+
+.image-container {
+    margin-right: 20px;
+    width: 10vw;
+    height: 10vh;
 }
