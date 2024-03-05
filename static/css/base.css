@@ -197,6 +197,14 @@ footer {
 
 .btn-primary {
     background-color: var(--orange);
+    border: var(--darkpink);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    background-color: var(--darkpink);
+    border: var(--darkpink);
+    color: var(--black);
 }
 
 .tasks {
@@ -219,7 +227,7 @@ footer {
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-    width: 25%;
+    width: 50%;
     margin: 5px;
     height: 40px;
     text-decoration: none;
@@ -418,6 +426,14 @@ footer {
     
     .btn-primary {
         background-color: var(--orange);
+        border: var(--darkpink);
+        color: var(--black);
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--darkpink);
+        border: var(--darkpink);
+        color: var(--black);
     }
     
     .tasks {
