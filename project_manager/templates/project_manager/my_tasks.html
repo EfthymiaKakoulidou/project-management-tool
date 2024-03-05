@@ -36,6 +36,8 @@
 
     {% if task.status == 'Done' %}
     <div class="tasks" style="background-color: lightgrey; color: gray;">
+      <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{ task.project }} 
+      </a>
     <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{ task.title }}
     </a>
 
