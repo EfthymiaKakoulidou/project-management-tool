@@ -20,7 +20,9 @@
         
         <div class="description p-3">
             <h3>{{project.title}}'s tasks:</h3>
+            <a class='btn btn-primary' href="{% url 'add_task' project.id %}">Add Task</a>
                 {% for task in project.task_set.all %}
+                {% if task.status == 'In progress' or task.status == 'To do' %}
                    <div class="tasks"> 
                     <a class='task-list' href="{% url 'task_detail' task.id %}">Task : {{ task.title }}
                     </a>
@@ -37,23 +39,29 @@
                     <p>Status : {{task.status}}</p>
                     </div>
                     {% endif %}
-
-                    {% if task.status == 'Done' %}
-                    <div class="task-list-status" style="color: gainsboro;">
-                    <p>Status : {{task.status}}</p>
-                    </div>
-                    {% endif %}
-                    
-                    {% if task.status == 'Done' %}
-                    <div class="task-list-status" style="text-decoration: line-through;">
-                    <p>Deadline : {{task.deadline|date:"Y-m-d"}}</p></div>
-                    {% else %}
-                    <a class='task-list' href="{% url 'task_detail' task.id %}">Deadline : {{ task.deadline|date:"Y-m-d" }}
-                    </a>
+                
                 </div>
                 {% endif %}
                 {% endfor %}
-        <a class='btn btn-primary' href="{% url 'add_task' project.id %}">Add Task</a>
+                
+                {% for task in project.task_set.all %}
+
+                {% if task.status == 'Done' %}
+                <div class="tasks" style="background-color: lightgrey; color: gray;">
+                <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">Task : {{ task.title }}
+                </a>
+
+                <a class='task-list' style="background-color: lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">Assigned to : {{ task.assigned_to }}
+                </a>
+
+                <a class='task-list-status' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">Status : {{task.status}}
+                </a>
+                </div>
+
+                {% endif %}
+                {% endfor %}
+            
+
     </div>
         
     </div>
