@@ -6,11 +6,11 @@
 <div class="container">
     <div class="project_info mt-3 p-1"></div>
     <div class="profile_detail">
-        <h3 class="text-center">{{task.project}}</h3>
+        <h1 class="text-center">{{task.project}}</h1>
         <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <p class="text-center small-text">{{task.title}} - Status : {{task.status}}</p>
         <p class="text-center small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
-        <h5 class="text-center">Task description : </h5>
+        <h2 class="text-center">Task description : </h2>
         <p class="text-center">{{task.description}}</p>
 
         {% if request.user == task.user %}
