@@ -7,6 +7,12 @@
     <div class="project_detail">
         <h1 class="text-center">{{project.title}}</h1>
         <p class="text-center small-text">Created by {{project.user}} on {{project.created_on.date}}</p>
+        {% if request.user == project.user %}
+        <div class="text-center">
+            <a class="btn btn-primary" href="{% url 'edit_project' project.id %}">Edit</a>
+            <a class="btn btn-primary" href="{% url 'delete_project' project.id %}">Delete</a>
+        </div>
+        {% endif %}
         
     </div>
     <div class="project_container">
@@ -69,12 +75,7 @@
     </div>
         
     </div>
-    {% if request.user == project.user %}
-        <div class="text-center">
-            <a class="btn btn-primary" href="{% url 'edit_project' project.id %}">Edit</a>
-            <a class="btn btn-primary" href="{% url 'delete_project' project.id %}">Delete</a>
-        </div>
-        {% endif %}
+    
 </div>
 
 {% endblock %}
