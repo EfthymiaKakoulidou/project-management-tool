@@ -326,28 +326,53 @@ etc.
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+class Profile(models.Model):
+    first_name = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    last_name = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    featured_image = CloudinaryField('image', default='placeholder')
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, related_name="name"
+    )
+    job_title = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    bio = models.TextField(null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.first_name
+
+class Project(models.Model):
+    title = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="project_creation"
+    )
+    description = models.TextField(null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    deadline = models.DateTimeField(null=False, blank=False)
+
+    def __str__(self):
+        return self.title
+
+class Task(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200, null=False, blank=False)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="task_creator"
+    )
+    assigned_to = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="task_owner"
+    )
+    description = models.TextField(null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    status = models.CharField(
+        max_length=20, choices=STATUS, default="To do", null=False, blank=False
+    )
+    deadline = models.DateTimeField(null=False, blank=False)
+
+    def __str__(self):
+        return self.title
 ```
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
