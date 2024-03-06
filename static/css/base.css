@@ -160,16 +160,19 @@ footer {
 .card {
     border: 1px solid;
     background-color: var(--pink);
-    height: 90%;
+    height: 80%;
     margin-top: 1 rem;
 }
 
 .projects {
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--black);
 }
 
 .projects.hover {
+    background-color: var(--darkpink);
     cursor:pointer;
 }
 
@@ -182,7 +185,6 @@ footer {
 .project_container, .task-container {
     display: flex;
     flex-direction: column;
-
 }
 
 .description, project_detail {
@@ -223,23 +225,23 @@ footer {
     border: 1px solid;
     border-radius: 10px;
     margin: 5px;
-    max-height: 20vh;
+    height: 55px;
+    width:100%;
 }
 
 .task-list, .task-list-status {
     background-color: var(--pink);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
     width: 50%;
     margin: 5px;
-    max-height: 20vh;
+    height: 50px;
     text-decoration: none;
     color: var(--black);
+    overflow: hidden;
     }
 
 .task-list-status {
+    display: flex;
     justify-content: center;
     }
 
@@ -485,6 +487,8 @@ footer {
         height: 40px;
         text-decoration: none;
         color: var(--black);
+        overflow: hidden;
+        text-overflow: ellipsis;
         }
     
     .task-list-status {
