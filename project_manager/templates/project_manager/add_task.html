@@ -5,14 +5,10 @@
 {% block title %}Add Task{% endblock %}
 
 {% block content %}
-{% for message in messages %}
-    <div class="alert alert-danger" role="alert">
-        {{ message }}
-    </div>
-    {% endfor %}
+
 <div class="container">
     <form method="POST" enctype="multipart/form-data" class="p-2 form">
-        <h1 class="text-center">Add Task to {{task.project}}</h1>
+        <h1 class="text-center">Add Task to {{project.title}}</h1>
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">
@@ -20,4 +16,15 @@
         </div>
     </form>
 </div>
+{% endblock %}
+
+{% block postload_js %}
+
+<script>
+    let project_deadline = '{{project.deadline|date:"Y-m-d"}}';
+    let deadline = new Date(project_deadline);
+    let maxDate = deadline.toISOString().substring(0,10);
+    document.getElementById('id_deadline').setAttribute('max', maxDate);
+</script>
+
 {% endblock %}

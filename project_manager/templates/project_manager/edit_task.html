@@ -16,3 +16,14 @@
     </form>
 </div>
 {% endblock %}
+
+{% block postload_js %}
+
+<script>
+    let project_deadline = '{{project.deadline|date:"Y-m-d"}}';
+    let deadline = new Date(project_deadline);
+    let maxDate = deadline.toISOString().substring(0,10);
+    document.getElementById('id_deadline').setAttribute('max', maxDate);
+</script>
+
+{% endblock %}
