@@ -293,21 +293,14 @@ etc.
 
 ### Future Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+- Groups
+    - In the furute it would be helpful to create groups of profiles that work on a project so that when a task is created it could only be assigned to team members. This way I could narrow down the pool of profiles to make an even better choice about who is going to work on a specific task.
+- Email notifications
+    - It would be very helpful if someone got an email notification when a task is assigned to them so that they know directly their workload.
+- Project templates
+    - In the future when creating a project it ould be helpful to choose a template suited for the specific project. This would save time to the proganization of tasks created.
+- Tasks that every profile has concluded
+    - It would also be helpful to include in the profile-details a list of tasks that the particular person has done. This way someone can check the kind of experience everybodu has and assign them tasks accordingly.
 
 ## Tools & Technologies Used
 
