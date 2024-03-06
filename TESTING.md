@@ -56,8 +56,6 @@ Sample HTML code validation documentation (tables are extremely helpful!):
 
 **IMPORTANT**: Python/Jinja syntax in HTML
 
-Python projects that use Jinja syntax, such as '`{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`'
-will not validate properly if you're copying/pasting into the HTML validator.
 
 In order to properly validate these types of files, it's recommended to
 [validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
