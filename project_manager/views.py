@@ -38,16 +38,16 @@ class AddProject(LoginRequiredMixin, CreateView):
 
     template_name = "project_manager/add_project.html"
     model = Project
-    success_url = "projects"
     form_class = ProjectForm
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         project = form.save()
         messages.success(self.request, "Project successfully added.")
-        form.instance.title = form.cleaned_data['title']
-        project.title = form.instance.title
         return super(AddProject, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('project_detail', kwargs={'pk': self.object.pk})
 
 class Tasks(LoginRequiredMixin, ListView):
     """Create List of Tasks"""
