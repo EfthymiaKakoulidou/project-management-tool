@@ -12,7 +12,7 @@ https://ui.dev/amiresponsive?url=https://project-management-tool-70101b30ec1e.he
 
 ## UX
 
-The purpose of the rpoject is to organize work so I want to have a clear and simple structure so that one can navigate easily into the site. 
+The purpose of the project is to organize work so I want to have a clear and simple structure so that one can navigate easily into the site. 
 
 ### Colour Scheme
 
@@ -86,27 +86,31 @@ The user stories created in the beginning of the project helped to organize the 
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to sign up, so that I can that I can have easy access to the site the next time I visit it.
+- As a new site user, I would like to make a profile which I will be able to edit or delete, so that I my details are there for me and others to see when they visit the site.
+- As a new site user, I would like to create a project which I will be able to edit or delete, so that I can access it later.
+- As a new site user, I would like to create tasks for my projects which I can edit or delete, so that I can organize my work into smaller segments.
+- As a new site user, I would like to be able to check my tasks in order, so that I can know which one to prioritize.
+- As a new site user, I would like to be able to signout, so that I can feel safe that the information I provided will not be seen by others on this particular computer.
+- As a new site user, I would like to be able to check others' profiles, so that I can choose the right people for the tasks I have created.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to login, so that I can access the information I provided on a previous session.
+- As a returning site user, I would like to see the projects I have created, so that I can choose the one I am going to work on.
+- As a returning site user, I would like to edit or delete my projects, in case something has changed.
+- As a returning site user, I would like to see my tasks, so that I can know which one to prioritize and what they are about.
+- As a returning site user, I would like to edit or delete my tasks, so that I can keep them up to date.
+- As a returning site user, I would like to sign out, so that I can be sure that others will not be able to see my information.
+- As a returning site user, I would like to edit or delete profile, so that it can be up to date or deleted if I do not want to have one.
+- As a returning site user, I would like to see others' profile, so that I can choose the right person for the tasks I am creating.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to sign in, so that I can see all the ntries made.
+- As a site administrator, I should be able to add, edit or delete projects, tasks and profiles so that I can control the information on the site.
+- As a site administrator, I should be able to sign out, so that information is not accessible to others.
+
 
 ## Wireframes
 
@@ -199,48 +203,93 @@ etc.
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Existing Features
 
-- **Title for feature #1**
+- **Sign Up**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature01.png)
 
-- **Title for feature #2**
+- **Login**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature02.png)
 
-- **Title for feature #3**
+- **Sign Out**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feature03.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Home Page**
 
-Repeat as necessary for as many features as your site contains.
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-Hint: the more, the merrier!
+![screenshot](documentation/feature04.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **My projects**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature05.png)
+
+- **Project details**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature06.png)
+
+- **Add Task**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature07.png)
+
+- **Edit or Delete Task**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature08.png)
+
+- **My Tasks**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature09.png)
+
+- **New Project**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature10.png)
+
+- **Edit or Delete my Projects**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature11.png)
+
+- **Create Profile**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature12.png)
+
+- **Edit or Delete my Profile**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature13.png)
+
+- **Profile**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feature14.png)
+
 
 ### Future Features
 
