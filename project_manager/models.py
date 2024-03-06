@@ -24,7 +24,7 @@ class Task(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="task_creator"
     )
-    assigned_to = models.OneToOneField(
+    assigned_to = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="task_owner"
     )
     description = models.TextField(null=False, blank=False)
