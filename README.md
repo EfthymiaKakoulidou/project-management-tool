@@ -375,35 +375,44 @@ class Task(models.Model):
         return self.title
 ```
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ![screenshot](documentation/erd.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Table: **Product**
+- Table: **Profile**
 
     | **PK** | **id** (unique) | Type | Notes |
     | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
+    | **OneToOne** | profile | OneToOneField | One user can have one profile |
+    | | first_name | CharField | |
+    | | last_name | CharField | |
+    | | featured_image | URLField | |
+    | | job_title | CharField | |
+    | | bio | Charfield | |
+    | | created_on | DateTimeField | |
+
+- Table: **Project**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | **FK** | profile | Foreignkey | One user can create many projects |
+    | | title | CharField | |
+    | | description | CharField | |
+    | | created_on | DateTimeField | |
+    | | deadline | DateTimeField | |
+
+- Table: **Tasks**
+
+    | **PK** | **id** (unique) | Type | Notes |
+    | --- | --- | --- | --- |
+    | **FK** | profile | Foreignkey | One user can create many tasks |
+    | **FK** | project | Foreignkey | One project can have many tasks |
+    | | title | CharField | |
+    | | description | CharField | |
+    | | created_on | DateTimeField | |
+    | | updated_on | DateTimeField | |
+    | | status | CharField | |
+    | | deadline | DateTimeField | |
+    | | assigned_to | CharField | |
 
 ## Agile Development Process
 
