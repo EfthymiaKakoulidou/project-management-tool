@@ -4,8 +4,10 @@
 
 {% block content %}
 <h1 class="text-center">{{task.project}}</h1>
+<h2 class="text-center">{{task.title}}</h2>
+<p class="text-center small-text">Status : {{task.status}}</p>
 <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
-<p class="text-center small-text">{{task.title}} - Status : {{task.status}}</p>
+
 
 <div class="container">
     <div class="description p-3">
