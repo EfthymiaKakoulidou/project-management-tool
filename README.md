@@ -208,85 +208,86 @@ etc.
 
 - **Sign Up**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user does not already have an account he/she should sign up to enter the site.
 
 ![screenshot](documentation/feature01.png)
 
 - **Login**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user already has an account he/she should login to enter the site.
 
 ![screenshot](documentation/feature02.png)
 
 - **Sign Out**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - After signing in if the user wants to logout he can signout.
 
 ![screenshot](documentation/feature03.png)
 
 - **Home Page**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - the home page calls the user to sign up or login, has a welcome message and a motivational quote to motivate the user to start working! This quote is different everytime the home page is loaded.
 
 ![screenshot](documentation/feature04.png)
+![screenshot](documentation/feature041.png)
 
 - **My projects**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - This pages contains a collection of the projects that the user has created or has a task assigned to him/her so that the user can easily see all the projects that involve him/her.
 
 ![screenshot](documentation/feature05.png)
 
 - **Project details**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - When the user chooses a project by clicking on it the project-details pages appears. There the user has access to information about the project, the chance to edit or delete the project and the chance to add a task.
 
 ![screenshot](documentation/feature06.png)
 
 - **Add Task**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user chooses to add a task the Add-task form appears and there he/she has the chance to create a task giving information about it and assigning to homself/herself or somebody else.
 
 ![screenshot](documentation/feature07.png)
 
 - **Edit or Delete Task**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - When the task is created the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-detail page.
 
 ![screenshot](documentation/feature08.png)
 
 - **My Tasks**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - On this page the user can see all the tasks assigned to him/her. They appear in order from the most urgent to least urgent. Tasks that are already done appear grey so that it is obvious that the user can ignore them.
 
 ![screenshot](documentation/feature09.png)
 
 - **New Project**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user wants to create a new project he/she can do it directly from the navigation bar. The user is redirected to the Add-project form and there he/she can provide the information of the new project. Once the new project is created the user is redirected to the new project's detail page.
 
 ![screenshot](documentation/feature10.png)
 
 - **Edit or Delete my Projects**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The user can edit or delete the projects that he/she has created. By clicking on edit the user is redirected to the edit-project form and by clicking the delete button to the confirm deletion page and if confirmed to the his/hers project page.
 
 ![screenshot](documentation/feature11.png)
 
 - **Create Profile**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - By clicking on the 'Profile' on the home page the user is directed to the add-profile form if he/she has not already created a profile or the his/hers profile page if the user has already created a profile. 
 
 ![screenshot](documentation/feature12.png)
 
 - **Edit or Delete my Profile**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the profile is already created then the user can edit or delete it. By clicking on the edit button he is reditected to the edit-profile form and by clicking on delete the user is reditected to confirm deletion page and if confirm to the profiles page which a collection of the profiles made on this site.
 
 ![screenshot](documentation/feature13.png)
 
-- **Profile**
+- **Profiles**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user clicks on members he/she can see all the profiles created on the site. If he/she chooses his own then he gets the opportunity to edit or delete it. Other peoples' profiles are not accessible to the user to edit or delete, the user can just see them.
 
 ![screenshot](documentation/feature14.png)
 
