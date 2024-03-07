@@ -32,8 +32,8 @@
     </div>
     {% if request.user == profile.user %}
         <div class="text-center">
-            <a class="btn btn-primary" href="{% url 'edit_profile' profile.id %}">Edit</a>
-            <a class="btn btn-primary" href="{% url 'delete_profile' profile.id %}">Delete</a>
+            <a class="btn btn-primary" href="{% url 'edit_profile' profile.id %}">Edit Profile</a>
+            <a class="btn btn-primary" href="{% url 'delete_profile' profile.id %}">Delete Profile</a>
         </div>
         {% endif %}
 </div>

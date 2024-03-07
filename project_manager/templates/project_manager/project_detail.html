@@ -10,8 +10,8 @@
         <p class="text-center small-text">Created by {{project.user}} on {{project.created_on.date}}</p>
         {% if request.user == project.user %}
         <div class="text-center">
-            <a class="btn btn-primary" href="{% url 'edit_project' project.id %}">Edit</a>
-            <a class="btn btn-primary" href="{% url 'delete_project' project.id %}">Delete</a>
+            <a class="btn btn-primary" href="{% url 'edit_project' project.id %}">Edit Project</a>
+            <a class="btn btn-primary" href="{% url 'delete_project' project.id %}">Delete Project</a>
         </div>
         {% endif %}   
     </div>

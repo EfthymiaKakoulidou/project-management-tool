@@ -63,8 +63,8 @@
 
 {% if request.user == task.user %}
     <div class="text-center">
-        <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit</a>
-        <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete</a>
+        <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit Task</a>
+        <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete Task</a>
     </div>
 {% endif %}
 
