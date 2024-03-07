@@ -11,7 +11,7 @@
 
 {% if request.user == task.assigned_to %}
 <div class="text-center">
-    <form method="POST" action="{% url 'edit_task_at' pk=task.pk %}">
+    <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Update Status</button>

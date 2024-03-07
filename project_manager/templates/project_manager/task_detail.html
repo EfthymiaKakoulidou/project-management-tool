@@ -10,7 +10,7 @@
 
 {% if request.user == task.assigned_to %}
 <div class="text-center">
-<a href="{% url 'edit_task_at' task.id %}">Update status</a>
+<a href="{% url 'edit_task_status' task.id %}">Update status</a>
 </div>
 {% endif %}
 

@@ -112,7 +112,7 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class EditTaskStatus(UpdateView):
     model = Task
     form_class = TaskFormStatus
-    template_name = 'project_manager/edit_task_at.html'
+    template_name = 'project_manager/edit_task_status.html'
 
     def get_success_url(self):
         return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
