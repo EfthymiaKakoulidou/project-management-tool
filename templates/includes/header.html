@@ -5,25 +5,6 @@
         <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
         <button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span></button>
-          <ul class="nav-list" id="navbarNavDropdown">
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'home' %}">Home</a></li>
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'add_project' %}">New Project</a></li>
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'projects' %}">My Projects</a></li>
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'my_tasks' %}">My Tasks</a></li>
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'add_profile' %}">My Profile</a></li>
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'profiles' %}">Members</a></li>
-          {% if user.is_authenticated %}
-          <li class="nav-list-items"><a class="nav-list-text" href="{% url 'account_logout' %}">Sign Out</a></li>
-          {% else %}
-          <li class="nav-list-items">
-          <a class="nav-list-text"
-          href="{% url 'account_signup' %}">Sign Up</a>
-          </li>
-          <li class="nav-list-items">
-          <a class="nav-list-text" href="{% url 'account_login' %}">Login</a>
-          </li>
-          {% endif %}
-        </ul>
         
         <!---Navigation Items-->
         <div class="collapse navbar-collapse">
@@ -47,8 +28,14 @@
               <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
             </li>
             <li class="nav-item">
-	          <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Sign Out</a></li>
-            
+              <a class="nav-link" href="{% url 'add_profile' %}">Profile</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
+                Members</a>
+            </li>
+            <li class="nav-item-signout">
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Sign Out</a></li>
             {% else %}
             <li class="nav-item">
 	          <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
@@ -62,17 +49,6 @@
         </ul>
         
         </div>
-        {% if user.is_authenticated %}
-
-        <div class="member_profiles"><div>
-          <a class="edit_profile nav-link" href="{% url 'add_profile' %}">Profile</a>
-        </div>
-
-        <div>
-          <a class="members nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
-            Members
-          </a>
-        </div></div>
-        {% endif %}
+        
       </nav>
 </header>

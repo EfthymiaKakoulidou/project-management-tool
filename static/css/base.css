@@ -105,11 +105,7 @@ footer {
 
 .nav-list.show {
     list-style-type: none;
-    position: absolute;
     color: var(--black);
-    margin-top: 300px;
-    margin-right: 10px;
-    right: 0;
     text-decoration: none;
     display: block;
     width: 100%;
@@ -198,6 +194,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 80%
 }
 
@@ -426,4 +423,10 @@ footer {
         margin-top: 80px;
         margin-left: 80px;
     }
+
+    .nav-item-signout {
+        border-top: none;
+        margin-left: 40vw;
+    }
+
    }
