@@ -178,6 +178,13 @@ footer {
     color: var(--black);
 }
 
+.project_detail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%
+}
+
 .projects.hover {
     background-color: var(--darkpink);
     cursor:pointer;
@@ -194,7 +201,7 @@ footer {
     flex-direction: column;
 }
 
-.description, project_detail {
+.description {
     width: 100%;
 }
 
