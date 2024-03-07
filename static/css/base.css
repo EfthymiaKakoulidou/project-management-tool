@@ -126,6 +126,10 @@ footer {
     border-radius: 10px;
 }
 
+.nav-item {
+    border: 1px solid var(--black)
+}
+
 .nav-list-text{
     text-decoration: none;
     color: var(--black);
@@ -133,6 +137,11 @@ footer {
 
 .nav-list-items:hover {
     background-color: var(--darkpink)
+}
+
+.alert {
+    font-size: smaller;
+    margin-bottom: 0;
 }
 
 .member_profiles{
