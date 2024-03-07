@@ -86,6 +86,7 @@ footer {
 .navbar {
     background-color: var(--orange);
     box-shadow: var(--small-box-shadow);
+    transition: margin-bottom 0.3s ease;
 }
 
 .navbar-toggler {
@@ -93,6 +94,8 @@ footer {
 }
 
 .nav-link {
+    display: flex;
+    justify-content: center;
     color: var(--black);
 }
 
