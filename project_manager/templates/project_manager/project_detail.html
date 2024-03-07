@@ -6,7 +6,7 @@
 <div class="container">
     <div style="display: flex; justify-content: center;">
     <div class="project_detail">
-        <h1 class="text-center">{{project.title}}</h1>
+        <h1 class="titles">{{project.title}}</h1>
         <p class="text-center small-text">Created by {{project.user}} on {{project.created_on.date}}</p>
         {% if request.user == project.user %}
         <div class="text-center">
@@ -26,7 +26,7 @@
         </div>
         
         <div class="description p-3">
-            <h3>{{project.title}}'s tasks:</h3>
+            <h3 class="titles">{{project.title}}'s tasks:</h3>
             <a class='btn btn-primary' href="{% url 'add_task' project.id %}">Add Task</a>
                 {% for task in project.task_set.all %}
                 {% if task.status == 'In progress' or task.status == 'To do' %}

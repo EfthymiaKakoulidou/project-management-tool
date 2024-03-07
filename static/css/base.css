@@ -195,7 +195,13 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 80%
+    width: 80%;
+}
+
+.titles {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
 }
 
 .projects.hover {
