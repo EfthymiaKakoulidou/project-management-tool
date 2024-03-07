@@ -24,7 +24,15 @@ class TaskForm(forms.ModelForm):
         widgets = {
             'deadline': forms.DateInput(attrs={'type': 'date'})
         }
-    
+
+class TaskFormAT(forms.ModelForm):
+    """form with just status field"""
+   
+    class Meta:
+        model = Task
+        fields = ['status']
+
+
 class ProfileForm(forms.ModelForm):
     """form to create profile"""
    
