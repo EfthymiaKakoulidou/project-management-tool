@@ -74,9 +74,8 @@ class AddTask(LoginRequiredMixin, CreateView):
             messages.error(self.request, "Task deadline cannot be after project deadline.")
             return redirect('add_task', project_id=project.id)
 
-        response = super().form_valid(form)  # Save the form and then access self.object for the task
+        response = super().form_valid(form)
 
-        # No need to explicitly call save() on the form as super().form_valid(form) already does
         return response
 
     def get_context_data(self, **kwargs):
@@ -86,7 +85,6 @@ class AddTask(LoginRequiredMixin, CreateView):
         return context
 
     def get_success_url(self):
-        # Access the project from the form instance (self.object) as it's already saved
         project_pk = self.object.project.pk
         return reverse_lazy('project_detail', kwargs={'pk': project_pk})
 
