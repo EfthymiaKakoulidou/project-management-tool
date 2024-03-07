@@ -6,7 +6,7 @@ STATUS = (("To do", "To do"), ("In progress", "In progress"), ("Done", "Done"))
 
 
 class Project(models.Model):
-    title = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    title = models.CharField(max_length=100, unique=True, null=False, blank=False)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="project_creation"
     )
@@ -20,7 +20,7 @@ class Project(models.Model):
 
 class Task(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200, null=False, blank=False)
+    title = models.CharField(max_length=100, null=False, blank=False)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="task_creator"
     )
@@ -39,8 +39,8 @@ class Task(models.Model):
         return self.title
 
 class Profile(models.Model):
-    first_name = models.CharField(max_length=200, unique=True, null=False, blank=False)
-    last_name = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    first_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
+    last_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
     featured_image = CloudinaryField('image', default='placeholder')
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name="name"
