@@ -19,10 +19,16 @@
               alt="{{ profile.title }}">
             {% endif %}
         </div>
-        <div>
-        <h1 class="text-center">{{profile.first_name}} {{profile.last_name}}</h1>
-        <p class="text-center">{{profile.job_title}}</p>
+        <div class="profile-text">
+        <h1>{{profile.first_name}} {{profile.last_name}}</h1>
+        <p>{{profile.job_title}}</p>
         </div>
+    </div>
+    
+    <div class="project_container">
+        <div class="description p-3 mt-5">
+            <h2>Bio</h2>
+            <p>{{profile.bio}}</p>
     </div>
     {% if request.user == profile.user %}
         <div class="text-center">
@@ -30,11 +36,5 @@
             <a class="btn btn-primary" href="{% url 'delete_profile' profile.id %}">Delete</a>
         </div>
         {% endif %}
-    <div class="project_container">
-        <div class="description p-3 mt-5">
-            <h2>Bio</h2>
-            <p>{{profile.bio}}</p>
-    </div>
-    
 </div>
 {% endblock %}
