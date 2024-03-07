@@ -7,30 +7,37 @@
 <div class="container d-flex flex-column flex-wrap justify-content-center">
     
   {% for task in tasks %}
-  {% if task.status == 'In progress' or task.status == 'To do' %}
-     <div class="tasks"> 
-      <a class='task-list' href="{% url 'edit_task_status' task.id %}">{{ task.project }} 
+  {% if task.status == 'To do' %}
+     <div class="tasks" style="background-color: rgb(159, 200, 190);"> 
+      <a class='task-list' href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(159, 200, 190);">{{ task.project }} 
       </a>
-      <a class='task-list' href="{% url 'edit_task_status' task.id %}">{{ task.title }}
+      <a class='task-list' href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(159, 200, 190);">{{ task.title }}
       </a>
-      
-      {% if task.status == 'To do' %}
-      <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(104, 192, 145);">
+      <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(159, 200, 190);">
       {{task.status}}
       </a>
-      {% endif %}
-
-      {% if task.status == 'In progress' %}
-      <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(246, 189, 96);">
-      {{task.status}}
-      </a>
-      {% endif %}
-      <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="font-size: smaller;">
+      <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="font-size: smaller; background-color: rgb(159, 200, 190);">
         {{task.deadline|date:"Y-m-d"}}
-        </a>
-      </div>
+        </a></div>
   {% endif %}
   {% endfor %}
+
+  {% for task in tasks %}
+  {% if task.status == 'In progress' %}
+  <div class="tasks" style="background-color: rgb(244, 227, 172);"> 
+    <a class='task-list' href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(244, 227, 172);">{{ task.project }} 
+    </a>
+    <a class='task-list' href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(244, 227, 172);">{{ task.title }}
+    </a>
+    <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(244, 227, 172);">
+    {{task.status}}
+    </a>
+    <a class="task-list-status" href="{% url 'edit_task_status' task.id %}" style="font-size: smaller; background-color: rgb(244, 227, 172);">
+      {{task.deadline|date:"Y-m-d"}}
+      </a></div>
+  {% endif %}
+  {% endfor %}
+
     {% for task in tasks %}
 
     {% if task.status == 'Done' %}
