@@ -282,6 +282,10 @@ footer {
     text-align: center;
     }
 
+.todo {
+    background-color: var(--green);
+}
+
 .profiles-container {
     flex-direction: column;
 }
