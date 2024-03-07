@@ -341,6 +341,12 @@ footer {
     flex-direction: row;
 }
 
+.profile-text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
 .welcome-text{
     display: flex;
     margin-top: 20px;
