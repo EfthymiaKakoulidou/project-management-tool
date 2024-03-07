@@ -15,17 +15,17 @@
       </a>
       
       {% if task.status == 'To do' %}
-      <a class="task-list-status" style="background-color: rgb(104, 192, 145);">
+      <a class="task-list-status" href="{% url 'task_detail' task.id %}" style="background-color: rgb(104, 192, 145);">
       {{task.status}}
       </a>
       {% endif %}
 
       {% if task.status == 'In progress' %}
-      <a class="task-list-status" style="background-color: rgb(246, 189, 96);">
+      <a class="task-list-status" href="{% url 'task_detail' task.id %}" style="background-color: rgb(246, 189, 96);">
       {{task.status}}
       </a>
       {% endif %}
-      <a class="task-list-status" style="font-size: smaller;">
+      <a class="task-list-status" href="{% url 'task_detail' task.id %}" style="font-size: smaller;">
         {{task.deadline|date:"Y-m-d"}}
         </a>
       </div>
