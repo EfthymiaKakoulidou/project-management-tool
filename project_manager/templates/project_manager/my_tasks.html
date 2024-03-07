@@ -13,8 +13,7 @@
       </a>
       <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.title }}
       </a>
-      <a class='task-list' href="{% url 'task_detail' task.id %}">{{ task.assigned_to }}
-      </a>
+      
       {% if task.status == 'To do' %}
       <a class="task-list-status" style="background-color: rgb(104, 192, 145);">
       {{task.status}}
@@ -26,7 +25,7 @@
       {{task.status}}
       </a>
       {% endif %}
-      <a class="task-list-status">
+      <a class="task-list-status" style="font-size: smaller;">
         {{task.deadline|date:"Y-m-d"}}
         </a>
       </div>
@@ -41,13 +40,10 @@
     <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{ task.title }}
     </a>
 
-    <a class='task-list' style="background-color: lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{ task.assigned_to }}
-    </a>
-
     <a class='task-list-status' style="background-color:lightgrey; color: gray;" href="{% url 'task_detail' task.id %}">{{task.status}}
     </a>
 
-    <a class="task-list-status" style="background-color:lightgrey; color: gray;">
+    <a class="task-list-status" style="background-color:lightgrey; color: gray; font-size: smaller;">
       {{task.deadline|date:"Y-m-d"}}
       </a>
 </div>
