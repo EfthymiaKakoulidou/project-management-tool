@@ -4,12 +4,13 @@
 :root{
 
     /*Colours*/
-    --background : rgb(247, 237, 226);
+    --background : whitesmoke;
     --green : rgb(132, 165, 157);
-    --pink : rgb(245, 202, 195);
+    --pink : rgb(246, 188, 187);
     --light_blue : #c4ebef;
-    --orange : rgb(246, 189, 96);
-    --darkpink : rgb(242, 132, 130);
+    --orange : rgb(244, 190, 172);
+    --darkpink : rgb(245, 170, 168);
+    --black : rgb(56, 69, 66);
 
 
     /*Utils*/
@@ -19,29 +20,32 @@
 
 }
 
-a {
+a { color: var(--black);
     text-decoration: none;
 }
 
-h1 {
+h1 {color: var(--black);
     font-size: 30px;
 }
-h2 {
+h2 {color: var(--black);
     font-size: 26px;
 }
-h3 {
+h3 {color: var(--black);
     font-size: 22px;
 }
-h4 {
+h4 {color: var(--black);
     font-size: 18px;
 }
-h5 {
+h5 {color: var(--black);
     font-size: 14px;
 }
-h6 {
+h6 {color: var(--black);
     font-size: 10px;
 }
 
+p {
+    color: var(--black);
+}
    
 /* Main*/
 
@@ -63,7 +67,7 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    background-color: var(--background)
+    background-color: var(--background);
 }
 
 footer {
@@ -80,12 +84,12 @@ footer {
 
 
 .navbar {
-    background-color: var(--pink);
+    background-color: var(--orange);
     box-shadow: var(--small-box-shadow);
 }
 
 .nav-link {
-    color: black;
+    color: var(--black);
 }
 
 .nav-list {
@@ -121,7 +125,7 @@ footer {
 }
 
 .nav-list-items:hover {
-    background-color: var(--darkpink);
+    background-color: var(--darkpink)
 }
 
 .member_profiles{
@@ -204,13 +208,13 @@ footer {
 
 .btn-primary {
     background-color: var(--orange);
-    border: var(--darkpink);
+    border: var(--black);
     color: var(--black);
 }
 
 .btn-primary:hover {
     background-color: var(--darkpink);
-    border: var(--darkpink);
+    border: var(--black);
     color: var(--black);
 }
 
@@ -221,7 +225,7 @@ footer {
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: var(--black);
     border: 1px solid;
     border-radius: 10px;
     margin: 5px;
@@ -256,7 +260,7 @@ footer {
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: black
     border: 1px solid;
     border-radius: 10px;
     margin: 5px;
@@ -364,12 +368,12 @@ footer {
     /* Header */
     
     .navbar {
-        background-color: var(--pink);
+        background-color: var(--orange);
         box-shadow: var(--small-box-shadow);
     }
     
     .nav-link {
-        color: black;
+        color: black
     }
 
     .nav-list {
@@ -453,24 +457,24 @@ footer {
     
     .btn-primary {
         background-color: var(--orange);
-        border: var(--darkpink);
+        border: var(--black);
         color: var(--black);
     }
     
     .btn-primary:hover {
         background-color: var(--darkpink);
-        border: var(--darkpink);
+        border: var(--black);
         color: var(--black);
     }
     
     .tasks {
-        background-color: var(--pink);
+        background-color: var(--orange);
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
         text-decoration: none;
-        color: #000;
+        color: black
         border: 1px solid;
         border-radius: 10px;
         margin: 5px;
@@ -478,7 +482,7 @@ footer {
     }
     
     .task-list, .task-list-status {
-        background-color: var(--pink);
+        background-color: var(--orange);
         display: flex;
         align-items: center;
         border-radius: 10px;
@@ -500,13 +504,13 @@ footer {
     }
     
     .profiles, .profile-detail-image-container {
-        background-color: var(--pink);
+        background-color: var(--orange);
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
         text-decoration: none;
-        color: #000;
+        color: black
         border: 1px solid;
         border-radius: 10px;
         margin: 5px;
@@ -519,7 +523,7 @@ footer {
     }
     
     .profiles-list {
-        background-color: var(--pink);
+        background-color: var(--orange);
         display: flex;
         justify-content: center;
         align-items: center;
