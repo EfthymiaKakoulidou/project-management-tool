@@ -6,10 +6,10 @@
 
 <div class="container">
     <h1 class="text-center mt-2">Confirm Project Deletion</h1>
-    <div class="d-flex justify-content-center pt-3">
+    <div class="d-flex justify-content-center pt-3" style="flex-direction: column;">
+        <p class="text-center titles">Are you sure you want to delete {{project.title}}?</p>
         <form method="POST" class="text-center">
             {% csrf_token %}
-            <p>Are you sure you want to delete {{project.title}}?</p>
             <input type="submit" value="Confirm" class="btn btn-primary w-25">
         </form>
     </div>
