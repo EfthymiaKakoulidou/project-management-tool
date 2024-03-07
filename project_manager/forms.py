@@ -25,7 +25,7 @@ class TaskForm(forms.ModelForm):
             'deadline': forms.DateInput(attrs={'type': 'date'})
         }
 
-class TaskFormAT(forms.ModelForm):
+class TaskFormStatus(forms.ModelForm):
     """form with just status field"""
    
     class Meta:

@@ -4,7 +4,7 @@ from django.views.generic import (
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
 from .models import Task, Profile
-from .forms import ProjectForm, TaskForm, ProfileForm, TaskFormAT
+from .forms import ProjectForm, TaskForm, ProfileForm, TaskFormStatus
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -68,7 +68,7 @@ class AddTask(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         project_id = self.kwargs['project_id']
         project = get_object_or_404(Project, pk=project_id)
-        form.instance.project = project  # Directly set the project to the form instance
+        form.instance.project = project
 
         if project.deadline < form.instance.deadline:
             messages.error(self.request, "Task deadline cannot be after project deadline.")
@@ -106,16 +106,16 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return self.request.user == task.user
     def get_success_url(self):
         messages.success(self.request, "Task successfully edited.")
-        return reverse_lazy('edit_task_at', kwargs={'pk': self.object.pk})
+        return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
 
 
-class EditTaskAT(UpdateView):
+class EditTaskStatus(UpdateView):
     model = Task
-    form_class = TaskFormAT
+    form_class = TaskFormStatus
     template_name = 'project_manager/edit_task_at.html'
 
     def get_success_url(self):
-        return reverse_lazy('edit_task_at', kwargs={'pk': self.object.pk})
+        return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
 
     def test_func(self):
         task = self.get_object()
