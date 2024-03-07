@@ -4,19 +4,54 @@
 {% block title %}Task Details - {{task.title}}{% endblock %}
 
 {% block content %}
-<h1 class="text-center">{{task.project}}</h1>
-<h2 class="text-center">{{task.title}}</h2>
-<p class="text-center small-text">Status : {{task.status}} </p>
-<p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
-
+{% if task.status == 'To do' %}
 {% if request.user == task.assigned_to %}
-<div class="text-center">
-    <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update Status</button>
-    </form>
-</div>
+<div class="todo">
+    <h1 class="text-center">{{task.project}}</h1>
+    <h2 class="text-center">{{task.title}}</h2>
+    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+    <div class="text-center">
+        <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Update Status</button>
+        </form>
+    </div></div>
+{% endif %}
+{% endif %}
+{% if task.status == 'In progress' %}
+{% if request.user == task.assigned_to %}
+<div class="inprogress">
+    <h1 class="text-center">{{task.project}}</h1>
+    <h2 class="text-center">{{task.title}}</h2>
+    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+        <div class="text-center">
+            <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Update Status</button>
+            </form>
+        </div>
+    </div>
+{% endif %}
+{% endif %}
+
+{% if task.status == 'Done' %}
+{% if request.user == task.assigned_to %}
+<div class="done">
+    <h1 class="text-center">{{task.project}}</h1>
+    <h2 class="text-center">{{task.title}}</h2>
+    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+        <div class="text-center">
+            <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Update Status</button>
+            </form>
+        </div>
+    </div>
+{% endif %}
+
 {% endif %}
 
 {% if request.user == task.user %}

@@ -284,7 +284,23 @@ footer {
 
 .todo {
     background-color: var(--green);
+    margin-bottom: 20px;
+    height: 33vh;
 }
+
+.inprogress {
+    background-color: rgb(226, 215, 128);
+    margin-bottom: 20px;
+    height: 33vh;
+}
+
+.done {
+    background-color: lightgrey; 
+    color: gray;
+    margin-bottom: 20px;
+    height: 33vh;
+}
+
 
 .profiles-container {
     flex-direction: column;
