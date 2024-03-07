@@ -101,9 +101,9 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         task = get_object_or_404(Task, pk=task_id)
         context['project'] = get_object_or_404(Project, pk=task.project.id)
         return context
-
     def test_func(self):
-        return self.request.user == self.get_object().user
+        task = self.get_object()
+        return self.request.user == task.user or self.request.user == task.assigned_to
     def get_success_url(self):
         messages.success(self.request, "Task successfully edited.")
         return reverse_lazy('task_detail', kwargs={'pk': self.object.pk})
