@@ -16,7 +16,7 @@
     /*Utils*/
 
     --small-box-shadow : 1px -1px 7px 0 #00000061;
-    --border : 1px solid #00000030;
+    --border : 0.5px solid #00000030;
 
 }
 
@@ -118,12 +118,12 @@ footer {
     justify-content: center;
     align-items: end;
     padding: 2px;
-    border: 1px solid;
+    border: 0.5px solid;
     border-radius: 10px;
 }
 
 .nav-item, .nav-item-signout{
-    border-top: 1px solid var(--black);
+    border-top: 0.5px solid var(--black);
 }
 
 .nav-list-text{
@@ -162,7 +162,7 @@ footer {
 }
 
 .active {
-    border-bottom: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
     font-weight: 500;
 
 }
@@ -176,7 +176,7 @@ footer {
 }
 
 .card {
-    border: 1px solid;
+    border: 0.5px solid;
     background-color: var(--orange);
     height: 80%;
     margin-top: 1 rem;
@@ -237,14 +237,14 @@ footer {
 
 .btn-primary {
     background-color: var(--orange);
-    border: 1px solid var(--black);
+    border: 0.5px solid var(--black);
     color: var(--black);
     box-shadow: var(--small-box-shadow);
 }
 
 .btn-primary:hover {
     background-color: var(--pink);
-    border: 1px solid var(--black);
+    border: 0.5px solid var(--black);
     color: var(--black);
 }
 
@@ -256,7 +256,7 @@ footer {
     align-items: center;
     text-decoration: none;
     color: var(--black);
-    border: 1px solid;
+    border: 0.5px solid;
     border-radius: 10px;
     margin: 5px;
     height: 55px;
@@ -307,14 +307,14 @@ footer {
 }
 
 .profiles {
-    background-color: var(--pink);
+    background-color: var(--darkpink);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
     color: var(--black);
-    border: 1px solid;
+    border: 0.5px solid;
     border-radius: 10px;
     margin: 5px;
     height: 50px;
@@ -322,7 +322,7 @@ footer {
 }
 
 .profiles-list {
-    background-color: var(--pink);
+    background-color: var(--orange);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,7 +365,7 @@ footer {
     width: 50px;
     height: 50px;
     overflow: hidden;
-    border: 1px solid;
+    border: 0.5px solid;
     border-radius: 10px;
 }
 
@@ -458,7 +458,7 @@ footer {
 
     .nav-item-signout {
         border-top: none;
-        margin-left: 40vw;
+
     }
 
    }
