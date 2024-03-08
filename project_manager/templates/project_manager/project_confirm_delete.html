@@ -10,8 +10,8 @@
         <p class="text-center titles">Are you sure you want to delete {{project.title}}?</p>
         <form method="POST" class="text-center">
             {% csrf_token %}
-            <input type="submit" value="Confirm" class="btn btn-primary w-25">
-            <a class='btn btn-primary w-25', href="{% url 'project_detail' project.id %}">Cancel</a>
+            <input type="submit" value="Confirm" class="btn btn-primary">
+            <a class='btn btn-primary', href="{% url 'project_detail' project.id %}">Cancel</a>
         </form>
 </div>
 </div>

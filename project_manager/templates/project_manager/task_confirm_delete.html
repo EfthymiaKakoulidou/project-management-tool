@@ -10,8 +10,8 @@
         <form method="POST" class="text-center">
             {% csrf_token %}
             <p>Are you sure you want to delete {{task.title}}?</p>
-            <input type="submit" value="Confirm" class="btn btn-primary w-25">
-            <a class='btn btn-primary w-25', href="{% url 'edit_task_status' task.id %}">Cancel</a>
+            <input type="submit" value="Confirm" class="btn btn-primary">
+            <a class='btn btn-primary', href="{% url 'edit_task_status' task.id %}">Cancel</a>
         </form>
     </div>
 </div>
