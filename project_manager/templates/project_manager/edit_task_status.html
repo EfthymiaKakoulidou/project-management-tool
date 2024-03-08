@@ -74,7 +74,7 @@
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
 </div>
 
-
+{% endif %}
 <div class="container">
     <div class="description p-3">
     <h2>Task description : </h2>
@@ -82,5 +82,5 @@
     <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
         </div>
 </div>
-{% endif %}
+
 {% endblock %}
