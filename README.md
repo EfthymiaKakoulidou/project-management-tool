@@ -224,73 +224,115 @@ etc.
 
 ![screenshot](documentation/feature03.png)
 
-- **Home Page**
+- **Home Page if the user is logged out**
 
-    - the home page calls the user to sign up or login, has a welcome message and a motivational quote to motivate the user to start working! This quote is different everytime the home page is loaded.
+    - The home page if the user is logged out has a welcome message and information about the site and how it can benefit the user.
 
 ![screenshot](documentation/feature04.png)
-![screenshot](documentation/feature041.png)
 
-- **My projects**
+- **Home Page if the user is logged in**
 
-    - This pages contains a collection of the projects that the user has created or has a task assigned to him/her so that the user can easily see all the projects that involve him/her.
+    - The home page if the user is logged in includes a welcome message and a motivational quote to inspire the user to start working. This quote is different everytime the page loads.
 
 ![screenshot](documentation/feature05.png)
+![screenshot](documentation/feature051.png)
 
-- **Project details**
+- **Navigation**
 
-    - When the user chooses a project by clicking on it the project-details pages appears. There the user has access to information about the project, the chance to edit or delete the project and the chance to add a task.
+    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages.
 
 ![screenshot](documentation/feature06.png)
 
-- **Add Task**
+- **My projects**
 
-    - If the user chooses to add a task the Add-task form appears and there he/she has the chance to create a task giving information about it and assigning to homself/herself or somebody else.
+    - This pages contains a collection of the projects that the user has created or has a task assigned to him/her so that the user can easily see all the projects that involve him/her. The projects' information provided here is just the name of the project and its deadline so that user can organize his/her work.
 
 ![screenshot](documentation/feature07.png)
 
-- **Edit or Delete Task**
+- **My Tasks**
 
-    - When the task is created the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-detail page.
+    - On this page the user can see all the tasks assigned to him/her. They appear in order from the most urgent to least urgent. The information provided on this page is the name of the project the tasks belongs to, the name of the task, the person that it is assigned to and the task's deadline. The tasks that have the "To do" status appear green, tasks that have the "In progress" status appear orange and tasks that are already done appear grey so that the user can ignore them.
 
 ![screenshot](documentation/feature08.png)
 
-- **My Tasks**
+- **New Project**
 
-    - On this page the user can see all the tasks assigned to him/her. They appear in order from the most urgent to least urgent. Tasks that are already done appear grey so that it is obvious that the user can ignore them.
+    - If the user wants to create a new project he/she can do it directly from the navigation bar. The user is redirected to the Add-project form and there he/she can provide the information of the new project. The name of the project, its description and the deadline are the fields he/she has to fill.
 
 ![screenshot](documentation/feature09.png)
 
-- **New Project**
+- **Profile**
 
-    - If the user wants to create a new project he/she can do it directly from the navigation bar. The user is redirected to the Add-project form and there he/she can provide the information of the new project. Once the new project is created the user is redirected to the new project's detail page.
+    - By clicking on the 'Profile' on the home page the user is directed to the add-profile form if he/she has not already created a profile or the his/hers profile page if the user has already created a profile. The fields on the profile form are "First Name", "Last Name", "Job Title", "Image" and "Bio". If the user has already created a profile the page with all that information will appear. All the fields except the image are mandatory. If the user does not provide a picture the default picture will appear instead.
 
 ![screenshot](documentation/feature10.png)
+![screenshot](documentation/feature101.png)
 
-- **Edit or Delete my Projects**
+- **Members**
 
-    - The user can edit or delete the projects that he/she has created. By clicking on edit the user is redirected to the edit-project form and by clicking the delete button to the confirm deletion page and if confirmed to the his/hers project page.
+    - All profiles made on the site appear here. The information provided here are the picture, the first name and the job title.
 
 ![screenshot](documentation/feature11.png)
 
-- **Create Profile**
+- **My Projects/project selected**
 
-    - By clicking on the 'Profile' on the home page the user is directed to the add-profile form if he/she has not already created a profile or the his/hers profile page if the user has already created a profile. 
+    - If the user clicks on a project from "My Projects" he/she is directed a page showing that project's details. There the user can see the project's title, when it was created and by whom, the projects' description, the deadline of the project and a list of the tasks created for this project together with a button that gives him/her the chance to add a task. If the user has created the project he/she gets the option to edit or delete the project. If the user has not created the project those 2 buttons do not appear so the user can just add tasks.
+    - The user is redirected to this page when he/she successfully fills in the form to add a new project.
 
 ![screenshot](documentation/feature12.png)
+![screenshot](documentation/feature121.png)
+
+
+- **Task details page**
+
+    - If the user clicks on a task either on the project's details page or on a task on the "My Tasks" page he/she is directed to the page showing all the details of the task. 
+    - If the user has neither created the task or is not assigned the task (with other words he sees this task because he is a member of that particular project) then : on the top there is the projects' title then to whom it was assigned to and from whom, then the task's description and the deadline.
+    - If the user has created the task and is not assigned himself/herself the task then he/she gets the edit, delete buttons.
+    - If the user is assigned the task then he/she gets the update-status button. In this case the user cannot change the task otherwise. He/She can just change the status.
+    -If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.)
+
+
+![screenshot](documentation/feature13.png)
+![screenshot](documentation/feature131.png)
+![screenshot](documentation/feature132.png)
+![screenshot](documentation/feature133.png)
+
+    -If the status of the task is set "To do" then the upper part of the background appears green.
+    -If the status of the task is set "In progress" then the upper part of the background appears orange.
+    -If the status of the task is set "Done" then the upper part of the background appears grey.
+
+![screenshot](documentation/feature134.png)
+![screenshot](documentation/feature135.png)
+![screenshot](documentation/feature136.png)
+
+
+- **Edit or Delete Task**
+
+    - When the task is created the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. If the form is sublited successfully the user is redirected the task-details page. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-details page.
+
+![screenshot](documentation/feature14.png)
+![screenshot](documentation/feature141.png)
+
+
+- **Edit or Delete my Projects**
+
+    - The user can edit or delete the projects that he/she has created. By clicking on edit the user is redirected to the edit-project form. If the form is successfully submitted the user is redirected to the project's-details page.By clicking the delete button to the confirm deletion page and if confirmed to the his/hers projects page.
+
+![screenshot](documentation/feature15.png)
+![screenshot](documentation/feature151.png)
 
 - **Edit or Delete my Profile**
 
-    - If the profile is already created then the user can edit or delete it. By clicking on the edit button he is reditected to the edit-profile form and by clicking on delete the user is reditected to confirm deletion page and if confirm to the profiles page which a collection of the profiles made on this site.
+    - If the user's profile is already created then the user can edit or delete it. By clicking on the edit button he is reditected to the edit-profile form. If the form is successfully submitted then the user gets to see his/hers profile page. By clicking on delete the user is reditected to confirm deletion page and if confirmed to the members page.
 
-![screenshot](documentation/feature13.png)
+![screenshot](documentation/feature16.png)
+![screenshot](documentation/feature161.png)
 
-- **Profiles**
+- **Members/members selected**
 
-    - If the user clicks on members he/she can see all the profiles created on the site. If he/she chooses his own then he gets the opportunity to edit or delete it. Other peoples' profiles are not accessible to the user to edit or delete, the user can just see them.
+    - If the user clicks on one of the profiles he sees that profile's details.
 
-![screenshot](documentation/feature14.png)
-
+![screenshot](documentation/feature17.png)
 
 ### Future Features
 
