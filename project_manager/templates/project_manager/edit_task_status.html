@@ -5,11 +5,13 @@
 
 {% block content %}
 
-{% if task.status == 'To do' %}
 {% if request.user == task.assigned_to %}
+
+{% if task.status == 'To do' %}
+
 <div class="todo">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
     <div class="text-center">
         <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
@@ -18,13 +20,14 @@
             <button class="btn btn-primary" type="submit">Update Status</button>
         </form>
     </div></div>
+
 {% endif %}
-{% endif %}
+
 {% if task.status == 'In progress' %}
-{% if request.user == task.assigned_to %}
+
 <div class="inprogress">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <div class="text-center">
             <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
@@ -34,14 +37,14 @@
             </form>
         </div>
     </div>
-{% endif %}
+
 {% endif %}
 
 {% if task.status == 'Done' %}
-{% if request.user == task.assigned_to %}
+
 <div class="done">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <div class="text-center">
             <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
@@ -52,22 +55,13 @@
         </div>
     </div>
 {% endif %}
-{% endif %}
 
+{% else %}
 
 <div>
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
-</div>
-
-
-<div class="container">
-    <div class="description p-3">
-    <h2>Task description : </h2>
-    <p>{{task.description}}</p>
-    <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
-        </div>
 </div>
 
 {% if request.user == task.user %}
@@ -76,5 +70,15 @@
         <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete Task</a>
     </div>
 {% endif %}
+{% endif %}
+<div class="container">
+    <div class="description p-3">
+    <h2>Task description : </h2>
+    <p>{{task.description}}</p>
+    <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
+        </div>
+</div>
+
+
 
 {% endblock %}
