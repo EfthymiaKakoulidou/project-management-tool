@@ -85,6 +85,7 @@ class AddTask(LoginRequiredMixin, CreateView):
         return context
 
     def get_success_url(self):
+        messages.success(self.request, "Task successfully added.")
         project_pk = self.object.project.pk
         return reverse_lazy('project_detail', kwargs={'pk': project_pk})
 
