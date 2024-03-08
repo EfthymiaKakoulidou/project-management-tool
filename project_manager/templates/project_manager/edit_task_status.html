@@ -63,13 +63,13 @@
     <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
 </div>
-
+{% endif %}
 {% if request.user == task.user %}
     <div class="text-center">
         <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit Task</a>
         <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete Task</a>
     </div>
-{% endif %}
+
 {% endif %}
 <div class="container">
     <div class="description p-3">
