@@ -11,8 +11,9 @@
         <form method="POST" class="text-center">
             {% csrf_token %}
             <input type="submit" value="Confirm" class="btn btn-primary w-25">
+            <a class='btn btn-primary w-25', href="{% url 'project_detail' project.id %}">Cancel</a>
         </form>
-    </div>
+</div>
 </div>
 
 {% endblock %}
