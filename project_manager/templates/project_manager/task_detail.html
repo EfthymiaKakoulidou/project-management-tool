@@ -3,7 +3,7 @@
 {% block title %}Task Details - {{task.title}}{% endblock %}
 
 {% block content %}
-<h1 class="text-center">{{task.project}}</h1>
+<a href="{% url 'project_detail' project.id}"><h1 class="text-center">{{task.project}}</h1></a>
 <h2 class="text-center">{{task.title}}</h2>
 <p class="text-center small-text">Status : {{task.status}} </p>
 <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>

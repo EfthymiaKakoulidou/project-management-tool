@@ -8,7 +8,7 @@
 {% if task.status == 'To do' %}
 {% if request.user == task.assigned_to %}
 <div class="todo">
-    <h1 class="text-center">{{task.project}}</h1>
+    <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
     <div class="text-center">
@@ -23,7 +23,7 @@
 {% if task.status == 'In progress' %}
 {% if request.user == task.assigned_to %}
 <div class="inprogress">
-    <h1 class="text-center">{{task.project}}</h1>
+    <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <div class="text-center">
@@ -40,7 +40,7 @@
 {% if task.status == 'Done' %}
 {% if request.user == task.assigned_to %}
 <div class="done">
-    <h1 class="text-center">{{task.project}}</h1>
+    <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <div class="text-center">
@@ -63,7 +63,7 @@
 
 {% if request.user != task.assigned_to and request.user != task.user %}
 <div>
-    <h1 class="text-center">{{task.project}}</h1>
+    <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
 </div>
