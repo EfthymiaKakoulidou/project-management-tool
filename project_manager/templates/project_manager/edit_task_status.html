@@ -58,7 +58,6 @@
         </div>
     </div>
 {% endif %}
-
 {% endif %}
 
 {% if request.user == task.user %}
@@ -68,13 +67,20 @@
     </div>
 {% endif %}
 
+{% if request.user != task.assigned_to and request.user != task.user %}
+<div>
+    <h1 class="text-center">{{task.project}}</h1>
+    <h2 class="text-center">{{task.title}}</h2>
+    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+</div>
+
+
 <div class="container">
     <div class="description p-3">
     <h2>Task description : </h2>
     <p>{{task.description}}</p>
     <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
         </div>
-    
-
 </div>
+{% endif %}
 {% endblock %}
