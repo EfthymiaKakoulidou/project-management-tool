@@ -116,6 +116,7 @@ class EditTaskStatus(UpdateView):
     template_name = 'project_manager/edit_task_status.html'
 
     def get_success_url(self):
+        messages.success(self.request, "Status successfully updated.")
         return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
 
     def test_func(self):

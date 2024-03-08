@@ -206,16 +206,11 @@ etc.
 
 ### Existing Features
 
-- **Sign Up**
+- **Sign Up or login**
 
-    - If the user does not already have an account he/she should sign up to enter the site.
+    - If the user does not already have an account he/she should sign up to enter the site so he/she is redirected to the sign up form. If the user already has an account he/she should login to enter the site so he/she is redirected to the login form. The user has the option to those things by 2 places on the home page, the top or the bottom inside the text.
 
 ![screenshot](documentation/feature01.png)
-
-- **Login**
-
-    - If the user already has an account he/she should login to enter the site.
-
 ![screenshot](documentation/feature02.png)
 
 - **Sign Out**
@@ -333,6 +328,40 @@ etc.
     - If the user clicks on one of the profiles he sees that profile's details.
 
 ![screenshot](documentation/feature17.png)
+
+- **Messages**
+
+    - The user is being informed constantly about his/hers actions.
+    - If the user has successfully signed up.
+    - If the user has successfully signed out.
+    - If the user has successfully logged in.
+    - If the user has successfully added a task.
+    - If the user has successfully edited a task.
+    - If the user has successfully deleted a task.
+    - If the user has successfully updated the status of a task.
+    - If the user has successfully added a project.
+    - If the user has successfully edited a project.
+    - If the user has successfully deleted a project.
+    - If the user has successfully added a profile.
+    - If the user has successfully edited a profile.
+    - If the user has successfully deleted a profile.
+    - If the user tries to give a task a deadline that is after the project's deadline.
+
+![screenshot](documentation/feature18.png)
+![screenshot](documentation/feature181.png)
+![screenshot](documentation/feature182.png)
+![screenshot](documentation/feature183.png)
+![screenshot](documentation/feature184.png)
+![screenshot](documentation/feature185.png)
+![screenshot](documentation/feature186.png)
+![screenshot](documentation/feature187.png)
+![screenshot](documentation/feature188.png)
+![screenshot](documentation/feature189.png)
+![screenshot](documentation/feature1810.png)
+![screenshot](documentation/feature1811.png)
+![screenshot](documentation/feature1812.png)
+![screenshot](documentation/feature1813.png)
+![screenshot](documentation/feature1814.png)
 
 ### Future Features
 
