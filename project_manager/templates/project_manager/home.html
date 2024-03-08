@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
+{% block title %}Home{% endblock %}
+
 {% block content %}
+
 {% if user.is_authenticated %}
+<div class="welcome-container">
 <div class="motivation">
 <h1 class="welcome-text">Hello {{user}} ! </h1>
-<p class="welcome-text" >{{ random_motivation }}</p>
-</div>
+<p class="welcome-text" style="font-size: medium;">{{ random_motivation }}</p>
+</div></div>
 
 {% else %}
 <div class="welcome-container">
