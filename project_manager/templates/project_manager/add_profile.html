@@ -9,7 +9,7 @@
 <div class="container">
     <form method="POST" enctype="multipart/form-data" class="p-2 form" style="background-image: linear-gradient(to top left, rgb(244, 190, 172), whitesmoke);">
         <h1 class="text-center">Hi {{ user }} </h1>
-        <h2 class="text-center">Here you can add some details into your profile</h2>
+        <p class="text-center" style="font-size: medium;">Here you can add some details into your profile</p>
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">
