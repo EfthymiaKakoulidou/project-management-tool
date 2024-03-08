@@ -148,6 +148,7 @@ footer {
 .alert {
     font-size: smaller;
     margin-bottom: 0;
+    margin-left: 0px;
 }
 
 .member_profiles{
@@ -511,5 +512,9 @@ footer {
 
     .pmt {
         margin-left: 70px;
+    }
+
+    .alert {
+        margin-left:150px
     }
    }
