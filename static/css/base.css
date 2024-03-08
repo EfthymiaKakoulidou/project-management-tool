@@ -67,12 +67,11 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    background-color: var(--background);
+    background-image: linear-gradient(to bottom right, rgb(244, 190, 172), whitesmoke);
 }
 
 .welcome-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex: 1 0 auto;
@@ -291,19 +290,19 @@ footer {
     }
 
 .todo {
-    background-color: var(--green);
+    background-image: linear-gradient(to bottom, var(--green), rgba(245, 245, 245, 0));
     margin-bottom: 20px;
     height: 33vh;
 }
 
 .inprogress {
-    background-color: rgb(226, 215, 128);
+    background-image: linear-gradient(to bottom, rgb(226,215,128), rgba(245, 245, 245, 0));
     margin-bottom: 20px;
     height: 33vh;
 }
 
 .done {
-    background-color: lightgrey; 
+    background-image: linear-gradient(to bottom, lightgrey, rgba(245, 245, 245, 0));
     color: gray;
     margin-bottom: 20px;
     height: 33vh;
