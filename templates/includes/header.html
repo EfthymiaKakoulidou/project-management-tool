@@ -1,6 +1,7 @@
 {% load static %}
 
 <header>
+  
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
         <button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,31 +11,35 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
-            </li>
-            
+              <h4><a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong>M</strong>anagement <strong>T</strong>ool<span class="sr-only"></span></a>
+              </h4></li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
+                </li>
+                
             {% if user.is_authenticated %}
-            <li class="nav-item">
+            
+            <li class="nav-item nav-invisible">
               <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
                 My Projects
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-invisible">
               <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
                 My Tasks
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-invisible">
               <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-invisible">
               <a class="nav-link" href="{% url 'add_profile' %}">Profile</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-invisible">
             <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
                 Members</a>
             </li>
-            <li class="nav-item-signout">
+            <li class="nav-item">
               <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Sign Out</a></li>
             {% else %}
             <li class="nav-item">
@@ -51,4 +56,32 @@
         </div>
         
       </nav>
+
+      {% if user.is_authenticated %}
+      <div class="vertical-nav">
+      <ul class="vertical-nav">
+      <li class="nav-item">
+        <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
+          My Projects
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
+          My Tasks
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'add_profile' %}">Profile</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
+          Members</a>
+      </li>
+      </ul>
+    </div>
+      {% endif%}
+
 </header>

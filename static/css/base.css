@@ -57,6 +57,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--orange);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,7 +68,7 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    background-image: linear-gradient(to bottom right, rgb(244, 190, 172), whitesmoke);
+    background-image: linear-gradient(to top left, rgb(244, 190, 172), whitesmoke);
 }
 
 .welcome-container {
@@ -105,6 +106,7 @@ footer {
     display: flex;
     justify-content: center;
     color: var(--black);
+    margin-top: 0px;
 }
 
 .nav-list {
@@ -130,7 +132,7 @@ footer {
     border-radius: 10px;
 }
 
-.nav-item, .nav-item-signout{
+.nav-item {
     border-top: 0.5px solid var(--black);
 }
 
@@ -314,7 +316,7 @@ footer {
 }
 
 .profiles {
-    background-color: var(--darkpink);
+    background-color: var(--orange);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -389,6 +391,14 @@ footer {
     background-position: center;
 }
 
+.vertical-nav {
+    display: none;
+}
+
+.pmt {
+    margin-right: 0px;
+}
+
 @media only screen and (min-width: 376px) and (max-width:992px) {
 
     .member_profiles{
@@ -400,6 +410,10 @@ footer {
    
     /* Desktop*/
     /* Header */
+
+    main {
+        margin-left: 150px;
+    }
  
     .nav-list {
         display:none;
@@ -417,12 +431,16 @@ footer {
         display: block;
     }
 
+    .nav-link {
+        margin-top: 50px;
+    }
+
     .members {
         display:block;
     }
  
     .motivation {
-        margin-left: 80px;
+        margin-left: 150px;
     }
     
     .tasks {
@@ -467,4 +485,27 @@ footer {
 
     }
 
+    .vertical-nav {
+        display: flex;
+        justify-content: center;
+        display: block;
+        background-color: var(--orange);
+        position: absolute;
+        width: 150px;
+        left:0px;
+        height:100vh;
+        list-style-type: none;
+      
+    }
+    .nav-invisible {
+        display: none;
+    }
+
+    .welcome-container {
+        margin-top: 30px;
+    }
+
+    .pmt {
+        margin-left: 70px;
+    }
    }
