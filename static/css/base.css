@@ -423,6 +423,10 @@ footer {
         border: none;
     }
     
+    .nav-item:hover {
+        text-decoration: underline;
+    }
+
     .member_profiles{
         display: block;
     }
