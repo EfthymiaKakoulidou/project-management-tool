@@ -1,110 +1,125 @@
 {% load static %}
 
 <header>
-  
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 40px;"><img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
-        <button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span></button>
-        
-        <!---Navigation Items-->
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav me-auto mb-2">
-            <li class="nav-item active">
-              <h3><a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong style="margin-left: 10px;">M</strong>anagement <strong style="margin-left: 10px;">T</strong>ool<span class="sr-only"></span></a>
-              </h3></li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
-                </li>
-                
-            {% if user.is_authenticated %}
-            
-            <li class="nav-item nav-invisible">
-              <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
-                My Projects
-              </a>
-            </li>
-            <li class="nav-item nav-invisible">
-              <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
-                My Tasks
-              </a>
-            </li>
-            <li class="nav-item nav-invisible">
-              <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
-            </li>
-            <li class="nav-item nav-invisible">
-              <a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
-            </li>
-            <li class="nav-item nav-invisible">
-            <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
-                Members</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Sign Out</a></li>
-            {% else %}
-            <li class="nav-item">
-	          <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-		        href="{% url 'account_signup' %}">Sign Up</a>
-            </li>
-            <li class="nav-item">
-	          <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-            </li>
-            
-            {% endif %}
-        </ul>
-        
-        </div>
-        
-      </nav>
+	
+		<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 40px;"><img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
+				<button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span></button>
+				
+				<!---Navigation Items-->
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav me-auto mb-2">
+						<li class="nav-item active">
+							<h3><a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong style="margin-left: 10px;">M</strong>anagement <strong style="margin-left: 10px;">T</strong>ool<span class="sr-only"></span></a>
+							</h3></li>
+							<li class="nav-item active">
+								<a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
+								</li>
+								
+						{% if user.is_authenticated %}
+						<!---Navigation Items for mobile-->
+						<li class="nav-item nav-invisible">
+							<a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
+								My Projects
+							</a>
+						</li>
+						<li class="nav-item nav-invisible">
+							<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
+								My Tasks
+							</a>
+						</li>
+						<li class="nav-item nav-invisible">
+							<a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
+						</li>
+						<li class="nav-item nav-invisible">
+							<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
+						</li>
+						<li class="nav-item nav-invisible">
+						<a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
+								Members</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Sign Out</a></li>
+						{% else %}
+						<li class="nav-item">
+						<a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+						href="{% url 'account_signup' %}">Sign Up</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+						</li>
+						
+						{% endif %}
+				</ul>
+				
+				</div>
+				
+			</nav>
+<!---Navigation Items for desktop-->
+			{% if user.is_authenticated %}
+			<div class="vertical-nav">
+			<ul class="vertical-nav">
+			<li style="font-size: larger; font-weight:bold; list-style: none;">Overview :</li>
+			<li class="nav-item">
+				<a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
+					My Projects
+				</a>
+			</li>
+			{% for project in projects %}
+			<li style="margin-left: 20px; font-size: small;">
+				<a href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}">
+							{{project.title}}
+			</a>
+			{% endfor%}
+		
+			{% if task.project and project.title %}
+			<li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
+					{{ project.title }}
+			 </a></li>
 
-      {% if user.is_authenticated %}
-      <div class="vertical-nav">
-      <ul class="vertical-nav">
-        <li style="font-size: larger; font-weight:bold; list-style: none;">Overview :</li>
-      <li class="nav-item">
-        <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
-          My Projects
-        </a>
-      </li>
-      {% if task.project and project.title %}
-      <li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
-          {{ task.project }}
-       </a></li>
-
-      {% elif project.title %}
-      <li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' project.id %}">
-          {{ project.title }}
-        </a></li>
-      
-      {% elif task.project %}
-      <li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
-          {{ task.project }}
-       </a></li>
-      {% endif %}
-      
-      {% if task.title %}
-      <li style="margin-left: 40px; font-size: smaller; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
-      {% endif %}
-      <li class="nav-item">
-        <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
-          My Tasks
-        </a>
-        {% if request.user == task.assigned_to %}
-        <li style="margin-left: 40px; font-size: smaller; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
-        {% endif %} 
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
-          Members</a>
-      </li>
-      </ul>
-    </div>
-      {% endif%}
+			{% elif project.title %}
+			<li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' project.id %}">
+					{{ project.title }}
+				</a></li>
+			
+			{% elif task.project %}
+			<li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
+					{{ task.project }}
+			 </a></li>
+			
+			{% endif %}
+			
+			{% if task.title %}
+			<li style="margin-left: 40px; font-size: smaller; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
+			{% endif %}
+			<li class="nav-item">
+				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
+					My Tasks
+				</a>
+			{%for task in tasks %}
+			<li style="margin-left: 20px; font-size: small;">
+				<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.project}}">
+							{{task.title}}
+			</a>
+			</li>
+			{% endfor %}
+				{% if request.user == task.assigned_to %}
+				<li style="margin-left: 40px; font-size: smaller; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
+			</li>
+			{% endif %} 
+			<li class="nav-item">
+				<a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
+					Members</a>
+			</li>
+			</ul>
+		</div>
+			{% endif%}
 
 </header>
