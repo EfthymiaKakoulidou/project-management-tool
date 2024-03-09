@@ -11,7 +11,7 @@
 
 <div class="todo">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
     <div class="text-center">
         <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
@@ -27,7 +27,7 @@
 
 <div class="inprogress">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <div class="text-center">
             <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
@@ -44,7 +44,7 @@
 
 <div class="done">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         <div class="text-center">
             <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
@@ -60,7 +60,7 @@
 
 <div>
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
-    <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
+    <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
     <p class="text-center small-text">Status : {{task.status}}</p>
 </div>
