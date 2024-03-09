@@ -45,7 +45,7 @@ class Profile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name="name"
     )
-    job_title = models.CharField(max_length=200, unique=True, null=False, blank=False)
+    job_title = models.CharField(max_length=200, null=False, blank=False)
     bio = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
