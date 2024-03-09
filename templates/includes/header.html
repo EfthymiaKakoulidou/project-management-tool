@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2">
             <li class="nav-item active">
-              <h3><a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong>M</strong>anagement <strong>T</strong>ool<span class="sr-only"></span></a>
+              <h3><a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong style="margin-left: 10px;">M</strong>anagement <strong style="margin-left: 10px;">T</strong>ool<span class="sr-only"></span></a>
               </h3></li>
               <li class="nav-item active">
                 <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
@@ -60,15 +60,25 @@
       {% if user.is_authenticated %}
       <div class="vertical-nav">
       <ul class="vertical-nav">
+        <li style="font-size: larger;">Overview :</li>
       <li class="nav-item">
         <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
           My Projects
         </a>
       </li>
+      
+      <li style="margin-left: 20px; font-size: medium;">
+          {{ project.title }}{{ task.project }}
+        </li>
+      
+      <li style="margin-left: 40px; font-size: small; text-wrap: wrap;">{{ task.title }}</li>
       <li class="nav-item">
         <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
           My Tasks
         </a>
+        {% if request.user == task.user or request.user == task.assigned_to %}
+        <li style="margin-left: 40px; font-size: small; text-wrap: wrap;">{{ task.title }}</li>
+        {% endif %} 
       </li>
       <li class="nav-item">
         <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
