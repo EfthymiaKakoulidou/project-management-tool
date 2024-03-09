@@ -234,7 +234,7 @@ etc.
 
 - **Navigation**
 
-    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages.
+    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left vertically and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages. For mobiled the navigation consists of a drop-down menu with a list of all the actions the user can do.
 
 ![screenshot](documentation/feature06.png)
 
@@ -271,7 +271,7 @@ etc.
 
 - **My Projects/project selected**
 
-    - If the user clicks on a project from "My Projects" he/she is directed a page showing that project's details. There the user can see the project's title, when it was created and by whom, the projects' description, the deadline of the project and a list of the tasks created for this project together with a button that gives him/her the chance to add a task. If the user has created the project he/she gets the option to edit or delete the project. If the user has not created the project those 2 buttons do not appear so the user can just add tasks.
+    - If the user clicks on a project from "My Projects" he/she is directed a page showing that project's details. There the user can see the project's title, when it was created and by whom, the projects' description, the deadline of the project and a list of the tasks created for this project together with a button that gives him/her the chance to add a task. If the user has created the project he/she gets the option to edit or delete the project. If the user has not created the project those 2 buttons do not appear so the user can just add tasks. In the same time the name of project appears under My Projects in the vertical navigation bar. This a link leading to the project's details page.
     - The user is redirected to this page when he/she successfully fills in the form to add a new project.
 
 ![screenshot](documentation/feature12.png)
@@ -280,11 +280,12 @@ etc.
 
 - **Task details page**
 
-    - If the user clicks on a task either on the project's details page or on a task on the "My Tasks" page he/she is directed to the page showing all the details of the task. 
-    - If the user has neither created the task or is not assigned the task (with other words he sees this task because he is a member of that particular project) then : on the top there is the projects' title then to whom it was assigned to and from whom, then the task's description and the deadline.
-    - If the user has created the task and is not assigned himself/herself the task then he/she gets the edit, delete buttons.
-    - If the user is assigned the task then he/she gets the update-status button. In this case the user cannot change the task otherwise. He/She can just change the status.
-    -If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.)
+    - When the user clicks on a task either on the project's details page or on a task on the "My Tasks" page he/she is directed to the page showing all the details of the task. 
+    - If the user has neither created the task or is not assigned the task (with other words he sees this task only because he is a member of that particular project) then : on the top there is the projects' title then to whom it was assigned to and from whom, then the task's description and the deadline. The name of the task appears under the name of the project in the vartical navigation bar but not under the My Tasks section.
+    - If the user has created the task and is not assigned himself/herself the task then he/she gets the edit, delete buttons. Again the name of the task appears under the name of the project in the vartical navigation bar but not under the My Tasks section. 
+    - If the user is assigned the task then he/she gets the update-status button. In this case the user cannot change the task otherwise. He/She can just change the status. This task appears now both under the project name and the My tasks section of the vertical navigation bar.
+    - If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.) and the task appears both under the project name and the My tasks section of the vertical navigation bar.
+    - In all cases when a task appears in the vertical navigation it is a link leading to the task's detail page.
 
 
 ![screenshot](documentation/feature13.png)
@@ -303,7 +304,7 @@ etc.
 
 - **Edit or Delete Task**
 
-    - When the task is created the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. If the form is sublited successfully the user is redirected the task-details page. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-details page.
+    - When the task is created by the user the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. If the form is sublited successfully the user is redirected the task-details page. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-details page. If the user changes his/her mind about editing the task then he/she always has the side navigation bar that informs him/her about the hierarchy of the content of the page and can navigate from there to the page he/she wants.
 
 ![screenshot](documentation/feature14.png)
 ![screenshot](documentation/feature141.png)
