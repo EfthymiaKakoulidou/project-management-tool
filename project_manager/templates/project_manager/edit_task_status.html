@@ -65,13 +65,7 @@
     <p class="text-center small-text">Status : {{task.status}}</p>
 </div>
 {% endif %}
-{% if request.user == task.user %}
-    <div class="text-center">
-        <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit Task</a>
-        <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete Task</a>
-    </div>
 
-{% endif %}
 <div class="container">
     <div class="description p-3">
     <h2>{{task.title}} : </h2>
@@ -79,7 +73,13 @@
     <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
         </div>
 </div>
+{% if request.user == task.user %}
+    <div class="text-center">
+        <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit Task</a>
+        <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete Task</a>
+    </div>
 
+{% endif %}
 
 
 {% endblock %}
