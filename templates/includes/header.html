@@ -89,7 +89,7 @@
         <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
           <strong>My Tasks</strong>
         </a>
-        {% if request.user == task.user or request.user == task.assigned_to %}
+        {% if request.user == task.assigned_to %}
         <li style="margin-left: 40px; font-size: small; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
         {% endif %} 
       </li>
