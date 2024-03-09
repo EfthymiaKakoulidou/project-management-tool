@@ -60,35 +60,48 @@
       {% if user.is_authenticated %}
       <div class="vertical-nav">
       <ul class="vertical-nav">
-        <li style="font-size: larger;">Overview :</li>
+        <li style="font-size: larger; font-weight:bold; list-style: none;">Overview :</li>
       <li class="nav-item">
-        <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false">
-          My Projects
+        <a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}" role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
+          <strong>My Projects</strong>
         </a>
       </li>
+      {% if task.project and project.title %}
+      <li style="margin-left: 20px; font-size: medium; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
+          {{ task.project }}
+       </a></li>
+
+      {% elif project.title %}
+      <li style="margin-left: 20px; font-size: medium; text-decoration: underline;"><a href="{% url 'project_detail' project.id %}">
+          {{ project.title }}
+        </a></li>
       
-      <li style="margin-left: 20px; font-size: medium;">
-          {{ project.title }}{{ task.project }}
-        </li>
+      {% elif task.project %}
+      <li style="margin-left: 20px; font-size: medium; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
+          {{ task.project }}
+       </a></li>
+      {% endif %}
       
-      <li style="margin-left: 40px; font-size: small; text-wrap: wrap;">{{ task.title }}</li>
+      {% if task.title %}
+      <li style="margin-left: 40px; font-size: small; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
+      {% endif %}
       <li class="nav-item">
         <a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
-          My Tasks
+          <strong>My Tasks</strong>
         </a>
         {% if request.user == task.user or request.user == task.assigned_to %}
-        <li style="margin-left: 40px; font-size: small; text-wrap: wrap;">{{ task.title }}</li>
+        <li style="margin-left: 40px; font-size: small; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
         {% endif %} 
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
+        <a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}"><strong>New Project</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'add_profile' %}">Profile</a>
+        <a class="nav-link" href="{% url 'add_profile' %}"><strong>Profile</strong></a>
       </li>
       <li class="nav-item">
       <a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}" role="button" aria-haspopup="true" aria-expanded="false">
-          Members</a>
+          <strong>Members</strong></a>
       </li>
       </ul>
     </div>
