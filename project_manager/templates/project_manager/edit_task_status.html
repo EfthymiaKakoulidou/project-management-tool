@@ -62,6 +62,7 @@
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center" style="font-size: medium;">{{task.title}}</h2>
     <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+    <p class="text-center small-text">Status : {{task.status}}</p>
 </div>
 {% endif %}
 {% if request.user == task.user %}
