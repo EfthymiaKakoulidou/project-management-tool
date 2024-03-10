@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.db.models import Q
 
 STATUS = (("To do", "To do"), ("In progress", "In progress"), ("Done", "Done"))
 
@@ -51,3 +52,10 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.first_name
+
+class ProjectsTasksMixin:
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['projects'] = Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
+        context['tasks'] = Task.objects.filter(assigned_to=self.request.user)
+        return context
