@@ -132,17 +132,6 @@ class DeleteTask(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, De
         messages.success(self.request, "Task successfully deleted.")
         return reverse_lazy('project_detail', kwargs={'pk': task.project.pk})
 
-class TaskDetail(ProjectsTasksMixin, DetailView):
-    """Creates task detail"""
-
-    template_name = "project_manager/edit_task_status.html"
-    model = Task
-    context_object_name = "task"
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['tasks'] = Task.objects.all()
-        return context
-
 class DeleteProject(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Project"""
     model = Project

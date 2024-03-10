@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls import reverse
 from .views import (
-    AddProject, Projects, Projectdetail, ProfileDetail, TaskDetail,
+    AddProject, Projects, Projectdetail, ProfileDetail,
     DeleteProject, EditProject, AddProfile, AddTask, Profiles,
     EditProfile, DeleteProfile, EditTask, DeleteTask, Tasks, Home, EditTaskStatus
 )
@@ -19,7 +19,6 @@ urlpatterns = [
     path("profiles/", Profiles.as_view(), name="profiles"),
     path("delete_profile/<slug:pk>", DeleteProfile.as_view(), name="delete_profile"),
     path("edit_profile/<slug:pk>", EditProfile.as_view(), name="edit_profile"),
-    path('task/<slug:pk>/', TaskDetail.as_view(), name='task_detail'),
     path("delete_task/<slug:pk>", DeleteTask.as_view(), name="delete_task"),
     path("edit_task/<slug:pk>", EditTask.as_view(), name="edit_task"),
     path("my_tasks", Tasks.as_view(), name="my_tasks"),
