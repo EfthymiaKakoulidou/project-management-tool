@@ -3,7 +3,7 @@ from django.views.generic import (
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
-from .models import Task, Profile
+from .models import Task, Profile, ProjectsTasksMixin
 from .forms import ProjectForm, TaskForm, ProfileForm, TaskFormStatus
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
@@ -92,12 +92,11 @@ class AddTask(LoginRequiredMixin, CreateView):
         return reverse_lazy('project_detail', kwargs={'pk': project_pk})
 
 
-class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditTask(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Task"""
     template_name = 'project_manager/edit_task.html'
     model = Task
     form_class = TaskForm
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         task_id = self.object.pk
@@ -112,24 +111,18 @@ class EditTask(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
 
 
-class EditTaskStatus(UpdateView):
+class EditTaskStatus(ProjectsTasksMixin, UpdateView):
     model = Task
     form_class = TaskFormStatus
     template_name = 'project_manager/edit_task_status.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['tasks'] = Task.objects.filter(Q(assigned_to=self.request.user)).distinct()
-        return context
+    def get_success_url(self):
+        messages.success(self.request, "Status successfully updated.")
+        return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
 
     def test_func(self):
         task = self.get_object()
         return self.request.user == task.user or self.request.user == task.assigned_to
-
-    def get_success_url(self):
-        messages.success(self.request, "Status successfully updated.")
-        return reverse_lazy('edit_task_status', kwargs={'pk': self.task.pk})
-    
 
 class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Task"""
