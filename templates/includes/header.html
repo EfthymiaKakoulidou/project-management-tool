@@ -69,45 +69,28 @@
 			{% for project in projects %}
 			<li style="margin-left: 20px; font-size: small;">
 				<a href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}">
-							{{project.title}}
+					{{project.title}}
 			</a>
+			{% for task in project.task_set.all %}
+			<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'task_detail' task.id %}" aria-label="Click to view {{project.title}}">
+				{{task.title}}
+			</a></li>
+			{% endfor %}
+			</li>
 			{% endfor%}
-		
-			{% if task.project and project.title %}
-			<li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
-					{{ project.title }}
-			 </a></li>
-
-			{% elif project.title %}
-			<li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' project.id %}">
-					{{ project.title }}
-				</a></li>
 			
-			{% elif task.project %}
-			<li style="margin-left: 20px; font-size: small; text-decoration: underline;"><a href="{% url 'project_detail' pk=task.project.pk %}">
-					{{ task.project }}
-			 </a></li>
-			
-			{% endif %}
-			
-			{% if task.title %}
-			<li style="margin-left: 40px; font-size: smaller; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
-			{% endif %}
 			<li class="nav-item">
 				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
 					My Tasks
 				</a>
-			{%for task in tasks %}
-			<li style="margin-left: 20px; font-size: small;">
-				<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.project}}">
-							{{task.title}}
-			</a>
-			</li>
-			{% endfor %}
-				{% if request.user == task.assigned_to %}
-				<li style="margin-left: 40px; font-size: smaller; text-wrap: wrap; text-decoration: underline;"><a href="{% url 'edit_task_status' task.id %}">{{ task.title }}</a></li>
-			</li>
-			{% endif %} 
+				{% for project in projects %}
+				{% for task in project.task_set.all %}
+				<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'task_detail' task.id %}" aria-label="Click to view {{project.title}}">
+					{{task.title}}
+				</a></li>
+				{% endfor %}
+				{% endfor%}
+			
 			<li class="nav-item">
 				<a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
 			</li>

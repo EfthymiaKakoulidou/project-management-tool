@@ -36,7 +36,6 @@ class Projects(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
 
-
 class AddProject(LoginRequiredMixin, CreateView):
     """Create project view"""
 
@@ -60,7 +59,6 @@ class Tasks(LoginRequiredMixin, ListView):
     context_object_name = "tasks"
     def get_queryset(self):
         return Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
-
 
 class AddTask(LoginRequiredMixin, CreateView):
     """Create task view"""
@@ -119,13 +117,19 @@ class EditTaskStatus(UpdateView):
     form_class = TaskFormStatus
     template_name = 'project_manager/edit_task_status.html'
 
-    def get_success_url(self):
-        messages.success(self.request, "Status successfully updated.")
-        return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = Task.objects.filter(Q(assigned_to=self.request.user)).distinct()
+        return context
 
     def test_func(self):
         task = self.get_object()
         return self.request.user == task.user or self.request.user == task.assigned_to
+
+    def get_success_url(self):
+        messages.success(self.request, "Status successfully updated.")
+        return reverse_lazy('edit_task_status', kwargs={'pk': self.task.pk})
+    
 
 class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Task"""
@@ -143,9 +147,13 @@ class DeleteTask(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class TaskDetail(DetailView):
     """Creates task detail"""
 
-    template_name = "project_manager/task_detail.html"
+    template_name = "project_manager/edit_task_status.html"
     model = Task
     context_object_name = "task"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = Task.objects.all()
+        return context
 
 class DeleteProject(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Project"""
