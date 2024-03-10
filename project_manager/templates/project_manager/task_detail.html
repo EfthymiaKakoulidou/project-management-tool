@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Task Details - {{task.title}}{% endblock %}
+
+{% block content %}
+<a href="{% url 'project_detail' project.id}"><h1 class="text-center">{{task.project}}</h1></a>
+<h2 class="text-center">{{task.title}}</h2>
+<p class="text-center small-text">Status : {{task.status}} </p>
+<p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+
+{% if request.user == task.assigned_to %}
+<div class="text-center">
+<a href="{% url 'edit_task_status' task.id %}">Update status</a>
+</div>
+{% endif %}
+
+{% if request.user == task.user %}
+    <div class="text-center">
+        <a class='btn btn-primary' href="{% url 'edit_task' task.id %}">Edit</a>
+        <a class='btn btn-primary' href="{% url 'delete_task' task.id %}">Delete</a>
+    </div>
+{% endif %}
+
+<div class="container">
+    <div class="description p-3">
+    <h2>Task description : </h2>
+    <p>{{task.description}}</p>
+    <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
+        </div>
+    
+
+</div>
+{% endblock %}
