@@ -91,11 +91,15 @@ footer {
 
 /* Header */
 
-
 .navbar {
     background-color: var(--orange);
     box-shadow: var(--small-box-shadow);
-    transition: margin-bottom 0.3s ease;
+    transition: 0.3s ease;
+
+}
+
+.mobilenav{
+    margin-bottom: 0px !important;
 }
 
 .navbar-toggler {
@@ -436,7 +440,7 @@ footer {
     }
 
     .nav-link {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .members {
@@ -522,4 +526,5 @@ footer {
     .alert {
         margin-left:200px
     }
+    
    }
