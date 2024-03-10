@@ -83,13 +83,12 @@
 				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}" role="button" aria-haspopup="true" aria-expanded="false">
 					My Tasks
 				</a>
-				{% for project in projects %}
-				{% for task in project.task_set.all %}
+				{% for task in tasks %}
 				<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{project.title}}">
 					{{task.title}}
 				</a></li>
 				{% endfor %}
-				{% endfor%}
+			
 				
 			<li class="nav-item">
 				<a class="nav-link {% if url_name == 'add_project' %}active{% endif %}" href="{% url 'add_project' %}">New Project</a>
