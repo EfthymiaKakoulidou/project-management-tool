@@ -21,6 +21,10 @@ class Projectdetail(DetailView):
     template_name = "project_manager/project_detail.html"
     model = Project
     context_object_name = "project"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['projects'] = Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
+        return context
 
 
 class Projects(LoginRequiredMixin, ListView):
