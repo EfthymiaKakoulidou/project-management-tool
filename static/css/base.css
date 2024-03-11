@@ -7,17 +7,14 @@
     --background : whitesmoke;
     --green : rgb(159, 200, 190);
     --pink : rgb(249, 218, 217);
-    --light_blue : #c4ebef;
     --orange : rgb(244, 190, 172);
     --darkpink : rgb(248, 137, 133);
     --black : rgb(42, 52, 50);
-
 
     /*Utils*/
 
     --small-box-shadow : 1px -1px 7px 0 #00000061;
     --border : 0.5px solid #00000030;
-
 }
 
 a { color: var(--black);
@@ -414,6 +411,7 @@ footer {
     margin-right: 0px;
 }
 
+
 @media only screen and (min-width: 376px) and (max-width:992px) {
 
     .member_profiles{
@@ -537,5 +535,5 @@ footer {
     .alert {
         margin-left:200px
     }
-    
+   
    }
