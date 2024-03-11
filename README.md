@@ -91,8 +91,8 @@ The user stories created in the beginning of the project helped to organize the 
 - As a new site user, I would like to create a project which I will be able to edit or delete, so that I can access it later.
 - As a new site user, I would like to create tasks for my projects which I can edit or delete, so that I can organize my work into smaller segments.
 - As a new site user, I would like to be able to check my tasks in order, so that I can know which one to prioritize.
-- As a new site user, I would like to be able to signout, so that I can feel safe that the information I provided will not be seen by others on this particular computer.
 - As a new site user, I would like to be able to check others' profiles, so that I can choose the right people for the tasks I have created.
+- As a new site user, I would like to be able to signout, so that my information and work are safe.
 
 ### Returning Site Users
 
@@ -107,9 +107,9 @@ The user stories created in the beginning of the project helped to organize the 
 
 ### Site Admin
 
-- As a site administrator, I should be able to sign in, so that I can see all the ntries made.
+- As a site administrator, I should be able to sign in, so that I can see all the entries made.
 - As a site administrator, I should be able to add, edit or delete projects, tasks and profiles so that I can control the information on the site.
-- As a site administrator, I should be able to sign out, so that information is not accessible to others.
+- As a site administrator, I should be able to sign out, so that information is secure.
 
 
 ## Wireframes
@@ -234,7 +234,7 @@ etc.
 
 - **Navigation**
 
-    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left vertically and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages. For mobiled the navigation consists of a drop-down menu with a list of all the actions the user can do.
+    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left vertically and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages. When the user clicks on My Projects then all the projects created by him/her or that he/she has tasks assigned to him/her will appear along with all the tasks of that specific project. Under My Tasks all the tasks assigned to the user will appear. For mobiles the navigation consists of a drop-down menu with a list of all the actions the user can do.
 
 ![screenshot](documentation/feature06.png)
 
@@ -371,7 +371,7 @@ etc.
 - Email notifications
     - It would be very helpful if someone got an email notification when a task is assigned to them so that they know directly their workload.
 - Project templates
-    - In the future when creating a project it ould be helpful to choose a template suited for the specific project. This would save time to the proganization of tasks created.
+    - In the future when creating a project it ould be helpful to choose a template suited for the specific project. This would save time to the oganization of tasks created.
 - Tasks that every profile has concluded
     - It would also be helpful to include in the profile-details a list of tasks that the particular person has done. This way someone can check the kind of experience everybodu has and assign them tasks accordingly.
 
@@ -495,12 +495,6 @@ class Task(models.Model):
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ![screenshot](documentation/gh-projects.png)
 
@@ -735,20 +729,6 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 
 ### Media
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
