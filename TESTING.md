@@ -258,9 +258,9 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Home | About | Contact | etc | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-login.png) | ![screenshot](documentation/browser-chrome-signup.png) | ![screenshot](documentation/browser-chrome-myprojects.png) | ![screenshot](documentation/browser-chrome-mytasks.png) | ![screenshot](documentation/browser-chrome-newproject.png) | ![screenshot](documentation/browser-chrome-myprofileadd.png) | ![screenshot](documentation/browser-chrome-myprofile.png) | ![screenshot](documentation/browser-chrome-profiles.png) | ![screenshot](documentation/browser-chrome-profiledetail.png) | ![screenshot](documentation/browser-chrome-editproject.png) | ![screenshot](documentation/browser-chrome-deleteproject.png) | ![screenshot](documentation/browser-chrome-addtask.png) | ![screenshot](documentation/browser-chrome-edittask.png) | ![screenshot](documentation/browser-chrome-deletetask.png) | ![screenshot](documentation/browser-chrome-editprofile.png) | ![screenshot](documentation/browser-chrome-deleteprofile.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-about.png) | ![screenshot](documentation/browser-chrome-edge.png) | ![screenshot](documentation/browser-edge-etc.png) | Works as expected |
+| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-login.png) | ![screenshot](documentation/browser-chrome-signup.png) |![screenshot](documentation/browser-chrome-signout.png) | ![screenshot](documentation/browser-chrome-myprojects.png) | ![screenshot](documentation/browser-chrome-mytasks.png) | ![screenshot](documentation/browser-chrome-newproject.png) | ![screenshot](documentation/browser-chrome-myprofileadd.png) | ![screenshot](documentation/browser-chrome-myprofile.png) | ![screenshot](documentation/browser-chrome-profiles.png) | ![screenshot](documentation/browser-chrome-profiledetail.png) | ![screenshot](documentation/browser-chrome-editproject.png) | ![screenshot](documentation/browser-chrome-deleteproject.png) | ![screenshot](documentation/browser-chrome-addtask.png) |![screenshot](documentation/browser-chrome-taskdetail.png) | ![screenshot](documentation/browser-chrome-edittask.png) | ![screenshot](documentation/browser-chrome-deletetask.png) | ![screenshot](documentation/browser-chrome-editprofile.png) | ![screenshot](documentation/browser-chrome-deleteprofile.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-login.png) | ![screenshot](documentation/browser-firefox-signup.png) |![screenshot](documentation/browser-firefox-signout.png) | ![screenshot](documentation/browser-firefox-myprojects.png) | ![screenshot](documentation/browser-firefox-mytasks.png) | ![screenshot](documentation/browser-firefox-newproject.png) | ![screenshot](documentation/browser-firefox-myprofileadd.png) | ![screenshot](documentation/browser-firefox-myprofile.png) | ![screenshot](documentation/browser-firefox-profiles.png) | ![screenshot](documentation/browser-firefox-profiledetail.png) | ![screenshot](documentation/browser-firefox-editproject.png) | ![screenshot](documentation/browser-firefox-deleteproject.png) | ![screenshot](documentation/browser-firefox-addtask.png) |![screenshot](documentation/browser-firefox-taskdetail.png) | ![screenshot](documentation/browser-firefox-edittask.png) | ![screenshot](documentation/browser-firefox-deletetask.png) | ![screenshot](documentation/browser-firefox-editprofile.png) | ![screenshot](documentation/browser-firefox-deleteprofile.png) | Works as expected |
+| Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-login.png) | ![screenshot](documentation/browser-edge-signup.png) |![screenshot](documentation/browser-chrome-signout.png) | ![screenshot](documentation/browser-edge-myprojects.png) | ![screenshot](documentation/browser-edge-mytasks.png) | ![screenshot](documentation/browser-edge-newproject.png) | ![screenshot](documentation/browser-edge-myprofileadd.png) | ![screenshot](documentation/browser-edge-myprofile.png) | ![screenshot](documentation/browser-edge-profiles.png) | ![screenshot](documentation/browser-edge-profiledetail.png) | ![screenshot](documentation/browser-edge-editproject.png) | ![screenshot](documentation/browser-edge-deleteproject.png) | ![screenshot](documentation/browser-edge-addtask.png) | ![screenshot](documentation/browser-edge-taskdetail.png) |![screenshot](documentation/browser-edge-edittask.png) | ![screenshot](documentation/browser-edge-deletetask.png) | ![screenshot](documentation/browser-edge-editprofile.png) | ![screenshot](documentation/browser-edge-deleteprofile.png) | Works as expected |
 
 ## Responsiveness
 
@@ -268,10 +268,9 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Home | About | Contact | etc | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-
+| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-login.png) | ![screenshot](documentation/responsive-mobile-signup.png) | ![screenshot](documentation/responsive-mobile-login.png) | ![screenshot](documentation/responsive-mobile-signout.png) |![screenshot](documentation/responsive-mobile-myprojects.png) |![screenshot](documentation/responsive-mobile-mytasks.png) |![screenshot](documentation/responsive-mobile-myprofileadd.png) |![screenshot](documentation/responsive-mobile-myprofile.png) |![screenshot](documentation/responsive-mobile-profiles.png) |![screenshot](documentation/responsive-mobile-profiledetail.png) |![screenshot](documentation/responsive-mobile-editproject.png) |![screenshot](documentation/responsive-mobile-deleteproject.png) |![screenshot](documentation/responsive-mobile-addtask.png) |![screenshot](documentation/responsive-mobile-taskdetail.png) |![screenshot](documentation/responsive-mobile-edittask.png) |![screenshot](documentation/responsive-mobile-deletetask.png) |![screenshot](documentation/responsive-mobile-editprofile.png) |![screenshot](documentation/responsive-mobile-deleteprofile.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-login.png) | ![screenshot](documentation/responsive-tablet-signup.png) | ![screenshot](documentation/responsive-tablet-signout.png) | ![screenshot](documentation/responsive-tablet-myprojects.png) |![screenshot](documentation/responsive-tablet-mytasks.png) |![screenshot](documentation/responsive-tablet-myprofileadd.png) |![screenshot](documentation/responsive-tablet-myprofile.png) |![screenshot](documentation/responsive-tablet-profiles.png) |![screenshot](documentation/responsive-tablet-profiledetail.png) |![screenshot](documentation/responsive-tablet-editproject.png) |![screenshot](documentation/responsive-tablet-deleteproject.png) |![screenshot](documentation/responsive-tablet-addtask.png) |![screenshot](documentation/responsive-tablet-taskdetail.png) |![screenshot](documentation/responsive-tablet-edittask.png) |![screenshot](documentation/responsive-tablet-deletetask.png) |![screenshot](documentation/responsive-tablet-editprofile.png) |![screenshot](documentation/responsive-tablet-deleteprofile.png) | Works as expected |
+| Desktop (DevTools) | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-login.png) | ![screenshot](documentation/responsive-desktop-signup.png) | ![screenshot](documentation/responsive-desktop-signout.png)  ![screenshot](documentation/responsive-desktop-myprojects.png) |![screenshot](documentation/responsive-desktop-mytasks.png) |![screenshot](documentation/responsive-desktop-myprofileadd.png) |![screenshot](documentation/responsive-desktop-myprofile.png) |![screenshot](documentation/responsive-desktop-profiles.png) |![screenshot](documentation/responsive-desktop-profiledetail.png) |![screenshot](documentation/responsive-desktop-editproject.png) |![screenshot](documentation/responsive-desktop-deleteproject.png) |![screenshot](documentation/responsive-desktop-addtask.png) |![screenshot](documentation/responsive-desktop-taskdetail.png) |![screenshot](documentation/responsive-desktop-edittask.png) |![screenshot](documentation/responsive-desktop-deletetask.png) |![screenshot](documentation/responsive-desktop-editprofile.png) |![screenshot](documentation/responsive-desktop-deleteprofile.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -280,10 +279,26 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | no warnings |
+| Login | ![screenshot](documentation/lighthouse-login-mobile.png) | ![screenshot](documentation/lighthouse-login-desktop.png) | no warnings |
+| Signup | ![screenshot](documentation/lighthouse-signup-mobile.png) | ![screenshot](documentation/lighthouse-signup-desktop.png) | no warnings |
+| Signout | ![screenshot](documentation/lighthouse-signout-mobile.png) | ![screenshot](documentation/lighthouse-signout-desktop.png) | no warnings |
+| My Projects | ![screenshot](documentation/lighthouse-myprojects-mobile.png) | ![screenshot](documentation/lighthouse-myprojects-desktop.png) | no warnings |
+| Project details | ![screenshot](documentation/lighthouse-projectdetail-mobile.png) | ![screenshot](documentation/lighthouse-projectdetail-desktop.png) | no warnings |
+| Add Project | ![screenshot](documentation/lighthouse-addproject-mobile.png) | ![screenshot](documentation/lighthouse-addproject-desktop.png) | no warnings |
+| Edit Project | ![screenshot](documentation/lighthouse-editproject-mobile.png) | ![screenshot](documentation/lighthouse-editproject-desktop.png) | no warnings |
+| Delete Project | ![screenshot](documentation/lighthouse-deleteproject-mobile.png) | ![screenshot](documentation/lighthouse-deleteproject-desktop.png) | no warnings |
+| My Tasks | ![screenshot](documentation/lighthouse-mytasks-mobile.png) | ![screenshot](documentation/lighthouse-mytasks-desktop.png) | no warnings |
+| Task details | ![screenshot](documentation/lighthouse-taskdetail-mobile.png) | ![screenshot](documentation/lighthouse-taskdetail-desktop.png) | no warnings |
+| Add Task | ![screenshot](documentation/lighthouse-addtask-mobile.png) | ![screenshot](documentation/lighthouse-addtask-desktop.png) | no warnings |
+| Edit Task | ![screenshot](documentation/lighthouse-edittask-mobile.png) | ![screenshot](documentation/lighthouse-edittask-desktop.png) | no warnings |
+| Update Task Status | ![screenshot](documentation/lighthouse-updatetaskstatus-mobile.png) | ![screenshot](documentation/lighthouse-updatetaskstatus-desktop.png) | no warnings |
+| Delete Task | ![screenshot](documentation/lighthouse-deletetask-mobile.png) | ![screenshot](documentation/lighthouse-deletetask-desktop.png) | no warnings |
+| Profiles | ![screenshot](documentation/lighthouse-profiles-mobile.png) | ![screenshot](documentation/lighthouse-profiles-desktop.png) | no warnings |
+| Profile Details | ![screenshot](documentation/lighthouse-profiledetail-mobile.png) | ![screenshot](documentation/lighthouse-profiledetail-desktop.png) | no warnings |
+| Add Profile | ![screenshot](documentation/lighthouse-addprofile-mobile.png) | ![screenshot](documentation/lighthouse-addprofile-desktop.png) | no warnings |
+| Edit Profile | ![screenshot](documentation/lighthouse-editprofile-mobile.png) | ![screenshot](documentation/lighthouse-editprofile-desktop.png) | no warnings |
+| Delete Profile | ![screenshot](documentation/lighthouse-deleteprofile-mobile.png) | ![screenshot](documentation/lighthouse-deleteprofile-desktop.png) | no warnings |
 
 ## Defensive Programming
 
@@ -345,18 +360,27 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
+| | Signup feature is expected to create a user when the form is filled successfully | Tested the feature filling the form | The feature behaved as expected, and created a user | Test concluded and passed | ![screenshot](documentation/feature01.png) |
+| | Login feature is expected to login an existing user when the user fills the form| Tested the feature by filling the form | The feature behaved as expected, and logged in the user | Test concluded and passed | ![screenshot](documentation/feature02.png) |
+| | Signout feature is expected to logout the user when the user confirms signout| Tested the feature by confirming sign out | The feature behaved as expected, and signed the user out | Test concluded and passed | ![screenshot](documentation/feature02.png) |
+| My Projects | | | | | |
+| | My projects' cards are expected to redirect the user to the project's details when the user clicks on them. | Tested the feature by clicking one of them | The feature behaved as expected and led me to the project's details page | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Project details page is expected to have the edit/delete buttons if the user is the creator of the project | Tested the feature by clicking a project I created | The feature behaved as expected and showed the buttons | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Project details page is expected not to have the edit/delete buttons if the user is not the creator of the project | Tested the feature by clicking a project I did not creat | The feature behaved as expected and did not show the buttons | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Edit Project page is expected to have a filled form with the details of the project for editing the project | Tested the feature by editing the details | The feature behaved as expected and edited the project | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Delete confirmation page is expected to delete the project when the user clicks on confirm | Tested the feature by clicking the button | The feature behaved as expected and deleted the project | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | New Project page is expected to have a form for the creation of a project | Tested the feature by filling the form | The feature behaved as expected and created a project | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Add Task button is expected to add a task to the project associated to it | Tested the feature by clicking the Add Task button| The feature behaved as expected and directed me to the Add Task form| Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Add Task form is expected to add a task to the project associated to it | Tested the feature by filling the form| The feature behaved as expected and created a task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Update status of the task is expected to update the status of this particular task | Tested the feature by changinf the status | The feature behaved as expected and updated status of the task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Edit Task form is expected to edit the task | Tested the feature by editing the details on the form| The feature behaved as expected and edited the task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Task delete confirmation is expected to delete the task when the user clicks the button | Tested the feature by clicking the button to confirm deletion| The feature behaved as expected and deleted the task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | My Profile is expected to lead to the Add Profile form if the user does not have a profile or to the his/hers profile page if he/she have alreadya profile | Tested the feature by clicking on My Profile one time when I had a profile and one time if when I had not| The feature behaved as expected and led me to the respective page| Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Add Profile is expected to add a profile for the user when the user fills the form successfully | Tested the feature by filling the form | The feature behaved as expected and created my profile | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Edit Profile is expected to show the form with the information of the profile to be able to edit it | Tested the feature by editing the information | The feature behaved as expected and edited my profile | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+| | Profile delete confirm is expected to delete the profile if the user confirms it | Tested the feature by clicking on the confirm button | The feature behaved as expected and deleted my profile | Test concluded and passed | ![screenshot](documentation/feature03.png) |
+
+
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
@@ -402,37 +426,26 @@ When in doubt, use the above method instead, and delete the table below.
 | | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
 | repeat for all remaining pages | x | x | x | x |
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## User Story Testing
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to sign up, so that I can enter the site. | ![screenshot](documentation/feature01.png) |
+| As a new site user, I would like to create a project, so that I can start organizing my work. | ![screenshot](documentation/feature02.png) |
+| As a new site user, I would like to create tasks for my projects, so that I can organize them into smaller segments. | ![screenshot](documentation/feature03.png) |
+| As a new site user, I would like to assign tasks to others, so that I can delegate my work. | ![screenshot](documentation/feature03.png) |
+| As a new site user, I would like to create my profile, so that others can see my information. | ![screenshot](documentation/feature03.png) |
+| As a new site user, I would like to sign out, so that my work and my information are secure. | ![screenshot](documentation/feature03.png) |
+| As a returning site user, I would like to login , so that I can have access to my previous work. | ![screenshot](documentation/feature04.png) |
+| As a returning site user, I would like to create new projects and edit or delete me projects, so that I can update the information of my work. | ![screenshot](documentation/feature05.png) |
+| As a returning site user, I would like to create, edit or delete tasks to the projects I have created, so that I can update the information of my work. | ![screenshot](documentation/feature05.png) |
+| As a returning site user, I would like to edit or delete my profile, so that I can update my information. | ![screenshot](documentation/feature05.png) |
+| As a returning site user, I would like to sign out, so that my work and information are secure. | ![screenshot](documentation/feature05.png) |
+
+| As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature07.png) |
+
 
 ## Automated Testing
 
