@@ -13,6 +13,7 @@ from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin)
 import random
 from django.db.models import Q
+from django.db.models import Count
 
 
 class Projectdetail(ProjectsTasksMixin, DetailView):
@@ -21,6 +22,7 @@ class Projectdetail(ProjectsTasksMixin, DetailView):
     template_name = "project_manager/project_detail.html"
     model = Project
     context_object_name = "project"
+  
 
 class Projects(ProjectsTasksMixin, LoginRequiredMixin, ListView):
     """Create List of Projects"""
@@ -30,7 +32,20 @@ class Projects(ProjectsTasksMixin, LoginRequiredMixin, ListView):
     context_object_name = "projects"
     def get_queryset(self):
         return Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        # Get the queryset of projects from the context
+        projects = context['projects']
+        
+        # Annotate each project with the count of done tasks
+        projects_with_done_task_count = projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
+        
+        # Add the annotated queryset to the context
+        context['projects'] = projects_with_done_task_count
+        
+        return context
+  
 class AddProject(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
     """Create project view"""
 
@@ -213,6 +228,7 @@ class EditProfile(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, U
     def get_success_url(self):
         messages.success(self.request, "Profile successfully edited.")
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
+
 
 class Home(TemplateView):
     template_name = 'project_manager/home.html'

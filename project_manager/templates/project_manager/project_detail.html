@@ -16,18 +16,21 @@
         {% endif %}   
     </div>
     </div>
+    
     <div class="project_container">
         <div class="description p-3">
             <h2>Project-description</h2>
             <p>{{project.description|safe}}</p>
         </div>
-        <div class="description p-3">
+        
+        <div class="description p-3" >
             <p class="small-text">Deadline : {{project.deadline|date:"Y-m-d"}}</p>
         </div>
         
         <div class="description p-3">
             <h3 class="titles">{{project.title}}'s tasks:</h3>
             <a class='btn btn-primary' href="{% url 'add_task' project.id %}">Add Task</a>
+            
 
                 {% for task in project.task_set.all %}
                 {% if task.status == 'To do' %}
