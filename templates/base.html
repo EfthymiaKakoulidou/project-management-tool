@@ -1,5 +1,5 @@
 {% load static %}
-{% url 'home' as home_view %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +15,9 @@
     {% endblock %}
 
     <title>Project Management Tool - {% block title %} {% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
     <link rel="stylesheet" href="{% static 'css/base.css' %}"
-    
+   
 </head>
 <body>
     {% include 'includes/header.html' %}

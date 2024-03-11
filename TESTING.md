@@ -46,11 +46,23 @@ Sample HTML code validation documentation (tables are extremely helpful!):
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fproject-management-tool%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fproject-management-tool%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fproject-management-tool%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Login | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fproject-management-tool%2Fcontact.html) | ![screenshot](documentation/html-validation-login.png) | obsolete iframe warnings |
+| Signup | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fproject-management-tool%2Fquiz.html) | ![screenshot](documentation/html-validation-signup.png) | Pass: No Errors |
+| My Projects | n/a | ![screenshot](documentation/html-validation-myprojects.png) | Duplicate IDs found, and fixed |
+| My Tasks | n/a | ![screenshot](documentation/html-validation-mytasks.png) | Pass: No Errors |
+| New Project | n/a | ![screenshot](documentation/html-validation-newproject.png) | Pass: No Errors |
+| My Profile Add | n/a | ![screenshot](documentation/html-validation-addprofile.png) | Pass: No Errors |
+| My Profile | n/a | ![screenshot](documentation/html-validation-profiledetail.png) | Pass: No Errors |
+| Members | n/a | ![screenshot](documentation/html-validation-profiles.png) | Pass: No Errors |
+| Project details | n/a | ![screenshot](documentation/html-validation-projectdetail.png) | Pass: No Errors |
+| Edit Project | n/a | ![screenshot](documentation/html-validation-editproject.png) | Pass: No Errors |
+| Delete Project | n/a | ![screenshot](documentation/html-validation-deleteproject.png) | Pass: No Errors |
+| Task detail | n/a | ![screenshot](documentation/html-validation-taskdetail.png) | Pass: No Errors |
+| Edit Task | n/a | ![screenshot](documentation/html-validation-edittask.png) | Pass: No Errors |
+| Delete Task | n/a | ![screenshot](documentation/html-validation-deletetask.png) | Pass: No Errors |
+| Update Status | n/a | ![screenshot](documentation/html-validation-updatestatus.png) | Pass: No Errors |
+| Profiles details | n/a | ![screenshot](documentation/html-validation-profiles.png) | Pass: No Errors |
+
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
@@ -246,7 +258,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Home | About | Contact | etc | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-about.png) | ![screenshot](documentation/browser-chrome-contact.png) | ![screenshot](documentation/browser-chrome-etc.png) | Works as expected |
+| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-login.png) | ![screenshot](documentation/browser-chrome-signup.png) | ![screenshot](documentation/browser-chrome-myprojects.png) | ![screenshot](documentation/browser-chrome-mytasks.png) | ![screenshot](documentation/browser-chrome-newproject.png) | ![screenshot](documentation/browser-chrome-myprofileadd.png) | ![screenshot](documentation/browser-chrome-myprofile.png) | ![screenshot](documentation/browser-chrome-profiles.png) | ![screenshot](documentation/browser-chrome-profiledetail.png) | ![screenshot](documentation/browser-chrome-editproject.png) | ![screenshot](documentation/browser-chrome-deleteproject.png) | ![screenshot](documentation/browser-chrome-addtask.png) | ![screenshot](documentation/browser-chrome-edittask.png) | ![screenshot](documentation/browser-chrome-deletetask.png) | ![screenshot](documentation/browser-chrome-editprofile.png) | ![screenshot](documentation/browser-chrome-deleteprofile.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
 | Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-about.png) | ![screenshot](documentation/browser-chrome-edge.png) | ![screenshot](documentation/browser-edge-etc.png) | Works as expected |
 
