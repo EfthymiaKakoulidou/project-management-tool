@@ -63,14 +63,25 @@
 				</li>
 
 				{% endif %}
-			</ul>
-		</div>
-
+			</ul></div>
+			<form class="form-inline search">
+		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		{% csrf_token %}
+		<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+	  </form>
+	  <ul>
+		{% for project in form.results %}
+			<li><a href="{% url 'project_detail' project.id %}">{{ project.title }}</a></li>
+		{% empty %}
+			<li>No results found.</li>
+		{% endfor %}
+	</ul>
 	</nav>
 	<!---Navigation Items for desktop-->
+	
 	{% if user.is_authenticated %}
 	<div class="vertical-nav">
-		<ul class="vertical-nav" style="overflow: auto;">
+		<ul class="vertical-nav" style="overflow-y: auto;">
 			<li style="font-size: larger; font-weight:bold; list-style: none;">Overview :</li>
 			
 				<li class="nav-item">
@@ -120,7 +131,9 @@
 				</li>
 			</li>
 		</ul>
+		
 	</div>
 	{% endif%}
+	
 
 </header>
