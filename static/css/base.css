@@ -84,7 +84,30 @@ footer {
     justify-content: center;
     align-items: center;
     border-top: var(--border);
+    height: 70px;
 }
+
+.footer {
+    display: flex;
+    flex-grow: 1;
+    justify-content:right;
+    padding:15px;
+    align-items: center;
+}
+
+.footercontent {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    font-size: 15px;
+    justify-content: end;
+}
+
+.fa-square-instagram, .fa-linkedin, .fa-github {
+    margin:10px;
+    font-size: 30px;
+}
+
 
 /* Header */
 
