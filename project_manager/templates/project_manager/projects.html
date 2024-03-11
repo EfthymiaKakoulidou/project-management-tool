@@ -16,10 +16,10 @@
               <p class="card-title" style="font-size: smaller;">Project Deadline : {{project.deadline|date:"Y-m-d"}}</p>
               <div>
               {% if project.done_task_count == project.task_set.count %}
-                <div class="alltasksdone">Project done</div>
+                <div class="alltasksdone"><h5>Project done</h5></div>
                 {% else %}
-                <div class="projectinprogress">{{ project.done_task_count }} out of {{ project.task_set.count }} tasks are done</div>
-              {% endif %}</div>
+                <div class="projectinprogress"><h5>{{ project.done_task_count }} out of {{ project.task_set.count }} tasks are done</div>
+              {% endif %}</h5></div>
             </div>
           </div>
     </a>
