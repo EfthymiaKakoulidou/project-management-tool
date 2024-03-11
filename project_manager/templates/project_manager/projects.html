@@ -8,19 +8,18 @@
 <div class="container d-flex flex-row flex-wrap justify-content-center align-items-center">
   
     {% for project in projects %}
-    {% if project.done_task_count == project.task_set.count %}
-          <span style="color: green;">All tasks are done</span>
-        {% else %}
-          <span style="color: red;">{{ project.done_task_count }} out of {{ project.task_set.count }} tasks are done</span>
-        {% endif %}
+    
     <a class='projects' href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}">
         <div class="card m-3" style="width: 20rem; height: 10rem;">
-            <div class="text-center card-body">
+            <div class="text-center card-body" style="display: flex; flex-direction: column;">
               <h4 class="card-title">{{project.title}}</h4>
               <p class="card-title" style="font-size: smaller;">Project Deadline : {{project.deadline|date:"Y-m-d"}}</p>
-              {% if done_tasks.count == tasks.count %}
-              <div>This project is done</div>
-              {% endif %}
+              <div>
+              {% if project.done_task_count == project.task_set.count %}
+                <div class="alltasksdone">Project done</div>
+                {% else %}
+                <div class="projectinprogress">{{ project.done_task_count }} out of {{ project.task_set.count }} tasks are done</div>
+              {% endif %}</div>
             </div>
           </div>
     </a>

@@ -34,16 +34,9 @@ class Projects(ProjectsTasksMixin, LoginRequiredMixin, ListView):
         return Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        
-        # Get the queryset of projects from the context
         projects = context['projects']
-        
-        # Annotate each project with the count of done tasks
         projects_with_done_task_count = projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
-        
-        # Add the annotated queryset to the context
         context['projects'] = projects_with_done_task_count
-        
         return context
   
 class AddProject(ProjectsTasksMixin, LoginRequiredMixin, CreateView):

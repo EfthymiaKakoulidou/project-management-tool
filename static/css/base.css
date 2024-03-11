@@ -314,6 +314,17 @@ footer {
     height: 33vh;
 }
 
+.alltasksdone {
+   background-color: lightgrey; 
+   color: gray;
+   width: 100%;
+   border-radius: 10px;
+}
+
+.projectinprogress {
+    background-color: rgb(226,215,128);
+    border-radius: 10px;
+}
 
 .profiles-container {
     flex-direction: column;
