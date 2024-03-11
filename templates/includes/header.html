@@ -2,11 +2,11 @@
 
 <header>
 
-	<nav class="mobilenav navbar navbar-expand-lg navbar-light" >
+	<nav class="mobilenav navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 40px;"><img
 				src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
 		<button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse"
-			data-target="#navbarNavmydropdown" aria-controls="navbarNavmydropdown" aria-expanded="false"
+			data-target="#navbarNavdropdown" aria-controls="navbarNavdropdown" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span></button>
 
@@ -72,52 +72,54 @@
 	<div class="vertical-nav">
 		<ul class="vertical-nav" style="overflow: auto;">
 			<li style="font-size: larger; font-weight:bold; list-style: none;">Overview :</li>
-			<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:160px;">
-		
-			<li class="nav-item">
-				<a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}"
-					role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
-					My Projects
-				</a>
-			</li>
-			{% for project in projects %}
-			<li style="margin-left: 20px; font-size: small;">
-				<a href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}" class="navprojects">
-					{{project.title}}
-				</a>
-				{% for task in project.task_set.all %}
-			<li style="margin-left: 40px; font-size: smaller;">
-				<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.title}}" class="navtasks">
-					{{task.title}}
-				</a></li>
 			
-			{% endfor %}
-			</li>
-			{% endfor%}
+				<li class="nav-item">
+					<a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}"
+						role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
+						My Projects
+					</a>
+				</li>
+					{% for project in projects %}
+				<li style="margin-left: 20px; font-size: small;">
+					<a href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}"
+						class="navprojects">
+						{{project.title}}
+					</a>
+					{% for task in project.task_set.all %}
+				<li style="margin-left: 40px; font-size: smaller;">
+					<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.title}}"
+						class="navtasks">
+						{{task.title}}
+					</a></li>
 
-			<li class="nav-item">
-				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}"
-					role="button" aria-haspopup="true" aria-expanded="false">
-					My Tasks
-				</a>
-				{% for task in tasks %}
-			<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}"
-					aria-label="Click to view {{task.title}}">
-					{{task.title}}
-				</a></li>
-			{% endfor %}
+				{% endfor %}
+			</li>
+					{% endfor%}
 
-			<li class="nav-item">
-				<a class="nav-link" href="{% url 'add_project' %}">New Project</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href=" {% url 'profiles' %}">Members</a>
-			</li>
+				<li class="nav-item">
+					<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}"
+						role="button" aria-haspopup="true" aria-expanded="false">
+						My Tasks
+					</a></li>
+					{% for task in tasks %}
+				<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}"
+						aria-label="Click to view {{task.title}}">
+						{{task.title}}
+					</a>
+				</li>
+					{% endfor %}
+
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'add_project' %}">New Project</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href=" {% url 'profiles' %}">Members</a>
+				</li>
 		</ul>
-	</div>
+	
 	{% endif%}
 
 </header>
