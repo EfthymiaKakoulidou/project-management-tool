@@ -102,7 +102,7 @@
 				</a>
 				{% for task in tasks %}
 			<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}"
-					aria-label="Click to view {{project.title}}">
+					aria-label="Click to view {{task.title}}">
 					{{task.title}}
 				</a></li>
 			{% endfor %}
@@ -114,8 +114,7 @@
 				<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href=" {% url 'profiles' %}">
-					Members</a>
+				<a class="nav-link" href=" {% url 'profiles' %}">Members</a>
 			</li>
 		</ul>
 	</div>
