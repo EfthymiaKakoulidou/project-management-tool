@@ -3,8 +3,9 @@ from django.urls import reverse
 from .views import (
     AddProject, Projects, Projectdetail, ProfileDetail,
     DeleteProject, EditProject, AddProfile, AddTask, Profiles,
-    EditProfile, DeleteProfile, EditTask, DeleteTask, Tasks, Home, EditTaskStatus
+    EditProfile, DeleteProfile, EditTask, DeleteTask, Tasks, Home, EditTaskStatus, search_results_view
 )
+
 
 urlpatterns = [
     path('', Home.as_view(), name='home'),
@@ -23,5 +24,6 @@ urlpatterns = [
     path("edit_task/<slug:pk>", EditTask.as_view(), name="edit_task"),
     path("my_tasks", Tasks.as_view(), name="my_tasks"),
     path("task/<slug:pk>", EditTaskStatus.as_view(), name="edit_task_status"),
+    path('search/', search_results_view, name='search_results'),
 ]
     

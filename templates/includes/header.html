@@ -64,17 +64,19 @@
 
 				{% endif %}
 			</ul></div>
-			<form class="form-inline search">
-		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-		{% csrf_token %}
-		<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-	  </form>
-	  <ul>
-		{% for project in form.results %}
-			<li><a href="{% url 'project_detail' project.id %}">{{ project.title }}</a></li>
-		{% empty %}
-			<li>No results found.</li>
-		{% endfor %}
+			<form class="form-inline search" method="GET" action="{% url 'search_results' %}">
+				{% csrf_token %}
+				{{ search_form.as_p }}
+				<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</form>
+			
+			{% if search_results %}
+				<ul>
+					{% for item in search_results %}
+						<li>{{ item.title }}</li> <!-- Adjust according to your model structure -->
+					{% endfor %}
+				</ul>
+			{% endif %}
 	</ul>
 	</nav>
 	<!---Navigation Items for desktop-->
