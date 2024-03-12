@@ -6,9 +6,11 @@ from .models import Project, Task, Profile
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ("title", "user", "deadline")
 
+
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('project', "title", 'user', "deadline","status")
+    list_display = ('project', "title", 'user', "deadline", "status")
+
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):

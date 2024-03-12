@@ -15,9 +15,10 @@ class ProjectForm(forms.ModelForm):
 
     labels = {"title": "Project title", "description": "Description"}
 
+
 class TaskForm(forms.ModelForm):
     """form to create a task"""
-   
+
     class Meta:
         model = Task
         fields = ["title", "description", "deadline", 'assigned_to']
@@ -25,9 +26,10 @@ class TaskForm(forms.ModelForm):
             'deadline': forms.DateInput(attrs={'type': 'date'})
         }
 
+
 class TaskFormStatus(forms.ModelForm):
     """form with just status field"""
-   
+
     class Meta:
         model = Task
         fields = ['status']
@@ -35,8 +37,8 @@ class TaskFormStatus(forms.ModelForm):
 
 class ProfileForm(forms.ModelForm):
     """form to create profile"""
-   
+
     class Meta:
         model = Profile
-        fields = ['first_name', "last_name",'featured_image', 'job_title', "bio"]
-
+        fields = ['first_name', "last_name , 'featured_image',
+        'job_title', "bio"]

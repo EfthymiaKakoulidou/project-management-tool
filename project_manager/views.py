@@ -1,5 +1,5 @@
 from django.views.generic import (
-    CreateView, ListView, DetailView, DeleteView, UpdateView, TemplateView, View
+    CreateView, ListView, DetailView, DeleteView, UpdateView, TemplateView
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
@@ -23,6 +23,7 @@ class Projectdetail(ProjectsTasksMixin, LoginRequiredMixin, DetailView):
     model = Project
     context_object_name = "project"
 
+
 class Projects(LoginRequiredMixin, ListView):
     """Create List of Projects"""
 
@@ -33,9 +34,11 @@ class Projects(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projects = context['projects']
-        projects_with_done_task_count = projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
+        projects_with_done_task_count =
+            projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
         context['projects'] = projects_with_done_task_count
         return context
+
     def get_queryset(self, **kwargs):
         query = self.request.GET.get('q')
         user = self.request.user
@@ -53,6 +56,7 @@ class Projects(LoginRequiredMixin, ListView):
 
         return projects
 
+
 class AddProject(LoginRequiredMixin, CreateView):
     """Create project view"""
 
@@ -69,13 +73,16 @@ class AddProject(LoginRequiredMixin, CreateView):
     def get_success_url(self):
         return reverse_lazy('project_detail', kwargs={'pk': self.object.pk})
 
+
 class Tasks(ProjectsTasksMixin, LoginRequiredMixin, ListView):
     """Create List of Tasks"""
     template_name = "project_manager/my_tasks.html"
     model = Task
     context_object_name = "tasks"
     def get_queryset(self):
-        return Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
+        return
+        Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
+
 
 class AddTask(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
     """Create task view"""
@@ -90,7 +97,7 @@ class AddTask(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
         form.instance.project = project
 
         if project.deadline < form.instance.deadline:
-            messages.error(self.request, "Task deadline cannot be after project deadline.")
+
             return redirect('add_task', project_id=project.id)
 
         response = super().form_valid(form)
@@ -109,20 +116,25 @@ class AddTask(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
         return reverse_lazy('project_detail', kwargs={'pk': project_pk})
 
 
-class EditTask(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditTask(
+    ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView
+        ):
     """Edit Task"""
     template_name = 'project_manager/edit_task.html'
     model = Task
     form_class = TaskForm
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         task_id = self.object.pk
         task = get_object_or_404(Task, pk=task_id)
         context['project'] = get_object_or_404(Project, pk=task.project.id)
         return context
+
     def test_func(self):
         task = self.get_object()
         return self.request.user == task.user
+
     def get_success_url(self):
         messages.success(self.request, "Task successfully edited.")
         return reverse_lazy('edit_task_status', kwargs={'pk': self.object.pk})
@@ -139,10 +151,15 @@ class EditTaskStatus(ProjectsTasksMixin, UpdateView):
 
     def test_func(self):
         task = self.get_object()
-        return self.request.user == task.user or self.request.user == task.assigned_to
+        return
+        self.request.user == task.user or self.request.user == task.assigned_to
 
-class DeleteTask(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+
+class DeleteTask(
+    ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView
+        ):
     """Delete Task"""
+
     model = Task
     success_url = "project_manager/project_detail/"
 
@@ -154,27 +171,38 @@ class DeleteTask(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, De
         messages.success(self.request, "Task successfully deleted.")
         return reverse_lazy('project_detail', kwargs={'pk': task.project.pk})
 
-class DeleteProject(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+
+class DeleteProject(
+    ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView
+        ):
     """Delete Project"""
     model = Project
+
     def test_func(self):
         return self.request.user == self.get_object().user
+
     def get_success_url(self):
         messages.success(self.request, "Project successfully deleted.")
         return reverse_lazy('projects')
 
 
-class EditProject(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditProject(
+    ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView
+        ):
     """Edit Project"""
+
     template_name = 'project_manager/edit_project.html'
     model = Project
     success_url = "/project_detail/"
     form_class = ProjectForm
+
     def test_func(self):
         return self.request.user == self.get_object().user
+
     def get_success_url(self):
         messages.success(self.request, "Project successfully edited.")
         return reverse_lazy('project_detail', kwargs={'pk': self.object.pk})
+
 
 class ProfileDetail(DetailView):
     """Creates profile detail"""
@@ -194,6 +222,7 @@ class Profiles(ListView):
     
 class AddProfile(LoginRequiredMixin, CreateView):
     """Profiles"""
+
     template_name = "project_manager/add_profile.html"
     model = Profile
     form_class = ProfileForm
@@ -205,7 +234,7 @@ class AddProfile(LoginRequiredMixin, CreateView):
             return redirect('profile_detail', pk=user_profile.pk)
         else:
             return super().get(request, *args, **kwargs)
-    
+
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddProfile, self).form_valid(form)
@@ -214,11 +243,15 @@ class AddProfile(LoginRequiredMixin, CreateView):
         messages.success(self.request, "Profile successfully added.")
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
+
 class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Profile"""
+
     model = Profile
+
     def test_func(self):
         return self.request.user == self.get_object().user
+
     def get_success_url(self):
         messages.success(self.request, "Profile successfully deleted.")
         return reverse_lazy('profiles')
@@ -226,9 +259,11 @@ class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Profile"""
+
     template_name = 'project_manager/edit_profile.html'
     model = Profile
     form_class = ProfileForm
+
     def test_func(self):
         return self.request.user == self.get_object().user
    
@@ -239,7 +274,7 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class Home(TemplateView):
     template_name = 'project_manager/home.html'
-    
+
     def get_success_url(self):
         return reverse_lazy('home')
 

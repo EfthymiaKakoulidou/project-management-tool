@@ -23,5 +23,5 @@ urlpatterns = [
     path("edit_task/<slug:pk>", EditTask.as_view(), name="edit_task"),
     path("my_tasks", Tasks.as_view(), name="my_tasks"),
     path("task/<slug:pk>", EditTaskStatus.as_view(), name="edit_task_status"),
-]
+    ]
     
