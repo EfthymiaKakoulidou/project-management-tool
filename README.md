@@ -129,6 +129,12 @@ Project details
 
 ![screenshot](documentation/feature06.png)
 
+- **Search bar**
+
+    - in the header of the page there is also a search bar that searches by the project's name. If the user enters a project name that is correct then he/she is redirected into the My projects page but will see just the project he/she searched for. This feature makes it easier for the user to isolate just the project he/she is interested in without having to scroll the side/nav/bar and find it.
+
+![screenshot](documentation/feature065.png)
+
 - **My projects**
 
     - This pages contains a collection of the projects that the user has created or has a task assigned to him/her so that the user can easily see all the projects that involve him/her. The projects' information provided here is just the name of the project and its deadline so that user can organize his/her work.
@@ -178,7 +184,6 @@ Project details
     - If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.) and the task appears both under the project name and the My tasks section of the vertical navigation bar.
     - In all cases when a task appears in the vertical navigation it is a link leading to the task's detail page.
 
-
 ![screenshot](documentation/feature13.png)
 ![screenshot](documentation/feature131.png)
 ![screenshot](documentation/feature132.png)
@@ -195,7 +200,7 @@ Project details
 
 - **Edit or Delete Task**
 
-    - When the task is created by the user the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. If the form is sublited successfully the user is redirected the task-details page. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-details page. If the user changes his/her mind about editing the task then he/she always has the side navigation bar that informs him/her about the hierarchy of the content of the page and can navigate from there to the page he/she wants.
+    - When the task is created by the user, the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. If the form is sublited successfully the user is redirected the task-details page. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-details page. If the user changes his/her mind about editing the task then he/she always has the side navigation bar that informs him/her about the hierarchy of the content of the page and can navigate from there to the page he/she wants.
 
 ![screenshot](documentation/feature14.png)
 ![screenshot](documentation/feature141.png)
@@ -258,13 +263,13 @@ Project details
 ### Future Features
 
 - Groups
-    - In the furute it would be helpful to create groups of profiles that work on a project so that when a task is created it could only be assigned to team members. This way I could narrow down the pool of profiles to make an even better choice about who is going to work on a specific task.
+    - In the future it would be helpful to create groups of profiles that work on a project so that when a task is created it could only be assigned to team members. This way I could narrow down the pool of profiles to make an even better choice about who is going to work on a specific task.
 - Email notifications
     - It would be very helpful if someone got an email notification when a task is assigned to them so that they know directly their workload.
 - Project templates
     - In the future when creating a project it ould be helpful to choose a template suited for the specific project. This would save time to the oganization of tasks created.
 - Tasks that every profile has concluded
-    - It would also be helpful to include in the profile-details a list of tasks that the particular person has done. This way someone can check the kind of experience everybodu has and assign them tasks accordingly.
+    - It would also be helpful to include in the profile-details a list of tasks that the particular person has done. This way someone can check the kind of experience everybody has and assign them tasks accordingly.
 
 ## Tools & Technologies Used
 
@@ -426,16 +431,6 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-**IMPORTANT:**
-
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 The live deployed application can be found deployed on [Heroku](https://project-management-tool-70101b30ec1e.herokuapp.com).
 
 ### ElephantSQL Database
@@ -577,15 +572,12 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+There are no differences between the local site and the deployed.
 
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Credits
 
-Though I did not get any code this tutorial helped me structure me project:
+Though I did not get any code from this tutorial it helped me structure me project:
 https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
 
 ### Content
