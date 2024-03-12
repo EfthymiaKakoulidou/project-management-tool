@@ -273,7 +273,7 @@ footer {
     font-size: small;
     color: var(--black);
     height: 50vh;
-    width: 90vw;
+    width: 70vw;
 }
 
 .btn-primary {
@@ -490,9 +490,6 @@ footer {
         display:block;
     }
  
-    .motivation {
-        margin-left: 150px;
-    }
     
     .tasks {
         height: 50px;
