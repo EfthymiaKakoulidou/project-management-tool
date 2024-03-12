@@ -16,21 +16,22 @@ from django.db.models import Q
 from django.db.models import Count
 
 
-class Projectdetail(ProjectsTasksMixin, DetailView):
+class Projectdetail(ProjectsTasksMixin, LoginRequiredMixin, DetailView):
     """Creates project detail"""
 
     template_name = "project_manager/project_detail.html"
     model = Project
     context_object_name = "project"
-  
 
-class Projects(ListView):
+class Projects(LoginRequiredMixin, ListView):
     """Create List of Projects"""
 
     template_name = "project_manager/projects.html"
     model = Project
     context_object_name = "projects"
-  
+    def get_queryset(self):
+        return Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projects = context['projects']
@@ -52,8 +53,7 @@ class Projects(ListView):
         ).distinct()
         return queryset
 
-  
-class AddProject(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
+class AddProject(LoginRequiredMixin, CreateView):
     """Create project view"""
 
     template_name = "project_manager/add_project.html"
@@ -176,7 +176,7 @@ class EditProject(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, U
         messages.success(self.request, "Project successfully edited.")
         return reverse_lazy('project_detail', kwargs={'pk': self.object.pk})
 
-class ProfileDetail(ProjectsTasksMixin, DetailView):
+class ProfileDetail(DetailView):
     """Creates profile detail"""
 
     template_name = "project_manager/profile_detail.html"
@@ -184,7 +184,7 @@ class ProfileDetail(ProjectsTasksMixin, DetailView):
     context_object_name = "profile"
 
 
-class Profiles(ProjectsTasksMixin, ListView):
+class Profiles(ListView):
     """Create List of Projects"""
 
     template_name = "project_manager/profiles.html"
@@ -192,7 +192,7 @@ class Profiles(ProjectsTasksMixin, ListView):
     context_object_name = "profiles"
 
     
-class AddProfile(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
+class AddProfile(LoginRequiredMixin, CreateView):
     """Profiles"""
     template_name = "project_manager/add_profile.html"
     model = Profile
@@ -214,7 +214,7 @@ class AddProfile(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
         messages.success(self.request, "Profile successfully added.")
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
-class DeleteProfile(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete Profile"""
     model = Profile
     def test_func(self):
@@ -224,7 +224,7 @@ class DeleteProfile(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin,
         return reverse_lazy('profiles')
 
 
-class EditProfile(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """Edit Profile"""
     template_name = 'project_manager/edit_profile.html'
     model = Profile
@@ -237,7 +237,7 @@ class EditProfile(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, U
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
 
-class Home(ProjectsTasksMixin,TemplateView):
+class Home(TemplateView):
     template_name = 'project_manager/home.html'
     
     def get_success_url(self):
