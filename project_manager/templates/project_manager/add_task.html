@@ -26,5 +26,9 @@
     let maxDate = deadline.toISOString().substring(0,10);
     document.getElementById('id_deadline').setAttribute('max', maxDate);
 </script>
-
+<script>
+    let now = new Date();
+    let minDate = now.toISOString().substring(0,10);
+    document.getElementById('id_deadline').setAttribute('min', minDate);
+</script>
 {% endblock %}
