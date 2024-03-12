@@ -1,10 +1,10 @@
 from django.views.generic import (
-    CreateView, ListView, DetailView, DeleteView, UpdateView, TemplateView
+    CreateView, ListView, DetailView, DeleteView, UpdateView, TemplateView, View
 )
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Project
 from .models import Task, Profile, ProjectsTasksMixin
-from .forms import ProjectForm, TaskForm, ProfileForm, TaskFormStatus, SearchForm
+from .forms import ProjectForm, TaskForm, ProfileForm, TaskFormStatus
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -223,7 +223,7 @@ class EditProfile(ProjectsTasksMixin, LoginRequiredMixin, UserPassesTestMixin, U
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
 
 
-class Home(TemplateView):
+class Home(ProjectsTasksMixin,TemplateView):
     template_name = 'project_manager/home.html'
     
     def get_success_url(self):
@@ -238,13 +238,3 @@ class Home(TemplateView):
         random_motivation = random.choice(motivational_quotes)
         context['random_motivation'] = random_motivation
         return context
-
-from django.shortcuts import render
-from .forms import SearchForm
-
-def search_results_view(request):
-    form = SearchForm(request.GET)
-    context = {
-        'form': form
-    }
-    return render(request, 'search_results.html', context)

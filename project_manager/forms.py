@@ -40,5 +40,3 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ['first_name', "last_name",'featured_image', 'job_title', "bio"]
 
-class SearchForm(forms.Form):
-    query = forms.CharField(label='', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Search'}))
