@@ -18,25 +18,25 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| project_manager | add_profile.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | add_project.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | add_task.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | edit_profile.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | edit_project.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | edit_task.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | edit_task_status.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | home.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | my_tasks.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | profile_detail.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | profiles.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| project_manager | add_profile.html | ![screenshot](documentation/validation/addprofile.png) | |
+| project_manager | add_project.html | ![screenshot](documentation/validation/addproject.png) | |
+| project_manager | add_task.html | ![screenshot](documentation/validation/addtask.png) | |
+| project_manager | edit_profile.html | ![screenshot](documentation/validation/editprofile.png) | |
+| project_manager | edit_project.html | ![screenshot](documentation/validation/editproject.png) | |
+| project_manager | edit_task.html | ![screenshot](documentation/validation/edittask.png) | |
+| project_manager | edit_task_status.html | ![screenshot](documentation/validation/edittaskstatus.png) | |
+| project_manager | home.html | ![screenshot](documentation/validation/home.png) | |
+| project_manager | my_tasks.html | ![screenshot](documentation/validation/mytasks.png) | |
+| project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/profileconfirmdelete.png) | |
+| project_manager | profile_detail.html | ![screenshot](documentation/validation/profiledetail.png) | |
+| project_manager | profiles.html | ![screenshot](documentation/validation/profiles.png) | |
+| project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/projectconfirmdelete.png) | |
 | project_manager | project_detail.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | projects.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | task_detail.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | 403.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| project_manager | projects.html | ![screenshot](documentation/validation/projectdetail.png) | |
+| project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/taskconfirmdelete.png) | |
+| project_manager | task_detail.html | ![screenshot](documentation/validation/taskdetail.png) | |
+| templates | 403.html | ![screenshot](documentation/validation/403.png) | |
+| templates | base.html | ![screenshot](documentation/validation/base.png) | |
 
             
 ### CSS
@@ -45,7 +45,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | base.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| static | base.css | ![screenshot](documentation/validation/css.png) | |
 
             
 ### JavaScript
@@ -54,7 +54,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | script.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| static | script.js | ![screenshot](documentation/validation/script.png) | |
 
             
 ### Python
@@ -63,14 +63,14 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/manage.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| my_project | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/my_project/settings.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| my_project | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/my_project/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| project_manager | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/manage.py) | ![screenshot](documentation/validation/manage.png) | |
+| my_project | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/my_project/settings.py) | ![screenshot](documentation/validation/settings.png) | |
+| my_project | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/my_project/urls.py) | ![screenshot](documentation/validation/myprojecturls.png) | |
+| project_manager | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/admin.py) | ![screenshot](documentation/validation/admin.png) | |
+| project_manager | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/forms.py) | ![screenshot](documentation/validation/forms.png) | |
+| project_manager | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/models.py) | ![screenshot](documentation/validation/models.png) | |
+| project_manager | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/urls.py) | ![screenshot](documentation/validation/projectmanagerurls.png) | |
+| project_manager | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/views.py) | ![screenshot](documentation/validation/views.png) | |
 
 
 ## Browser Compatibility
@@ -130,69 +130,23 @@ Defensive programming was manually tested with the below user acceptance testing
 | Home | | | | | |
 | | Signup feature is expected to create a user when the form is filled successfully | Tested the feature filling the form | The feature behaved as expected, and created a user | Test concluded and passed | ![screenshot](documentation/feature01.png) |
 | | Login feature is expected to login an existing user when the user fills the form| Tested the feature by filling the form | The feature behaved as expected, and logged in the user | Test concluded and passed | ![screenshot](documentation/feature02.png) |
-| | Signout feature is expected to logout the user when the user confirms signout| Tested the feature by confirming sign out | The feature behaved as expected, and signed the user out | Test concluded and passed | ![screenshot](documentation/feature02.png) |
+| | Signout feature is expected to logout the user when the user confirms signout| Tested the feature by confirming sign out | The feature behaved as expected, and signed the user out | Test concluded and passed | ![screenshot](documentation/feature03.png) |
 | My Projects | | | | | |
-| | My projects' cards are expected to redirect the user to the project's details when the user clicks on them. | Tested the feature by clicking one of them | The feature behaved as expected and led me to the project's details page | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Project details page is expected to have the edit/delete buttons if the user is the creator of the project | Tested the feature by clicking a project I created | The feature behaved as expected and showed the buttons | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Project details page is expected not to have the edit/delete buttons if the user is not the creator of the project | Tested the feature by clicking a project I did not creat | The feature behaved as expected and did not show the buttons | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Edit Project page is expected to have a filled form with the details of the project for editing the project | Tested the feature by editing the details | The feature behaved as expected and edited the project | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Delete confirmation page is expected to delete the project when the user clicks on confirm | Tested the feature by clicking the button | The feature behaved as expected and deleted the project | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | New Project page is expected to have a form for the creation of a project | Tested the feature by filling the form | The feature behaved as expected and created a project | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Add Task button is expected to add a task to the project associated to it | Tested the feature by clicking the Add Task button| The feature behaved as expected and directed me to the Add Task form| Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Add Task form is expected to add a task to the project associated to it | Tested the feature by filling the form| The feature behaved as expected and created a task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Update status of the task is expected to update the status of this particular task | Tested the feature by changinf the status | The feature behaved as expected and updated status of the task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Edit Task form is expected to edit the task | Tested the feature by editing the details on the form| The feature behaved as expected and edited the task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Task delete confirmation is expected to delete the task when the user clicks the button | Tested the feature by clicking the button to confirm deletion| The feature behaved as expected and deleted the task| Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | My Profile is expected to lead to the Add Profile form if the user does not have a profile or to the his/hers profile page if he/she have alreadya profile | Tested the feature by clicking on My Profile one time when I had a profile and one time if when I had not| The feature behaved as expected and led me to the respective page| Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Add Profile is expected to add a profile for the user when the user fills the form successfully | Tested the feature by filling the form | The feature behaved as expected and created my profile | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Edit Profile is expected to show the form with the information of the profile to be able to edit it | Tested the feature by editing the information | The feature behaved as expected and edited my profile | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Profile delete confirm is expected to delete the profile if the user confirms it | Tested the feature by clicking on the confirm button | The feature behaved as expected and deleted my profile | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-
-
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
-
-When in doubt, use the above method instead, and delete the table below.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| Home | | | | |
-| | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
+| | My projects' cards are expected to redirect the user to the project's details when the user clicks on them. | Tested the feature by clicking one of them | The feature behaved as expected and led me to the project's details page | Test concluded and passed | ![screenshot](documentation/feature07.png) |
+| | Project details page is expected to have the edit/delete buttons if the user is the creator of the project | Tested the feature by clicking a project I created | The feature behaved as expected and showed the buttons | Test concluded and passed | ![screenshot](documentation/feature12.png) |
+| | Project details page is expected not to have the edit/delete buttons if the user is not the creator of the project | Tested the feature by clicking a project I did not creat | The feature behaved as expected and did not show the buttons | Test concluded and passed | ![screenshot](documentation/feature121.png) |
+| | Edit Project page is expected to have a filled form with the details of the project for editing the project | Tested the feature by editing the details | The feature behaved as expected and edited the project | Test concluded and passed | ![screenshot](documentation/feature15.png) |
+| | Delete confirmation page is expected to delete the project when the user clicks on confirm | Tested the feature by clicking the button | The feature behaved as expected and deleted the project | Test concluded and passed | ![screenshot](documentation/feature151.png) |
+| | New Project page is expected to have a form for the creation of a project | Tested the feature by filling the form | The feature behaved as expected and created a project | Test concluded and passed | ![screenshot](documentation/feature09.png) |
+| | Add Task button is expected to add a task to the project associated to it | Tested the feature by clicking the Add Task button| The feature behaved as expected and directed me to the Add Task form| Test concluded and passed | ![screenshot](documentation/feature12.png) |
+| | Add Task form is expected to add a task to the project associated to it | Tested the feature by filling the form| The feature behaved as expected and created a task| Test concluded and passed | ![screenshot](documentation/feature122.png) |
+| | Update status of the task is expected to update the status of this particular task | Tested the feature by changinf the status | The feature behaved as expected and updated status of the task| Test concluded and passed | ![screenshot](documentation/feature132.png) |
+| | Edit Task form is expected to edit the task | Tested the feature by editing the details on the form| The feature behaved as expected and edited the task| Test concluded and passed | ![screenshot](documentation/feature14.png) |
+| | Task delete confirmation is expected to delete the task when the user clicks the button | Tested the feature by clicking the button to confirm deletion| The feature behaved as expected and deleted the task| Test concluded and passed | ![screenshot](documentation/feature141.png) |
+| | My Profile is expected to lead to the Add Profile form if the user does not have a profile or to the his/hers profile page if he/she have alreadya profile | Tested the feature by clicking on My Profile one time when I had a profile and one time if when I had not| The feature behaved as expected and led me to the respective page| Test concluded and passed | ![screenshot](documentation/feature10.png) |
+| | Add Profile is expected to add a profile for the user when the user fills the form successfully | Tested the feature by filling the form | The feature behaved as expected and created my profile | Test concluded and passed | ![screenshot](documentation/feature101.png) |
+| | Edit Profile is expected to show the form with the information of the profile to be able to edit it | Tested the feature by editing the information | The feature behaved as expected and edited my profile | Test concluded and passed | ![screenshot](documentation/feature16.png) |
+| | Profile delete confirm is expected to delete the profile if the user confirms it | Tested the feature by clicking on the confirm button | The feature behaved as expected and deleted my profile | Test concluded and passed | ![screenshot](documentation/feature161.png) |
 
 
 ## User Story Testing
@@ -222,12 +176,6 @@ I have conducted a series of automated tests on my application.
 I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
 
 ### JavaScript (Jest Testing)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Adjust the code below (file names, etc.) to match your own project files/folders.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality.
 
