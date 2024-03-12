@@ -56,6 +56,6 @@ class Profile(models.Model):
 class ProjectsTasksMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['projects'] = Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
-        context['tasks'] = Task.objects.filter(assigned_to=self.request.user)
+        context['projects'] = Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct().order_by('deadline')
+        context['tasks'] = Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
         return context

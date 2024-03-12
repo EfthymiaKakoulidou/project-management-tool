@@ -49,7 +49,7 @@ class Projects(LoginRequiredMixin, ListView):
             # Fetch all projects for the user
             projects = self.model.objects.filter(
                 Q(user=user) | Q(task__assigned_to=user)
-            ).distinct()
+            ).distinct().order_by('deadline')
 
         return projects
 
