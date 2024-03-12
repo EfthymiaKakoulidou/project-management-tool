@@ -12,7 +12,7 @@
 <div class="todo">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
-    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+    <p class="text-center small-text">Task Deadline : {{task.deadline|date:"Y-m-d" }}</p>
     <div class="text-center">
         <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
             {% csrf_token %}
@@ -28,7 +28,7 @@
 <div class="inprogress">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
-    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+    <p class="text-center small-text">Task Deadline : {{task.deadline|date:"Y-m-d" }}</p>
         <div class="text-center">
             <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
                 {% csrf_token %}
@@ -45,7 +45,7 @@
 <div class="done">
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
-    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+    <p class="text-center small-text">Task Deadline : {{task.deadline|date:"Y-m-d" }}</p>
         <div class="text-center">
             <form method="POST" action="{% url 'edit_task_status' pk=task.pk %}">
                 {% csrf_token %}
@@ -61,7 +61,7 @@
 <div>
     <a href="{% url 'project_detail' pk=task.project.pk %}"><h1 class="text-center">{{task.project}}</h1></a>
     <h2 class="text-center" style="font-size: larger;">{{task.title}}</h2>
-    <p class="text-center small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
+    <p class="text-center small-text">Task Deadline : {{task.deadline|date:"Y-m-d" }}</p>
     <p class="text-center small-text">Status : {{task.status}}</p>
 </div>
 {% endif %}
@@ -70,7 +70,7 @@
     <div class="description p-3">
     <h2>{{task.title}} : </h2>
     <p>{{task.description}}</p>
-    <p class="small-text">Deadline {{task.deadline|date:"Y-m-d" }}</p>
+    <p class="small-text">Assigned to {{task.assigned_to}} by {{task.user}}</p>
         </div>
 </div>
 {% if request.user == task.user %}
