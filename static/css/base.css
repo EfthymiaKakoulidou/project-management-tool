@@ -441,6 +441,10 @@ footer {
     margin-right: 0px;
 }
 
+.search {
+    flex-direction: row;
+
+}
 
 @media only screen and (min-width: 376px) and (max-width:992px) {
 
@@ -573,4 +577,9 @@ footer {
         padding-right: 25px;
     }
     
+    .search {
+        flex-direction: row;
+        margin-left: 10vw;
+    }
+
    }

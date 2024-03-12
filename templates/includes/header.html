@@ -61,71 +61,71 @@
 					<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
 						href="{% url 'account_login' %}">Login</a>
 				</li>
-
-				{% endif %}
-				 <!-- Form for search bar -->
-				 <form class="d-flex" role="search" method="GET" action="{% url 'projects' %}">
-					<input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-primary" type="submit">Search</button>
-				  </form>
+				<!-- Form for search bar -->
+	{% endif %}
+				<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
+					<input class="form me-2 searchmobile" name="q" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+				</form>
+				
 	</nav>
 	<!---Navigation Items for desktop-->
-	
+
 	{% if user.is_authenticated %}
 	<div class="vertical-nav">
 		<ul class="vertical-nav" style="overflow-y: auto;">
 			<li style="font-size: larger; font-weight:bold; list-style: none;">Overview :</li>
-			
-				<li class="nav-item">
-					<a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}"
-						role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
-						My Projects
-					</a>
-				</li>
-					{% for project in projects %}
-				<li style="margin-left: 20px; font-size: small;">
-					<a href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}"
-						class="navprojects">
-						{{project.title}}
-					</a>
-					{% for task in project.task_set.all %}
-				<li style="margin-left: 40px; font-size: smaller;">
-					<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.title}}"
-						class="navtasks">
-						{{task.title}}
-					</a></li>
 
-				{% endfor %}
+			<li class="nav-item">
+				<a class="nav-link {% if url_name == 'projects' %}active{% endif %}" href="{% url 'projects' %}"
+					role="button" aria-haspopup="true" aria-expanded="false" style="margin-top: 20px;">
+					My Projects
+				</a>
 			</li>
-					{% endfor%}
+			{% for project in projects %}
+			<li style="margin-left: 20px; font-size: small;">
+				<a href="{% url 'project_detail' project.id %}" aria-label="Click to view {{project.title}}"
+					class="navprojects">
+					{{project.title}}
+				</a>
+				{% for task in project.task_set.all %}
+			<li style="margin-left: 40px; font-size: smaller;">
+				<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.title}}"
+					class="navtasks">
+					{{task.title}}
+				</a></li>
 
-				<li class="nav-item">
-					<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}"
-						role="button" aria-haspopup="true" aria-expanded="false">
-						My Tasks
-					</a></li>
-					{% for task in tasks %}
-				<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}"
-						aria-label="Click to view {{task.title}}">
-						{{task.title}}
-					</a>
-				</li>
-					{% endfor %}
+			{% endfor %}
+			</li>
+			{% endfor%}
 
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'add_project' %}">New Project</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href=" {% url 'profiles' %}">Members</a>
-				</li>
+			<li class="nav-item">
+				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}"
+					role="button" aria-haspopup="true" aria-expanded="false">
+					My Tasks
+				</a></li>
+			{% for task in tasks %}
+			<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}"
+					aria-label="Click to view {{task.title}}">
+					{{task.title}}
+				</a>
+			</li>
+			{% endfor %}
+
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'add_project' %}">New Project</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href=" {% url 'profiles' %}">Members</a>
+			</li>
 			</li>
 		</ul>
-		
+
 	</div>
 	{% endif%}
-	
+
 
 </header>
