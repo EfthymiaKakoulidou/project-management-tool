@@ -61,10 +61,11 @@
 					<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
 						href="{% url 'account_login' %}">Login</a>
 				</li>
-				<!-- Form for search bar -->
-	{% endif %}
+			</ul></div>
+				{% endif %}
+	<!-- Form for search bar -->
 				<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
-					<input class="form me-2 searchmobile" name="q" type="search" placeholder="Search" aria-label="Search">
+					<input class="form me-2 searchmobile" name="q" type="search" placeholder="Enter project name" aria-label="Search">
 					<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</form>
 				
@@ -88,24 +89,26 @@
 					class="navprojects">
 					{{project.title}}
 				</a>
+
 				{% for task in project.task_set.all %}
-			<li style="margin-left: 40px; font-size: smaller;">
+				<li style="margin-left: 40px; font-size: smaller;">
 				<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.title}}"
 					class="navtasks">
 					{{task.title}}
 				</a></li>
-
-			{% endfor %}
+				{% endfor %}
 			</li>
 			{% endfor%}
-
+			
 			<li class="nav-item">
 				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}"
 					role="button" aria-haspopup="true" aria-expanded="false">
 					My Tasks
-				</a></li>
+				</a>
+			</li>
 			{% for task in tasks %}
-			<li style="margin-left: 40px; font-size: smaller;"><a href="{% url 'edit_task_status' task.id %}"
+			<li style="margin-left: 40px; font-size: smaller;">
+				<a href="{% url 'edit_task_status' task.id %}"
 					aria-label="Click to view {{task.title}}">
 					{{task.title}}
 				</a>
