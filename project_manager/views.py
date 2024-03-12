@@ -24,20 +24,34 @@ class Projectdetail(ProjectsTasksMixin, DetailView):
     context_object_name = "project"
   
 
-class Projects(ProjectsTasksMixin, LoginRequiredMixin, ListView):
+class Projects(ListView):
     """Create List of Projects"""
 
     template_name = "project_manager/projects.html"
     model = Project
     context_object_name = "projects"
-    def get_queryset(self):
-        return Project.objects.filter(Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct()
+  
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projects = context['projects']
         projects_with_done_task_count = projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
         context['projects'] = projects_with_done_task_count
         return context
+    def get_queryset(self):
+        queryset = super().get_queryset().annotate(
+            done_task_count=Count('task', filter=Q(task__status="Done"))
+        )
+        query = self.request.GET.get('q')
+        if query:
+            queryset = queryset.filter(
+                Q(title__icontains=query) |
+                Q(description__icontains=query)
+            )
+        queryset = queryset.filter(
+            Q(user=self.request.user) | Q(task__assigned_to=self.request.user)
+        ).distinct()
+        return queryset
+
   
 class AddProject(ProjectsTasksMixin, LoginRequiredMixin, CreateView):
     """Create project view"""
