@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", False)
 
-ALLOWED_HOSTS = ['8000-efthymiakak-projectmana-39rpggzgns8.ws-eu109.gitpod.io']
+ALLOWED_HOSTS = []
 CSRF_TRUSTED_ORIGINS = []
 host = os.environ.get("HOST")
 if host:
@@ -106,12 +106,12 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 # 'default': {
 # 'ENGINE': 'django.db.backends.sqlite3',
 # 'NAME': BASE_DIR / 'db.sqlite3',
-#}
-#}
+# }
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
