@@ -1,14 +1,14 @@
 # [PROJECT MANAGEMENT TOOL](https://project-management-tool-70101b30ec1e.herokuapp.com/)
 
 The Project Management Tool has as a purpose to help users and teams to organize their workload. 
-A user can add a project, add tasks to it and assign these tasks to colleagues. Information such as deadline dates and when a project or task were created help have controll of their work. The possibility to see your tasks ranked from the most urgent to the least urgent help ptioritize their work and organize their day. In addition the user can create his/hers profile and check others profiles as well. This has a purpose to create a pool of proffessionals that one can check their job-titles and bios so that they can choose the right people for their project.
+A user can add a project, add tasks to it and assign these tasks to colleagues. Information such as deadline-dates and when a project or task were created, helps them have controll of their work and prioritize their tasks. In addition the user can create his/hers profile and check others' profiles as well. This has a purpose to create a pool of proffessionals with information such as job-titles and bios to ensure that right people were chosen for every project.
 A quote on the landing page of the Project Management Tool is added to help start working motivated!
 
 ![screenshot](documentation/mockup.jpg)
 
 ## UX
 
-The purpose of the project is to organize work so I want to have a clear and simple structure so that one can navigate easily into the site. 
+The purpose of the project is to organize work, so I want to have a clear and simple structure so that one can navigate easily into the site. 
 
 ### Colour Scheme
 
@@ -35,7 +35,7 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### Typography
 
-- [Poppins](https://fonts.google.com/specimen/Poppins) was used for all text in various font-sizes and weights based to emphasize when needed.
+- [Poppins](https://fonts.google.com/specimen/Poppins) was used for all text in various font-sizes and weights to emphasize when needed.
 
 
 ## User Stories
@@ -45,7 +45,7 @@ The user stories created in the beginning of the project helped to organize the 
 ### New Site Users
 
 - As a new site user, I would like to sign up, so that I can that I can have easy access to the site the next time I visit it.
-- As a new site user, I would like to make a profile which I will be able to edit or delete, so that I my details are there for me and others to see when they visit the site.
+- As a new site user, I would like to make a profile which I will be able to edit or delete, so that my details are availlable for me and others to see when they visit the site.
 - As a new site user, I would like to create a project which I will be able to edit or delete, so that I can access it later.
 - As a new site user, I would like to create tasks for my projects which I can edit or delete, so that I can organize my work into smaller segments.
 - As a new site user, I would like to be able to check my tasks in order, so that I can know which one to prioritize.
@@ -61,7 +61,7 @@ The user stories created in the beginning of the project helped to organize the 
 - As a returning site user, I would like to edit or delete my tasks, so that I can keep them up to date.
 - As a returning site user, I would like to sign out, so that I can be sure that others will not be able to see my information.
 - As a returning site user, I would like to edit or delete profile, so that it can be up to date or deleted if I do not want to have one.
-- As a returning site user, I would like to see others' profile, so that I can choose the right person for the tasks I am creating.
+- As a returning site user, I would like to see others' profiles, so that I can choose the right person for the tasks I am creating.
 
 ### Site Admin
 
@@ -134,31 +134,31 @@ Project details
 
 - **Search bar**
 
-    - in the header of the page there is also a search bar that searches by the project's name. If the user enters a project name that is correct then he/she is redirected into the My projects page but will see just the project he/she searched for. This feature makes it easier for the user to isolate just the project he/she is interested in without having to scroll the side/nav/bar and find it.
+    - in the header of the page there is also a search bar that searches by the project's name. If the user enters a project name then he/she is redirected into the "My projects" page but will see just the project he/she searched for. This feature makes it easier for the user to isolate just the project he/she is interested in without having to scroll the side-nav-bar and find it.
 
 ![screenshot](documentation/feature065.jpg)
 
 - **My projects**
 
-    - This pages contains a collection of the projects that the user has created or has a task assigned to him/her so that the user can easily see all the projects that involve him/her. The projects' information provided here is just the name of the project and its deadline so that user can organize his/her work.
+    - This pages contains a collection of the projects that the user has created or has tasks assigned to him/her so that the user can easily see all the projects that involve him/her. The projects' information provided here is just the name of the project and its deadline so that user can organize his/her work.
 
 ![screenshot](documentation/feature07.jpg)
 
 - **My Tasks**
 
-    - On this page the user can see all the tasks assigned to him/her. They appear in order from the most urgent to least urgent. The information provided on this page is the name of the project the tasks belongs to, the name of the task, the person that it is assigned to and the task's deadline. The tasks that have the "To do" status appear green, tasks that have the "In progress" status appear orange and tasks that are already done appear grey so that the user can ignore them.
+    - On this page the user can see all the tasks assigned to him/her. They appear in order from the most urgent to least urgent. The information provided on this page is the name of the project the tasks belongs to, the name of the task, and the task's deadline. The tasks that have the "To do" status appear green, tasks that have the "In progress" status appear orange and tasks that are already done appear grey so that the user can ignore them.
 
 ![screenshot](documentation/feature08.jpg)
 
 - **New Project**
 
-    - If the user wants to create a new project he/she can do it directly from the navigation bar. The user is redirected to the Add-project form and there he/she can provide the information of the new project. The name of the project, its description and the deadline are the fields he/she has to fill.
+    - If the user wants to create a new project he/she can do it directly from the navigation bar. The user is redirected to the "Add-project" form and there he/she can provide the information of the new project. The name of the project, its description and the deadline are the fields he/she has to fill.
 
 ![screenshot](documentation/feature09.jpg)
 
 - **Profile**
 
-    - By clicking on the 'Profile' on the home page the user is directed to the add-profile form if he/she has not already created a profile or the his/hers profile page if the user has already created a profile. The fields on the profile form are "First Name", "Last Name", "Job Title", "Image" and "Bio". If the user has already created a profile the page with all that information will appear. All the fields except the image are mandatory. If the user does not provide a picture the default picture will appear instead.
+    - By clicking on the 'Profile' on the home page the user is redirected to the add-profile form if he/she has not already created a profile or to his/hers profile page if the user has already created a profile. The fields on the profile form are "First Name", "Last Name", "Job Title", "Image" and "Bio". If the user has already created a profile the page with all that information will appear. All the fields except the image are mandatory. If the user does not provide a picture the default picture will appear instead.
 
 ![screenshot](documentation/feature10.jpg)
 ![screenshot](documentation/feature101.jpg)
@@ -171,7 +171,7 @@ Project details
 
 - **My Projects/project selected**
 
-    - If the user clicks on a project from "My Projects" he/she is directed a page showing that project's details. There the user can see the project's title, when it was created and by whom, the projects' description, the deadline of the project and a list of the tasks created for this project together with a button that gives him/her the chance to add a task. If the user has created the project he/she gets the option to edit or delete the project. If the user has not created the project those 2 buttons do not appear so the user can just add tasks. In the same time the name of project appears under My Projects in the vertical navigation bar. This a link leading to the project's details page.
+    - If the user clicks on a project from "My Projects" he/she is redirected to a page showing that project's details. There, the user can see the project's title, when it was created and by whom, the projects' description, the deadline of the project and a list of the tasks created for this project together with a button that gives him/her the chance to add a task. If the user has created the project he/she gets the option to edit or delete the project. If the user has not created the project those 2 buttons do not appear so the user can just add tasks. In the same time the name of the project appears under "My Projects" in the vertical navigation bar. This a link leading to the project's details page.
     - The user is redirected to this page when he/she successfully fills in the form to add a new project.
 
 ![screenshot](documentation/feature12.jpg)
@@ -182,7 +182,7 @@ Project details
 
     - When the user clicks on a task either on the project's details page or on a task on the "My Tasks" page he/she is directed to the page showing all the details of the task. 
     - If the user has neither created the task or is not assigned the task (with other words he sees this task only because he is a member of that particular project) then : on the top there is the projects' title then to whom it was assigned to and from whom, then the task's description and the deadline. The name of the task appears under the name of the project in the vartical navigation bar but not under the My Tasks section.
-    - If the user has created the task and is not assigned himself/herself the task then he/she gets the edit, delete buttons. Again the name of the task appears under the name of the project in the vartical navigation bar but not under the My Tasks section. 
+    - If the user has created the task and is not assigned himself/herself the task then he/she gets the edit, delete buttons. Again the name of the task appears under the name of the project in the vertical navigation bar but not under the "My Tasks" section. 
     - If the user is assigned the task then he/she gets the update-status button. In this case the user cannot change the task otherwise. He/She can just change the status. This task appears now both under the project name and the My tasks section of the vertical navigation bar.
     - If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.) and the task appears both under the project name it belongs to and the "My tasks" section of the vertical navigation bar.
     - In all cases when a task appears in the vertical navigation it is a link leading to the task's detail page.
@@ -199,6 +199,7 @@ Project details
 ![screenshot](documentation/feature133.jpg)
 ![screenshot](documentation/feature134.jpg)
 
+    -The general rule is that if you own a project or task you can edit or delete them otherwise you cannot alter them. The eception is that if you are assigned a task, so you are the one working on it, you can update its status because you are the one that can provide this information.
 
 - **Edit or Delete Task**
 
@@ -245,6 +246,8 @@ Project details
     - If the user has successfully edited a profile.
     - If the user has successfully deleted a profile.
     - If the user tries to give a task a deadline that is after the project's deadline.
+    - If the user tries to give a task a deadline that is before the current date.
+    - If the user tries to submit an empty form.
 
 ![screenshot](documentation/feature18.jpg)
 ![screenshot](documentation/feature181.jpg)
@@ -260,6 +263,7 @@ Project details
 ![screenshot](documentation/feature1811.jpg)
 ![screenshot](documentation/feature1812.jpg)
 ![screenshot](documentation/feature1813.jpg)
+![screenshot](documentation/feature1814.jpg)
 ![screenshot](documentation/feature1814.jpg)
 
 ### Future Features
