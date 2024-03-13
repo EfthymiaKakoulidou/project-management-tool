@@ -41,12 +41,14 @@ class Task(models.Model):
     def __str__(self):
         return self.title
 
+
 class Profile(models.Model):
     first_name = models.CharField(
         max_length=50, unique=True, null=False, blank=False
     )
-    last_name = models.CharField(max_length=50, unique=True,
-    null=False, blank=False)
+    last_name = models.CharField(
+        max_length=50, unique=True, null=False, blank=False
+            )
     featured_image = CloudinaryField('image', default='placeholder')
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name="name"
@@ -58,11 +60,15 @@ class Profile(models.Model):
     def __str__(self):
         return self.first_name
 
+
 class ProjectsTasksMixin:
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['projects'] = Project.objects.filter(
-                Q(user=self.request.user) | Q(task__assigned_to=self.request.user)).distinct().order_by('deadline')
-        context['tasks'] =Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
+                Q(user=self.request.user) |
+                Q(task__assigned_to=self.request.user)
+                ).distinct().order_by('deadline')
+        context['tasks'] = Task.objects.filter(
+                assigned_to=self.request.user).order_by('deadline')
         return context

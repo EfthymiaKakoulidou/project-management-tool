@@ -30,11 +30,16 @@ class Projects(LoginRequiredMixin, ListView):
     template_name = "project_manager/projects.html"
     model = Project
     context_object_name = "projects"
-   
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projects = context['projects']
-        projects_with_done_task_count = projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
+        projects_with_done_task_count = projects.annotate(
+            done_task_count=Count(
+                'task',
+                filter=Q(task__status="Done")
+            )
+        )
         context['projects'] = projects_with_done_task_count
         return context
 
@@ -78,6 +83,7 @@ class Tasks(ProjectsTasksMixin, LoginRequiredMixin, ListView):
     template_name = "project_manager/my_tasks.html"
     model = Task
     context_object_name = "tasks"
+
     def get_queryset(self):
         return
         Task.objects.filter(assigned_to=self.request.user).order_by('deadline')
@@ -218,7 +224,7 @@ class Profiles(ListView):
     model = Profile
     context_object_name = "profiles"
 
-    
+
 class AddProfile(LoginRequiredMixin, CreateView):
     """Profiles"""
 
@@ -265,7 +271,7 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
-   
+
     def get_success_url(self):
         messages.success(self.request, "Profile successfully edited.")
         return reverse_lazy('profile_detail', kwargs={'pk': self.object.pk})
@@ -279,10 +285,13 @@ class Home(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        motivational_quotes = ['"The most certain way to succeed is always to try just one more time." - Thomas Edison.',
-        "'The only way to do great work is to love what you do.' - Steve Jobs",
-        '"In the middle of every difficulty lies opportunity." - Albert Einstein',
-        '"The biggest risk is not taking any risk. In a world that is changing quickly, the only strategy that is guaranteed to fail is not taking risks." - Mark Zuckerberg']
+        motivational_quotes = [
+            '"The most certain way to succeed is always to try just one more time." - Thomas Edison.',
+            "'The only way to do great work is to love what you do.' - Steve Jobs",
+            '"In the middle of every difficulty lies opportunity." - Albert Einstein',
+            '"The biggest risk is not taking any risk. In a world that is changing quickly, '
+            'the only strategy that is guaranteed to fail is not taking risks." - Mark Zuckerberg'
+        ]
         random_motivation = random.choice(motivational_quotes)
         context['random_motivation'] = random_motivation
         return context
