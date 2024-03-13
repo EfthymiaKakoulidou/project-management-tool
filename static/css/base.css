@@ -272,9 +272,8 @@ footer {
     flex-direction: column;
     font-size: small;
     color: var(--black);
-    height: 50vh;
     width: 70vw;
-    margin-top: 100px;
+  
 }
 
 .btn-primary {

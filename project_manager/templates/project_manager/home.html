@@ -13,7 +13,7 @@
 </div>
 
 {% else %}
-<div class="welcome-container">
+<div class="welcome-container container">
     <div class="motivation">
         <h1 class="welcome-text">Hi and welcome to Project Management Tool! </h1>
         <p style='font-size: medium;' class="welcome-text">This tool will help you and your team organize your work!</p>
@@ -26,8 +26,8 @@
         <strong class="welcome-text">Resource Planning</strong>
         <p class="welcome-text">Allocate resources efficiently by choosing the right profile for your projects.</p>
         <strong class="welcome-text">Project Tracking</strong>
-        <p class="welcome-text">Monitor project and tasks timelines. </p>
-        <p style="font-size: large;" class="welcome-text">Please <a href="{% url 'account_signup' %}"
+        <p class="welcome-text">Monitor project and tasks timelines.</p>
+        <p style="font-size: medium;" class="welcome-text">Please <a href="{% url 'account_signup' %}"
                 style="text-decoration: underline;"> sign up </a> or <a href="{% url 'account_login' %}"
                 style="text-decoration: underline;"> login </a> to continue!</p>
     </div>
