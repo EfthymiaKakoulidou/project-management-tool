@@ -17,7 +17,7 @@ The purpose of the project is to organize work so I want to have a clear and sim
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
 
-![screenshot](documentation/coolors.png)
+![screenshot](documentation/coolors.jpg)
 
 I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
@@ -80,7 +80,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <details>
 <summary> Click here to see the Mobile Wireframes </summary>
 Project details
-  - ![screenshot](documentation/wireframemobile.png)
+  - ![screenshot](documentation/wireframemobile.jpg)
 
 <details>
 <summary> Click here to see the Tablet Wireframes </summary>
@@ -88,7 +88,7 @@ Project details
 ### Desktop Wireframes
 
 Project details
-  - ![screenshot](documentation/wireframedesktop.png)
+  - ![screenshot](documentation/wireframedesktop.jpg)
 </details>
 
 
@@ -101,81 +101,81 @@ Project details
 
     - If the user does not already have an account he/she should sign up to enter the site so he/she is redirected to the sign up form. If the user already has an account he/she should login to enter the site so he/she is redirected to the login form. The user has the option to do those things by 2 places on the home page, the top or the bottom inside the text.
 
-![screenshot](documentation/feature01.png)
-![screenshot](documentation/feature02.png)
-![screenshot](documentation/feature021.png)
+![screenshot](documentation/feature01.jpg)
+![screenshot](documentation/feature02.jpg)
+![screenshot](documentation/feature021.jpg)
 
 - **Sign Out**
 
     - After signing in if the user wants to logout he will be called to confirm his/hers decision. If the user clicks on the "Sign out" button he/she will be signed out.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/feature03.jpg)
 
 - **Home Page if the user is logged out**
 
     - The home page if the user is logged out has a welcome message and information about the site and how it can benefit the user.
 
-![screenshot](documentation/feature04.png)
+![screenshot](documentation/feature04.jpg)
 
 - **Home Page if the user is logged in**
 
     - The home page if the user is logged in includes a welcome message and a motivational quote to inspire the user to start working. This quote is different everytime the page loads.
 
-![screenshot](documentation/feature05.png)
-![screenshot](documentation/feature051.png)
+![screenshot](documentation/feature05.jpg)
+![screenshot](documentation/feature051.jpg)
 
 - **Navigation**
 
     - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left vertically and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages. When the user clicks on My Projects then all the projects created by him/her or that he/she has tasks assigned to him/her will appear along with all the tasks of that specific project. Under My Tasks all the tasks assigned to the user will appear. If he/she clicks on "New project a form to create a new project appear. If he/she clicks on "My profile" then there are 2 options : if he/she has already created a profile then a pafe with the rpofile imformation will appear otherwise he/she will get aform to create a profile. Under "Members" there is a list with all the users that have created a profile. For mobiles the navigation consists of a drop-down menu with a list of all the actions the user can do.
 
-![screenshot](documentation/feature06.png)
-![screenshot](documentation/feature060.png)
-![screenshot](documentation/feature061.png)
+![screenshot](documentation/feature06.jpg)
+![screenshot](documentation/feature060.jpg)
+![screenshot](documentation/feature061.jpg)
 
 - **Search bar**
 
     - in the header of the page there is also a search bar that searches by the project's name. If the user enters a project name that is correct then he/she is redirected into the My projects page but will see just the project he/she searched for. This feature makes it easier for the user to isolate just the project he/she is interested in without having to scroll the side/nav/bar and find it.
 
-![screenshot](documentation/feature065.png)
+![screenshot](documentation/feature065.jpg)
 
 - **My projects**
 
     - This pages contains a collection of the projects that the user has created or has a task assigned to him/her so that the user can easily see all the projects that involve him/her. The projects' information provided here is just the name of the project and its deadline so that user can organize his/her work.
 
-![screenshot](documentation/feature07.png)
+![screenshot](documentation/feature07.jpg)
 
 - **My Tasks**
 
     - On this page the user can see all the tasks assigned to him/her. They appear in order from the most urgent to least urgent. The information provided on this page is the name of the project the tasks belongs to, the name of the task, the person that it is assigned to and the task's deadline. The tasks that have the "To do" status appear green, tasks that have the "In progress" status appear orange and tasks that are already done appear grey so that the user can ignore them.
 
-![screenshot](documentation/feature08.png)
+![screenshot](documentation/feature08.jpg)
 
 - **New Project**
 
     - If the user wants to create a new project he/she can do it directly from the navigation bar. The user is redirected to the Add-project form and there he/she can provide the information of the new project. The name of the project, its description and the deadline are the fields he/she has to fill.
 
-![screenshot](documentation/feature09.png)
+![screenshot](documentation/feature09.jpg)
 
 - **Profile**
 
     - By clicking on the 'Profile' on the home page the user is directed to the add-profile form if he/she has not already created a profile or the his/hers profile page if the user has already created a profile. The fields on the profile form are "First Name", "Last Name", "Job Title", "Image" and "Bio". If the user has already created a profile the page with all that information will appear. All the fields except the image are mandatory. If the user does not provide a picture the default picture will appear instead.
 
-![screenshot](documentation/feature10.png)
-![screenshot](documentation/feature101.png)
+![screenshot](documentation/feature10.jpg)
+![screenshot](documentation/feature101.jpg)
 
 - **Members**
 
     - All profiles made on the site appear here. The information provided here are the picture, the first name and the job title.
 
-![screenshot](documentation/feature11.png)
+![screenshot](documentation/feature11.jpg)
 
 - **My Projects/project selected**
 
     - If the user clicks on a project from "My Projects" he/she is directed a page showing that project's details. There the user can see the project's title, when it was created and by whom, the projects' description, the deadline of the project and a list of the tasks created for this project together with a button that gives him/her the chance to add a task. If the user has created the project he/she gets the option to edit or delete the project. If the user has not created the project those 2 buttons do not appear so the user can just add tasks. In the same time the name of project appears under My Projects in the vertical navigation bar. This a link leading to the project's details page.
     - The user is redirected to this page when he/she successfully fills in the form to add a new project.
 
-![screenshot](documentation/feature12.png)
-![screenshot](documentation/feature121.png)
+![screenshot](documentation/feature12.jpg)
+![screenshot](documentation/feature121.jpg)
 
 
 - **Task details page**
@@ -184,50 +184,49 @@ Project details
     - If the user has neither created the task or is not assigned the task (with other words he sees this task only because he is a member of that particular project) then : on the top there is the projects' title then to whom it was assigned to and from whom, then the task's description and the deadline. The name of the task appears under the name of the project in the vartical navigation bar but not under the My Tasks section.
     - If the user has created the task and is not assigned himself/herself the task then he/she gets the edit, delete buttons. Again the name of the task appears under the name of the project in the vartical navigation bar but not under the My Tasks section. 
     - If the user is assigned the task then he/she gets the update-status button. In this case the user cannot change the task otherwise. He/She can just change the status. This task appears now both under the project name and the My tasks section of the vertical navigation bar.
-    - If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.) and the task appears both under the project name and the My tasks section of the vertical navigation bar.
+    - If the user is both the creator and the person the task was assigned to he/she gets all the options(edit the task, delete the task and update status.) and the task appears both under the project name it belongs to and the "My tasks" section of the vertical navigation bar.
     - In all cases when a task appears in the vertical navigation it is a link leading to the task's detail page.
 
-![screenshot](documentation/feature13.png)
-![screenshot](documentation/feature131.png)
-![screenshot](documentation/feature132.png)
-![screenshot](documentation/feature133.png)
+![screenshot](documentation/feature13.jpg)
+![screenshot](documentation/feature131.jpg)
+![screenshot](documentation/feature132.jpg)
 
     -If the status of the task is set "To do" then the upper part of the background appears green.
     -If the status of the task is set "In progress" then the upper part of the background appears orange.
     -If the status of the task is set "Done" then the upper part of the background appears grey.
 
-![screenshot](documentation/feature134.png)
-![screenshot](documentation/feature135.png)
-![screenshot](documentation/feature136.png)
+![screenshot](documentation/feature13.jpg)
+![screenshot](documentation/feature133.jpg)
+![screenshot](documentation/feature134.jpg)
 
 
 - **Edit or Delete Task**
 
     - When the task is created by the user, the user can edit or delete. By clicking on edit the edit-form appears filled with the information of the task that can be edited. If the form is sublited successfully the user is redirected the task-details page. By clicking on the delete button the user is redirected to the confirm deletion page and if confirmed to the project-details page. If the user changes his/her mind about editing the task then he/she always has the side navigation bar that informs him/her about the hierarchy of the content of the page and can navigate from there to the page he/she wants.
 
-![screenshot](documentation/feature14.png)
-![screenshot](documentation/feature141.png)
+![screenshot](documentation/feature14.jpg)
+![screenshot](documentation/feature141.jpg)
 
 
 - **Edit or Delete my Projects**
 
     - The user can edit or delete the projects that he/she has created. By clicking on edit the user is redirected to the edit-project form. If the form is successfully submitted the user is redirected to the project's-details page.By clicking the delete button to the confirm deletion page and if confirmed to the his/hers projects page.
 
-![screenshot](documentation/feature15.png)
-![screenshot](documentation/feature151.png)
+![screenshot](documentation/feature15.jpg)
+![screenshot](documentation/feature151.jpg)
 
 - **Edit or Delete my Profile**
 
     - If the user's profile is already created then the user can edit or delete it. By clicking on the edit button he is reditected to the edit-profile form. If the form is successfully submitted then the user gets to see his/hers profile page. By clicking on delete the user is reditected to confirm deletion page and if confirmed to the members page.
 
-![screenshot](documentation/feature16.png)
-![screenshot](documentation/feature161.png)
+![screenshot](documentation/feature16.jpg)
+![screenshot](documentation/feature161.jpg)
 
 - **Members/members selected**
 
     - If the user clicks on one of the profiles he sees that profile's details.
 
-![screenshot](documentation/feature17.png)
+![screenshot](documentation/feature17.jpg)
 
 - **Messages**
 
@@ -247,21 +246,21 @@ Project details
     - If the user has successfully deleted a profile.
     - If the user tries to give a task a deadline that is after the project's deadline.
 
-![screenshot](documentation/feature18.png)
-![screenshot](documentation/feature181.png)
-![screenshot](documentation/feature182.png)
-![screenshot](documentation/feature183.png)
-![screenshot](documentation/feature184.png)
-![screenshot](documentation/feature185.png)
-![screenshot](documentation/feature186.png)
-![screenshot](documentation/feature187.png)
-![screenshot](documentation/feature188.png)
-![screenshot](documentation/feature189.png)
-![screenshot](documentation/feature1810.png)
-![screenshot](documentation/feature1811.png)
-![screenshot](documentation/feature1812.png)
-![screenshot](documentation/feature1813.png)
-![screenshot](documentation/feature1814.png)
+![screenshot](documentation/feature18.jpg)
+![screenshot](documentation/feature181.jpg)
+![screenshot](documentation/feature182.jpg)
+![screenshot](documentation/feature183.jpg)
+![screenshot](documentation/feature184.jpg)
+![screenshot](documentation/feature185.jpg)
+![screenshot](documentation/feature186.jpg)
+![screenshot](documentation/feature187.jpg)
+![screenshot](documentation/feature188.jpg)
+![screenshot](documentation/feature189.jpg)
+![screenshot](documentation/feature1810.jpg)
+![screenshot](documentation/feature1811.jpg)
+![screenshot](documentation/feature1812.jpg)
+![screenshot](documentation/feature1813.jpg)
+![screenshot](documentation/feature1814.jpg)
 
 ### Future Features
 
@@ -347,7 +346,7 @@ class Task(models.Model):
         return self.title
 ```
 
-![screenshot](documentation/erd.png)
+![screenshot](documentation/erd.jpg)
 
 
 - Table: **Profile**
@@ -395,7 +394,7 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/gh-projects.jpg)
 
 ### GitHub Issues
 
@@ -412,11 +411,11 @@ Consider adding a screenshot of your Open and Closed Issues.
 
 - [Open Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](documentation/gh-issues-open.jpg)
 
 - [Closed Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](documentation/gh-issues-closed.jpg)
 
 ### MoSCoW Prioritization
 
@@ -598,7 +597,7 @@ https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pngtree](https://pngtree.com/freepng/creative-company-logo_1197025.html) | logo | image | logo on the header |
+| [jpgtree](https://jpgtree.com/freejpg/creative-company-logo_1197025.html) | logo | image | logo on the header |
 | [icons](https://icons8.com/icons/set/project) | favicon | image | favicon on all pages |
 
 ### Acknowledgements
