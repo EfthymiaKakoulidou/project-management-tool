@@ -101,6 +101,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse-home-mobile.jpg) | ![screenshot](documentation/lighthouse-home-desktop.jpg) | no warnings |
+| Home when logged in | ![screenshot](documentation/lighthouse-home2-mobile.jpg) | ![screenshot](documentation/lighthouse-home2-desktop.jpg) | no warnings |
 | Login | ![screenshot](documentation/lighthouse-login-mobile.jpg) | ![screenshot](documentation/lighthouse-login-desktop.jpg) | no warnings |
 | Signup | ![screenshot](documentation/lighthouse-signup-mobile.jpg) | ![screenshot](documentation/lighthouse-signup-desktop.jpg) | no warnings |
 | Signout | ![screenshot](documentation/lighthouse-signout-mobile.jpg) | ![screenshot](documentation/lighthouse-signout-desktop.jpg) | no warnings |
