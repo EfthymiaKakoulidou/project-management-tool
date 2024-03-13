@@ -33,7 +33,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/projectconfirmdelete.jpg) | |
 | project_manager | project_detail.html | ![screenshot](documentation/validation/path-to-screenshot.jpg) | |
 | project_manager | projects.html | ![screenshot](documentation/validation/projectdetail.jpg) | |
-| project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/taskconfirmdelete.jpg) | |
+| project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/deletetask.jpg) | |
 | project_manager | task_detail.html | ![screenshot](documentation/validation/taskdetail.jpg) | |
 | templates | 403.html | ![screenshot](documentation/validation/403.jpg) | |
 | templates | base.html | ![screenshot](documentation/validation/base.jpg) | |
