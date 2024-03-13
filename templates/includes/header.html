@@ -63,13 +63,14 @@
 				</li>
 				{% endif %}
 			</ul>
-		
+			{% if user.is_authenticated %}
 		<!-- Form for search bar -->
 		<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
 			<input class="form me-2 searchmobile" name="q" type="search" placeholder="Enter project name" aria-label="Search">
 			<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 		</form>	</div>
 	</nav>
+	{% endif %}
 	<!---Navigation Items for desktop-->
 
 	{% if user.is_authenticated %}
