@@ -99,14 +99,15 @@ Project details
 
 - **Sign Up or login**
 
-    - If the user does not already have an account he/she should sign up to enter the site so he/she is redirected to the sign up form. If the user already has an account he/she should login to enter the site so he/she is redirected to the login form. The user has the option to those things by 2 places on the home page, the top or the bottom inside the text.
+    - If the user does not already have an account he/she should sign up to enter the site so he/she is redirected to the sign up form. If the user already has an account he/she should login to enter the site so he/she is redirected to the login form. The user has the option to do those things by 2 places on the home page, the top or the bottom inside the text.
 
 ![screenshot](documentation/feature01.png)
 ![screenshot](documentation/feature02.png)
+![screenshot](documentation/feature021.png)
 
 - **Sign Out**
 
-    - After signing in if the user wants to logout he can signout.
+    - After signing in if the user wants to logout he will be called to confirm his/hers decision. If the user clicks on the "Sign out" button he/she will be signed out.
 
 ![screenshot](documentation/feature03.png)
 
@@ -125,9 +126,11 @@ Project details
 
 - **Navigation**
 
-    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left vertically and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages. When the user clicks on My Projects then all the projects created by him/her or that he/she has tasks assigned to him/her will appear along with all the tasks of that specific project. Under My Tasks all the tasks assigned to the user will appear. For mobiles the navigation consists of a drop-down menu with a list of all the actions the user can do.
+    - The home page when the user is logged in reveals the navigation. The navigation consists of the header that includes the home button and the choice to sign out. The content of the site lies on the left vertically and consists of the "My Projects", "My Tasks", "New Project", "Profile" and "Members" pages. When the user clicks on My Projects then all the projects created by him/her or that he/she has tasks assigned to him/her will appear along with all the tasks of that specific project. Under My Tasks all the tasks assigned to the user will appear. If he/she clicks on "New project a form to create a new project appear. If he/she clicks on "My profile" then there are 2 options : if he/she has already created a profile then a pafe with the rpofile imformation will appear otherwise he/she will get aform to create a profile. Under "Members" there is a list with all the users that have created a profile. For mobiles the navigation consists of a drop-down menu with a list of all the actions the user can do.
 
 ![screenshot](documentation/feature06.png)
+![screenshot](documentation/feature060.png)
+![screenshot](documentation/feature061.png)
 
 - **Search bar**
 
