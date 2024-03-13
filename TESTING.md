@@ -2,14 +2,6 @@
 
 Return back to the [README.md](README.md) file.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Code Validation
 
 ### HTML
@@ -27,11 +19,11 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | project_manager | edit_task_status.html | ![screenshot](documentation/validation/edittaskstatus.jpg) | |
 | project_manager | home.html | ![screenshot](documentation/validation/home.jpg) | |
 | project_manager | my_tasks.html | ![screenshot](documentation/validation/mytasks.jpg) | |
-| project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/profileconfirmdelete.jpg) | |
+| project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/deleteprofile.jpg) | |
 | project_manager | profile_detail.html | ![screenshot](documentation/validation/profiledetail.jpg) | |
 | project_manager | profiles.html | ![screenshot](documentation/validation/profiles.jpg) | |
-| project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/projectconfirmdelete.jpg) | |
-| project_manager | project_detail.html | ![screenshot](documentation/validation/path-to-screenshot.jpg) | |
+| project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/deleteproject.jpg) | |
+| project_manager | project_detail.html | ![screenshot](documentation/validation/projectdetail.jpg) | |
 | project_manager | projects.html | ![screenshot](documentation/validation/projectdetail.jpg) | |
 | project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/deletetask.jpg) | |
 | project_manager | task_detail.html | ![screenshot](documentation/validation/taskdetail.jpg) | |
