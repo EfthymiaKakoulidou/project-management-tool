@@ -34,8 +34,7 @@ class Projects(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projects = context['projects']
-        projects_with_done_task_count =
-            projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
+        projects_with_done_task_count = projects.annotate(done_task_count=Count('task', filter=Q(task__status="Done")))
         context['projects'] = projects_with_done_task_count
         return context
 
