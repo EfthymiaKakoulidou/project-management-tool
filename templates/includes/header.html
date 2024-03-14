@@ -1,26 +1,28 @@
 {% load static %}
 
 <header>
-
 	<nav class="mobilenav navbar navbar-expand-lg navbar-light">
 		<a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 40px;">
-			<img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
+			<img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo">
+		</a>
 		<button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse"
 			data-target="#navbarNavdropdown" aria-controls="navbarNavdropdown" aria-expanded="false"
 			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span></button>
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
 		<!---Navigation Items-->
 		<div class="collapse navbar-collapse" id="navbarNavdropdown">
 			<ul class="navbar-nav me-auto">
 				<li class="nav-item active">
-					<h3><a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong
-								style="margin-left: 10px;">M</strong>anagement <strong
-								style="margin-left: 10px;">T</strong>ool<span class="sr-only"></span></a>
+					<h3>
+					<a class="nav-link pmt" href="{% url 'home' %}"><strong>P</strong>roject <strong style="margin-left: 10px;">M</strong>anagement <strong style="margin-left: 10px;">T</strong>ool<span class="sr-only"></span>
+					</a>
 					</h3>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span></a>
+					<a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only"></span>
+					</a>
 				</li>
 
 				{% if user.is_authenticated %}
@@ -39,42 +41,48 @@
 				</li>
 				<li class="nav-item nav-invisible">
 					<a class="nav-link {% if url_name == 'add_project' %}active{% endif %}"
-						href="{% url 'add_project' %}">New Project</a>
+						href="{% url 'add_project' %}">New Project
+					</a>
 				</li>
 				<li class="nav-item nav-invisible">
-					<a class="nav-link" href="{% url 'add_profile' %}">My Profile</a>
+					<a class="nav-link" href="{% url 'add_profile' %}">My Profile
+					</a>
 				</li>
 				<li class="nav-item nav-invisible">
 					<a class="nav-link {% if url_name == 'profiles' %}active{% endif %}" href="{% url 'profiles' %}"
 						role="button" aria-haspopup="true" aria-expanded="false">
-						Members</a>
+						Members
+					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-						href="{% url 'account_logout' %}">Sign Out</a>
+						href="{% url 'account_logout' %}">Sign Out
+					</a>
 				</li>
 				{% else %}
 				<li class="nav-item">
 					<a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-						href="{% url 'account_signup' %}">Sign Up</a>
+						href="{% url 'account_signup' %}">Sign Up
+					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-						href="{% url 'account_login' %}">Login</a>
+						href="{% url 'account_login' %}">Login
+					</a>
 				</li>
 				{% endif %}
 			</ul>
-			{% if user.is_authenticated %}
-			<!-- Form for search bar -->
-			<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
-				<input class="form me-2 searchmobile" name="q" type="search" placeholder="Enter project name"
-					aria-label="Search">
-				<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-			</form>
-
+				{% if user.is_authenticated %}
+				<!-- Form for search bar -->
+				<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
+					<input class="form me-2 searchmobile" name="q" type="search" placeholder="Enter project name"
+						aria-label="Search">
+					<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+				</form>
+		</div>
 	</nav>
 	{% endif %}
-	</div>
+	
 	<!---Navigation Items for desktop-->
 
 	{% if user.is_authenticated %}
