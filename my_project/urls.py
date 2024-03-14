@@ -17,11 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from project_manager import views as index_views
-from project_manager import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path('', include('project_manager.urls')),
-    path('404/', views.custom_404_view, name='custom_404_view'),
 ]
