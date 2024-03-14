@@ -3,8 +3,8 @@
 <header>
 
 	<nav class="mobilenav navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 40px;"><img
-				src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
+		<a class="navbar-brand" href="{% url 'home' %}" style="margin-left: 40px;">
+			<img src="{% static 'images/logo_spiral.png' %}" alt='logo' class="logo"></a>
 		<button class="navbar-toggler" type="button" onclick="toggleMenu()" data-toggle="collapse"
 			data-target="#navbarNavdropdown" aria-controls="navbarNavdropdown" aria-expanded="false"
 			aria-label="Toggle navigation">
@@ -51,7 +51,8 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-						href="{% url 'account_logout' %}">Sign Out</a></li>
+						href="{% url 'account_logout' %}">Sign Out</a>
+				</li>
 				{% else %}
 				<li class="nav-item">
 					<a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
@@ -64,13 +65,16 @@
 				{% endif %}
 			</ul>
 			{% if user.is_authenticated %}
-		<!-- Form for search bar -->
-		<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
-			<input class="form me-2 searchmobile" name="q" type="search" placeholder="Enter project name" aria-label="Search">
-			<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-		</form>	</div>
+			<!-- Form for search bar -->
+			<form class="d-flex search" role="search" method="GET" action="{% url 'projects' %}">
+				<input class="form me-2 searchmobile" name="q" type="search" placeholder="Enter project name"
+					aria-label="Search">
+				<button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</form>
+
 	</nav>
 	{% endif %}
+	</div>
 	<!---Navigation Items for desktop-->
 
 	{% if user.is_authenticated %}
@@ -103,7 +107,7 @@
 				{% endfor %}
 			</li>
 			{% endfor%}
-			
+
 			<li class="nav-item">
 				<a class="nav-link {% if url_name == 'my_tasks' %}active{% endif %}" href="{% url 'my_tasks' %}"
 					role="button" aria-haspopup="true" aria-expanded="false">
@@ -112,8 +116,7 @@
 			</li>
 			{% for task in tasks %}
 			<li style="margin-left: 40px; font-size: smaller;">
-				<a href="{% url 'edit_task_status' task.id %}"
-					aria-label="Click to view {{task.title}}">
+				<a href="{% url 'edit_task_status' task.id %}" aria-label="Click to view {{task.title}}">
 					{{task.title}}
 				</a>
 			</li>
@@ -128,7 +131,7 @@
 			<li class="nav-item">
 				<a class="nav-link" href=" {% url 'profiles' %}">Members</a>
 			</li>
-		
+
 		</ul>
 
 	</div>
