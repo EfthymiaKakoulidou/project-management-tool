@@ -165,29 +165,6 @@ I have conducted a series of automated tests on my application.
 
 I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
 
-### JavaScript (Jest Testing)
-
-I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality.
-
-In order to work with Jest, I first had to initialize NPM.
-
-- `npm init`
-- Hit `enter` for all options, except for **test command:**, just type `jest`.
-
-Add Jest to a list called **Dev Dependencies** in a dev environment:
-
-- `npm install --save-dev jest`
-
-Below are the results from the tests that I've written for this application:
-
-| Test Suites | Tests | Screenshot |
-| --- | --- | --- |
-| 1 passed | 16 passed | ![screenshot](documentation/js-test-coverage.jpg) |
-| x | x | repeat for all remaining tests |
-
-#### Jest Test Issues
-
-
 ### Python (Unit Testing)
 
 I have used Django's built-in unit testing framework to test the application functionality.
@@ -223,35 +200,19 @@ Below are the results from the various apps on my application that I've tested:
 
 ## Bugs
 
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
+- Python 
 
-    ![screenshot](documentation/bug01.jpg)
+    - I encountered an error trying to to have 2 queries in one function separately and that did not work properly. 
 
-    - To fix this, I _____________________.
+    - To fix this, I I restrustured the code to make one query for all.
+    
+- Django `TemplateDoesNotExist`
 
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
+    - To fix this, I adjusted my urls patterns accordingly to accept rendering from the respective views.
 
-    ![screenshot](documentation/bug02.jpg)
+- Python `E501 line too long` 
 
-    - To fix this, I _____________________.
-
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
-
-    ![screenshot](documentation/bug03.jpg)
-
-    - To fix this, I _____________________.
-
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bug04.jpg)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.jpg)
-
-    - To fix this, I _____________________.
+    - To fix this, I cut the line so that it would continue to the next line without breaking the functionality..
 
 ### GitHub **Issues**
 
@@ -274,6 +235,9 @@ When showcasing your bug tracking for assessment, you can use the following form
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 **Fixed Bugs**
+
+
+- When validating HTML the validator warned that there were unclosed tags. This happened because the closing tag was before the closing tag of an if statement which was not executed so the validator did not see it. I fixed this by moving the closing tag after the is statement.
 
 [![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AEfthymiaKakoulidou%2Fproject-management-tool%20label%3Abug&label=bugs)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
@@ -299,7 +263,6 @@ Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakou
 
 ## Unfixed Bugs
 
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
 
     ![screenshot](documentation/unfixed-bug03.jpg)
 
