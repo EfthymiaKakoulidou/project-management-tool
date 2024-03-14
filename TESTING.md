@@ -1,6 +1,7 @@
 # Testing
 
-Return back to the [README.md](README.md) file.
+> [!NOTE]  
+> Return back to the [README.md](README.md) file.
 
 ## Code Validation
 
@@ -28,8 +29,6 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/deletetask.jpg) | |
 | project_manager | task_detail.html | ![screenshot](documentation/validation/taskdetail.jpg) | |
 | templates | 403.html | ![screenshot](documentation/validation/403.jpg) | |
-| templates | base.html | ![screenshot](documentation/validation/base.jpg) | |
-
             
 ### CSS
 
@@ -158,7 +157,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to create, edit or delete tasks to the projects I have created, so that I can update the information of my work. | ![screenshot](documentation/feature13.jpg) |
 | As a returning site user, I would like to edit or delete my profile, so that I can update my information. | ![screenshot](documentation/feature19.jpg) |
 | As a returning site user, I would like to sign out, so that my work and information are secure. | ![screenshot](documentation/feature03.jpg) |
-
 | As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature20.jpg) |
 
 
@@ -181,56 +179,6 @@ Add Jest to a list called **Dev Dependencies** in a dev environment:
 
 - `npm install --save-dev jest`
 
-**IMPORTANT**: Initial configurations
-
-When creating test files, the name of the file needs to be `file-name.test.js` in order for Jest to properly work.
-
-Without the following, Jest won't properly run the tests:
-
-- `npm install -D jest-environment-jsdom`
-
-Due to a change in Jest's default configuration, you'll need to add the following code to the top of the `.test.js` file:
-
-```js
-/**
- * @jest-environment jsdom
- */
-
-const { test, expect } = require("@jest/globals");
-const { function1, function2, function3, etc. } = require("../script-name");
-
-beforeAll(() => {
-    let fs = require("fs");
-    let fileContents = fs.readFileSync("index.html", "utf-8");
-    document.open();
-    document.write(fileContents);
-    document.close();
-});
-```
-
-Remember to adjust the `fs.readFileSync()` to the specific file you'd like you test.
-The example above is testing the `index.html` file.
-
-Finally, at the bottom of the script file where your primary scripts are written, include the following at the bottom of the file.
-Make sure to include the name of all of your functions that are being tested in the `.test.js` file.
-
-```js
-if (typeof module !== "undefined") module.exports = {
-    function1, function2, function3, etc.
-};
-```
-
-Now that these steps have been undertaken, further tests can be written, and be expected to fail initially.
-Write JS code that can get the tests to pass as part of the Red-Green refactor process.
-
-Once ready, to run the tests, use this command:
-
-- `npm test`
-
-**NOTE**: To obtain a coverage report, use the following command:
-
-- `npm test --coverage`
-
 Below are the results from the tests that I've written for this application:
 
 | Test Suites | Tests | Screenshot |
@@ -240,14 +188,6 @@ Below are the results from the tests that I've written for this application:
 
 #### Jest Test Issues
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this section to list any known issues you ran into while writing your Jest tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Python (Unit Testing)
 
@@ -273,52 +213,16 @@ Below are the results from the various apps on my application that I've tested:
 
 | App | File | Coverage | Screenshot |
 | --- | --- | --- | --- |
-| Bag | test_forms.py | 99% | ![screenshot](documentation/py-test-bag-forms.jpg) |
-| Bag | test_models.py | 89% | ![screenshot](documentation/py-test-bag-models.jpg) |
-| Bag | test_urls.py | 100% | ![screenshot](documentation/py-test-bag-urls.jpg) |
-| Bag | test_views.py | 71% | ![screenshot](documentation/py-test-bag-views.jpg) |
-| Checkout | test_forms.py | 99% | ![screenshot](documentation/py-test-checkout-forms.jpg) |
-| Checkout | test_models.py | 89% | ![screenshot](documentation/py-test-checkout-models.jpg) |
-| Checkout | test_urls.py | 100% | ![screenshot](documentation/py-test-checkout-urls.jpg) |
-| Checkout | test_views.py | 71% | ![screenshot](documentation/py-test-checkout-views.jpg) |
-| Home | test_forms.py | 99% | ![screenshot](documentation/py-test-home-forms.jpg) |
-| Home | test_models.py | 89% | ![screenshot](documentation/py-test-home-models.jpg) |
-| Home | test_urls.py | 100% | ![screenshot](documentation/py-test-home-urls.jpg) |
-| Home | test_views.py | 71% | ![screenshot](documentation/py-test-home-views.jpg) |
-| Products | test_forms.py | 99% | ![screenshot](documentation/py-test-products-forms.jpg) |
-| Products | test_models.py | 89% | ![screenshot](documentation/py-test-products-models.jpg) |
-| Products | test_urls.py | 100% | ![screenshot](documentation/py-test-products-urls.jpg) |
-| Products | test_views.py | 71% | ![screenshot](documentation/py-test-products-views.jpg) |
-| Profiles | test_forms.py | 99% | ![screenshot](documentation/py-test-profiles-forms.jpg) |
-| Profiles | test_models.py | 89% | ![screenshot](documentation/py-test-profiles-models.jpg) |
-| Profiles | test_urls.py | 100% | ![screenshot](documentation/py-test-profiles-urls.jpg) |
-| Profiles | test_views.py | 71% | ![screenshot](documentation/py-test-profiles-views.jpg) |
-| x | x | x | repeat for all remaining tested apps/files |
+| project_manager | test_forms.py | 99% | ![screenshot](documentation/py-test-bag-forms.jpg) |
+| project_manager | test_models.py | 89% | ![screenshot](documentation/py-test-bag-models.jpg) |
+| project_manager | test_urls.py | 100% | ![screenshot](documentation/py-test-bag-urls.jpg) |
+| project_manager | test_views.py | 71% | ![screenshot](documentation/py-test-bag-views.jpg) |
+
 
 #### Unit Test Issues
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this section to list any known issues you ran into while writing your unit tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Bugs
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
-
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - JS Uncaught ReferenceError: `foobar` is undefined/not defined
 
@@ -352,7 +256,7 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 
 ### GitHub **Issues**
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
 
 An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
 To access your Issues, click on the "Issues" tab at the top of your repository.
@@ -368,9 +272,11 @@ Once you've sorted the issue, you should then "Close" it.
 
 When showcasing your bug tracking for assessment, you can use the following format:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 **Fixed Bugs**
+
+[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AEfthymiaKakoulidou%2Fproject-management-tool%20label%3Abug&label=bugs)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
 All previously closed/fixed bugs can be tracked [here](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed).
 
@@ -382,6 +288,9 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/Efthym
 
 **Open Issues**
 
+[![GitHub issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed)
+
 Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakoulidou/project-management-tool/issues).
 
 | Bug | Status |
@@ -391,43 +300,10 @@ Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakou
 
 ## Unfixed Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.jpg)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.jpg)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
 - When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
 
     ![screenshot](documentation/unfixed-bug03.jpg)
 
     - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 There are no remaining bugs that I am aware of.
