@@ -107,7 +107,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
     - The home page if the user is logged out has a welcome message and information about the site and how it can benefit the user.
 
-![screenshot](documentation/feature04.jpg)
+![screenshot](documentation/feature01.jpg)
 
 - **Home Page if the user is logged in**
 
@@ -223,9 +223,10 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 - **Members/members selected**
 
-    - If the user clicks on one of the profiles he sees that profile's details.
+    - If the user clicks on one of the profiles he sees that profile's details with the options to edit or delete it if he/she owns the profile or without them if he/shes views another person's profile.
 
-![screenshot](documentation/feature17.jpg)
+![screenshot](documentation/feature101.jpg)
+![screenshot](documentation/feature19.jpg)
 
 - **Messages**
 
@@ -262,7 +263,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 ![screenshot](documentation/feature1812.jpg)
 ![screenshot](documentation/feature1813.jpg)
 ![screenshot](documentation/feature1814.jpg)
-![screenshot](documentation/feature1814.jpg)
+![screenshot](documentation/feature1815.jpg)
 
 ### Future Features
 
@@ -348,14 +349,14 @@ class Task(models.Model):
         return self.title
 ```
 
-![screenshot](documentation/erd.jpg)
+![screenshot](documentation/erd.png)
 
 
 - Table: **Profile**
 
     | **PK** | **id** (unique) | Type | Notes |
     | --- | --- | --- | --- |
-    | **OneToOne** | profile | OneToOneField | One user can have one profile |
+    | **OneToOne** | user | OneToOneField | One user can have one profile |
     | | first_name | CharField | |
     | | last_name | CharField | |
     | | featured_image | URLField | |
@@ -367,7 +368,7 @@ class Task(models.Model):
 
     | **PK** | **id** (unique) | Type | Notes |
     | --- | --- | --- | --- |
-    | **FK** | profile | Foreignkey | One user can create many projects |
+    | **FK** | user | Foreignkey | One user can create many projects |
     | | title | CharField | |
     | | description | CharField | |
     | | created_on | DateTimeField | |
@@ -377,7 +378,7 @@ class Task(models.Model):
 
     | **PK** | **id** (unique) | Type | Notes |
     | --- | --- | --- | --- |
-    | **FK** | profile | Foreignkey | One user can create many tasks |
+    | **FK** | user | Foreignkey | One user can create many tasks |
     | **FK** | project | Foreignkey | One project can have many tasks |
     | | title | CharField | |
     | | description | CharField | |
