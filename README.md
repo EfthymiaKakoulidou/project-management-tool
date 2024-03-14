@@ -232,6 +232,13 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 ![screenshot](documentation/feature101.jpg)
 ![screenshot](documentation/feature19.jpg)
 
+- **403, 404 pages**
+
+    - If the user tries to access a page the he is not authorized to he/she gets a 403 page. In case the user tries a page that does not exist then he/she gets the 404 page.
+
+![screenshot](documentation/feature22.jpg)
+![screenshot](documentation/feature23.jpg)
+
 - **Messages**
 
     - The user is being informed constantly about his/hers actions.
