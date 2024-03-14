@@ -5,6 +5,7 @@
 {% block title %}Profiles{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <h1 class="text-center p-2">Profiles</h1>
 <div class="container d-flex flex-column flex-wrap justify-content-center">
     
@@ -29,5 +30,5 @@
     </a>
     {% endfor %}
 </div>
-
+{% endif %}
 {% endblock %}
