@@ -77,19 +77,11 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Mobile Wireframes
 
-<details>
-<summary> Click here to see the Mobile Wireframes </summary>
-Project details
-  - ![screenshot](documentation/wireframemobile.jpg)
-
-<details>
-<summary> Click here to see the Tablet Wireframes </summary>
+![screenshot](documentation/wireframemobile.png)
 
 ### Desktop Wireframes
 
-Project details
-  - ![screenshot](documentation/wireframedesktop.jpg)
-</details>
+![screenshot](documentation/wireframedesktop.png)
 
 
 ## Features
