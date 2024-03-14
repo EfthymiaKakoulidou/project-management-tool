@@ -121,7 +121,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home | | | | | |
-| | Signup feature is expected to create a user when the form is filled successfully | Tested the feature filling the form | The feature behaved as expected, and created a user | Test concluded and passed | ![screenshot](documentation/feature01.jpg) |
+| | Signup feature is expected to create a user when the form is filled successfully | Tested the feature filling the form | The feature behaved as expected, and created a user | Test concluded and passed | ![screenshot](documentation/feature021.jpg) |
 | | Login feature is expected to login an existing user when the user fills the form| Tested the feature by filling the form | The feature behaved as expected, and logged in the user | Test concluded and passed | ![screenshot](documentation/feature02.jpg) |
 | | Signout feature is expected to logout the user when the user confirms signout| Tested the feature by confirming sign out | The feature behaved as expected, and signed the user out | Test concluded and passed | ![screenshot](documentation/feature03.jpg) |
 | My Projects | | | | | |
@@ -131,9 +131,9 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Edit Project page is expected to have a filled form with the details of the project for editing the project | Tested the feature by editing the details | The feature behaved as expected and edited the project | Test concluded and passed | ![screenshot](documentation/feature15.jpg) |
 | | Delete confirmation page is expected to delete the project when the user clicks on confirm | Tested the feature by clicking the button | The feature behaved as expected and deleted the project | Test concluded and passed | ![screenshot](documentation/feature151.jpg) |
 | | New Project page is expected to have a form for the creation of a project | Tested the feature by filling the form | The feature behaved as expected and created a project | Test concluded and passed | ![screenshot](documentation/feature09.jpg) |
-| | Add Task button is expected to add a task to the project associated to it | Tested the feature by clicking the Add Task button| The feature behaved as expected and directed me to the Add Task form| Test concluded and passed | ![screenshot](documentation/feature12.jpg) |
-| | Add Task form is expected to add a task to the project associated to it | Tested the feature by filling the form| The feature behaved as expected and created a task| Test concluded and passed | ![screenshot](documentation/feature122.jpg) |
-| | Update status of the task is expected to update the status of this particular task | Tested the feature by changinf the status | The feature behaved as expected and updated status of the task| Test concluded and passed | ![screenshot](documentation/feature132.jpg) |
+| | Add Task button is expected to add a task to the project associated to it | Tested the feature by clicking the Add Task button| The feature behaved as expected and directed me to the Add Task form| Test concluded and passed | ![screenshot](documentation/feature125.jpg) |
+| | Add Task form is expected to add a task to the project associated to it | Tested the feature by filling the form| The feature behaved as expected and created a task| Test concluded and passed | ![screenshot](documentation/feature126.jpg) |
+| | Update status of the task is expected to update the status of this particular task | Tested the feature by changinf the status | The feature behaved as expected and updated status of the task| Test concluded and passed | ![screenshot](documentation/feature21.jpg) ![screenshot](documentation/feature215.jpg)  |
 | | Edit Task form is expected to edit the task | Tested the feature by editing the details on the form| The feature behaved as expected and edited the task| Test concluded and passed | ![screenshot](documentation/feature14.jpg) |
 | | Task delete confirmation is expected to delete the task when the user clicks the button | Tested the feature by clicking the button to confirm deletion| The feature behaved as expected and deleted the task| Test concluded and passed | ![screenshot](documentation/feature141.jpg) |
 | | My Profile is expected to lead to the Add Profile form if the user does not have a profile or to the his/hers profile page if he/she have alreadya profile | Tested the feature by clicking on My Profile one time when I had a profile and one time if when I had not| The feature behaved as expected and led me to the respective page| Test concluded and passed | ![screenshot](documentation/feature10.jpg) |
@@ -147,19 +147,19 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to sign up, so that I can enter the site. | ![screenshot](documentation/feature01.jpg) |
-| As a new site user, I would like to create a project, so that I can start organizing my work. | ![screenshot](documentation/feature02.jpg) |
-| As a new site user, I would like to create tasks for my projects, so that I can organize them into smaller segments. | ![screenshot](documentation/feature03.jpg) |
-| As a new site user, I would like to assign tasks to others, so that I can delegate my work. | ![screenshot](documentation/feature03.jpg) |
-| As a new site user, I would like to create my profile, so that others can see my information. | ![screenshot](documentation/feature03.jpg) |
+| As a new site user, I would like to sign up, so that I can enter the site. | ![screenshot](documentation/feature021.jpg) |
+| As a new site user, I would like to create a project, so that I can start organizing my work. | ![screenshot](documentation/feature09.jpg) |
+| As a new site user, I would like to create tasks for my projects, so that I can organize them into smaller segments. | ![screenshot](documentation/feature125.jpg) |
+| As a new site user, I would like to assign tasks to others, so that I can delegate my work. | ![screenshot](documentation/feature126.jpg) |
+| As a new site user, I would like to create my profile, so that others can see my information. | ![screenshot](documentation/feature10.jpg) |
 | As a new site user, I would like to sign out, so that my work and my information are secure. | ![screenshot](documentation/feature03.jpg) |
-| As a returning site user, I would like to login , so that I can have access to my previous work. | ![screenshot](documentation/feature04.jpg) |
-| As a returning site user, I would like to create new projects and edit or delete me projects, so that I can update the information of my work. | ![screenshot](documentation/feature05.jpg) |
-| As a returning site user, I would like to create, edit or delete tasks to the projects I have created, so that I can update the information of my work. | ![screenshot](documentation/feature05.jpg) |
-| As a returning site user, I would like to edit or delete my profile, so that I can update my information. | ![screenshot](documentation/feature05.jpg) |
-| As a returning site user, I would like to sign out, so that my work and information are secure. | ![screenshot](documentation/feature05.jpg) |
+| As a returning site user, I would like to login , so that I can have access to my previous work. | ![screenshot](documentation/feature02.jpg) |
+| As a returning site user, I would like to create new projects and edit or delete my projects, so that I can update the information of my work. | ![screenshot](documentation/feature09.jpg) |
+| As a returning site user, I would like to create, edit or delete tasks to the projects I have created, so that I can update the information of my work. | ![screenshot](documentation/feature13.jpg) |
+| As a returning site user, I would like to edit or delete my profile, so that I can update my information. | ![screenshot](documentation/feature19.jpg) |
+| As a returning site user, I would like to sign out, so that my work and information are secure. | ![screenshot](documentation/feature03.jpg) |
 
-| As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature07.jpg) |
+| As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature20.jpg) |
 
 
 ## Automated Testing
@@ -251,17 +251,11 @@ This can be used for both "fixed" and "unresolved" issues.
 
 ### Python (Unit Testing)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Adjust the code below (file names, etc.) to match your own project files/folders.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I have used Django's built-in unit testing framework to test the application functionality.
 
 In order to run the tests, I ran the following command in the terminal each time:
 
-`python3 manage.py test name-of-app `
+`python3 manage.py test project_manager `
 
 To create the coverage report, I would then run the following commands:
 
