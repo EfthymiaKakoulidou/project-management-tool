@@ -119,7 +119,7 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
+| Authentication| | | | | |
 | | Signup feature is expected to create a user when the form is filled successfully | Tested the feature filling the form | The feature behaved as expected, and created a user | Test concluded and passed | ![screenshot](documentation/feature021.jpg) |
 | | Login feature is expected to login an existing user when the user fills the form| Tested the feature by filling the form | The feature behaved as expected, and logged in the user | Test concluded and passed | ![screenshot](documentation/feature02.jpg) |
 | | Signout feature is expected to logout the user when the user confirms signout| Tested the feature by confirming sign out | The feature behaved as expected, and signed the user out | Test concluded and passed | ![screenshot](documentation/feature03.jpg) |
@@ -139,7 +139,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Add Profile is expected to add a profile for the user when the user fills the form successfully | Tested the feature by filling the form | The feature behaved as expected and created my profile | Test concluded and passed | ![screenshot](documentation/feature101.jpg) |
 | | Edit Profile is expected to show the form with the information of the profile to be able to edit it | Tested the feature by editing the information | The feature behaved as expected and edited my profile | Test concluded and passed | ![screenshot](documentation/feature16.jpg) |
 | | Profile delete confirm is expected to delete the profile if the user confirms it | Tested the feature by clicking on the confirm button | The feature behaved as expected and deleted my profile | Test concluded and passed | ![screenshot](documentation/feature161.jpg) |
-
+| | When a user tries to access a page that he is not authenticated for he gets the 403 page | Tested the feature by trying to access the edit profile form of a user being logged in as another user.| The feature behaved as expected and redirected me to 403 page | Test concluded and passed | ![screenshot](documentation/feature22.jpg) |
+| | When a user tries to access a page that does not exist he gets the 404 page| Tested the feature by trying to access a profile that I had previously deleted | The feature behaved as expected and redirected me to 404 page | Test concluded and passed | ![screenshot](documentation/feature23.jpg) |
 
 ## User Story Testing
 
@@ -157,7 +158,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to create, edit or delete tasks to the projects I have created, so that I can update the information of my work. | ![screenshot](documentation/feature13.jpg) |
 | As a returning site user, I would like to edit or delete my profile, so that I can update my information. | ![screenshot](documentation/feature19.jpg) |
 | As a returning site user, I would like to sign out, so that my work and information are secure. | ![screenshot](documentation/feature03.jpg) |
+| As a returning site user, I would like to be informed if I am not authorizes to access certain pages. | ![screenshot](documentation/feature22.jpg) |
+| As a returning site user, I would like to be informed if I the page that I am trying to access is unavaillable. | ![screenshot](documentation/feature23.jpg) |
 | As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature20.jpg) |
+
 
 
 ## Automated Testing
@@ -190,10 +194,10 @@ Below are the results from the various apps on my application that I've tested:
 
 | App | File | Coverage | Screenshot |
 | --- | --- | --- | --- |
-| project_manager | test_forms.py | 99% | ![screenshot](documentation/py-test-bag-forms.jpg) |
-| project_manager | test_models.py | 89% | ![screenshot](documentation/py-test-bag-models.jpg) |
-| project_manager | test_urls.py | 100% | ![screenshot](documentation/py-test-bag-urls.jpg) |
-| project_manager | test_views.py | 71% | ![screenshot](documentation/py-test-bag-views.jpg) |
+| project_manager | test_forms.py | 99% | ![screenshot](documentation/py-test-project_manager-forms.jpg) |
+| project_manager | test_models.py | 89% | ![screenshot](documentation/py-test-project_manager-models.jpg) |
+| project_manager | test_urls.py | 100% | ![screenshot](documentation/py-test-project_manager-urls.jpg) |
+| project_manager | test_views.py | 71% | ![screenshot](documentation/py-test-project_manager-views.jpg) |
 
 
 #### Unit Test Issues
