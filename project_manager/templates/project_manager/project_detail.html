@@ -3,6 +3,7 @@
 {% block title %}Project Details - {{project.title}}{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <div class="container">
     <div style="display: flex; justify-content: center;">
     <div class="project_detail">
@@ -88,5 +89,5 @@
     </div>
     
 </div>
-
+{%endif%}
 {% endblock %}

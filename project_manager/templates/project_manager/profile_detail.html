@@ -5,6 +5,7 @@
 {% block title %}Profile Details - {{project.title}}{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <div class="container d-flex " style='justify-content:center; flex-direction:column ;'>
 
     <div class="project_info mt-3 p-1"></div>
@@ -39,4 +40,6 @@
         </div>
     {% endif %}
 </div>
+
+{% endif %}
 {% endblock %}

@@ -5,6 +5,7 @@
 {% block title %}My profile{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated%}
 
 <div class="container">
     <form method="POST" enctype="multipart/form-data" class="p-2 form" style="background-image: linear-gradient(to top left, rgb(244, 190, 172), whitesmoke);">
@@ -18,5 +19,5 @@
     </form>
 </div>
 
-
+{%endif%}
 {% endblock %}

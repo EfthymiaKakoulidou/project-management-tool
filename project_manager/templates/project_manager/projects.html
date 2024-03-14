@@ -3,6 +3,7 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <h1 class="text-center p-2">My Projects</h1>
 <p class="text-center" style="font-size: medium;">Projects I created or that have tasks assigned to me.</p>
 <div class="container d-flex flex-row flex-wrap justify-content-center align-items-center">
@@ -37,5 +38,5 @@
   {% endfor %}
 
 </div>
-
+{% endif %}
 {% endblock %}

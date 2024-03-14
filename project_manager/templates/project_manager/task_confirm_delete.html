@@ -3,7 +3,7 @@
 {% block title %}Delete Task {{object.title}}{% endblock %}
 
 {% block content %}
-
+{% if user.is_authenticated%}
 <div class="container">
     <h1 class="text-center mt-2">Confirm Task Deletion</h1>
     <div class="d-flex justify-content-center pt-3">
@@ -15,5 +15,5 @@
         </form>
     </div>
 </div>
-
+{%endif%}
 {% endblock %}

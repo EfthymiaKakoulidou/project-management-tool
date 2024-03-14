@@ -3,6 +3,7 @@
 {% block title %}Task Details - {{task.title}}{% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <a href="{% url 'project_detail' project.id}"><h1 class="text-center">{{task.project}}</h1></a>
 <h2 class="text-center">{{task.title}}</h2>
 <p class="text-center small-text">Status : {{task.status}} </p>
@@ -30,4 +31,5 @@
     
 
 </div>
+{%endif%}
 {% endblock %}
