@@ -16,6 +16,7 @@
         </div>
     </form>
 </div>
+{%endif%}
 {% endblock %}
 
 {% block postload_js %}
@@ -31,5 +32,5 @@
     let minDate = now.toISOString().substring(0,10);
     document.getElementById('id_deadline').setAttribute('min', minDate);
 </script>
-{%endif%}
+
 {% endblock %}
