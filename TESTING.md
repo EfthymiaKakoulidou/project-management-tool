@@ -17,17 +17,18 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | project_manager | edit_profile.html | ![screenshot](documentation/validation/editprofile.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fedit_profile%2F27 |
 | project_manager | edit_project.html | ![screenshot](documentation/validation/editproject.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fedit%2F30|
 | project_manager | edit_task.html | ![screenshot](documentation/validation/edittask.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fedit_task%2F73 |
-| project_manager | edit_task_status.html | ![screenshot](documentation/validation/edittaskstatus.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Ftask%2F73#textarea |
+| project_manager | edit_task_status.html | ![screenshot](documentation/validation/edittaskstatus.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fshowsource%3Dyes%26doc%3Dhttps%253A%252F%252Fproject-management-tool-70101b30ec1e.herokuapp.com%252Fprofile_detail%252F27%252F |
 | project_manager | home.html | ![screenshot](documentation/validation/home.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2F |
 | project_manager | my_tasks.html | ![screenshot](documentation/validation/mytasks.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fmy_tasks |
 | project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/deleteprofile.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fdelete_profile%2F27 |
-| project_manager | profile_detail.html | ![screenshot](documentation/validation/profiledetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprofile_detail%2F17%2F |
+| project_manager | profile_detail.html | ![screenshot](documentation/validation/profiledetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprofile_detail%2F27%2F |
 | project_manager | profiles.html | ![screenshot](documentation/validation/profiles.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprofiles%2F |
 | project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/deleteproject.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fdelete%2F30 |
 | project_manager | project_detail.html | ![screenshot](documentation/validation/projectdetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fproject_detail%2F30%2F |
 | project_manager | projects.html | ![screenshot](documentation/validation/projectdetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprojects |
 | project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/deletetask.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fdelete_task%2F73 |
-| templates | 403.html | ![screenshot](documentation/validation/403.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Ftask%2F73#textarea |
+| templates | 403.html | ![screenshot](documentation/validation/403.jpg) | |
+| templates | 404.html | ![screenshot](documentation/validation/404.jpg) | |
             
 ### CSS
 
@@ -205,7 +206,7 @@ Below are the results from the various apps on my application that I've tested:
     - I encountered an error trying to to have 2 queries in one function separately and that did not work properly. 
 
     - To fix this, I I restrustured the code to make one query for all.
-    
+
 - Django `TemplateDoesNotExist`
 
     - To fix this, I adjusted my urls patterns accordingly to accept rendering from the respective views.
