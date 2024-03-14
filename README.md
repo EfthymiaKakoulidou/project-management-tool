@@ -177,6 +177,12 @@ Project details
 ![screenshot](documentation/feature12.jpg)
 ![screenshot](documentation/feature121.jpg)
 
+- **Add Task**
+
+    - From the projects' detail page the user can add a task to aproject
+
+![screenshot](documentation/feature125.jpg)
+![screenshot](documentation/feature126.jpg)
 
 - **Task details page**
 
