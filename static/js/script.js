@@ -13,3 +13,6 @@ function toggleMenu() {
     navbar.style.marginBottom = navbarHeight;
   }
 }
+
+if (typeof module !== "undefined") module.exports = {
+  toggleMenu};
