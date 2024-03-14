@@ -10,7 +10,9 @@
 <div class="container d-flex flex-column flex-wrap justify-content-center">
     
   {% for task in tasks %}
+
   {% if task.status == 'To do' %}
+
      <div class="tasks" style="background-color: rgb(159, 200, 190);"> 
       <a class='task-list' href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(159, 200, 190);">{{ task.project }} 
       </a>
@@ -26,7 +28,9 @@
   {% endfor %}
 
   {% for task in tasks %}
+
   {% if task.status == 'In progress' %}
+
   <div class="tasks" style="background-color: rgb(244, 227, 172);"> 
     <a class='task-list' href="{% url 'edit_task_status' task.id %}" style="background-color: rgb(244, 227, 172);">{{ task.project }} 
     </a>
@@ -44,6 +48,7 @@
     {% for task in tasks %}
 
     {% if task.status == 'Done' %}
+    
     <div class="tasks" style="background-color: lightgrey; color: gray;">
       <a class='task-list' style="background-color:lightgrey; color: gray;" href="{% url 'edit_task_status' task.id %}">{{ task.project }} 
       </a>
