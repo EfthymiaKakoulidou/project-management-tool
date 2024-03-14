@@ -11,24 +11,23 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| project_manager | add_profile.html | ![screenshot](documentation/validation/addprofile.jpg) | |
-| project_manager | add_project.html | ![screenshot](documentation/validation/addproject.jpg) | |
-| project_manager | add_task.html | ![screenshot](documentation/validation/addtask.jpg) | |
-| project_manager | edit_profile.html | ![screenshot](documentation/validation/editprofile.jpg) | |
-| project_manager | edit_project.html | ![screenshot](documentation/validation/editproject.jpg) | |
-| project_manager | edit_task.html | ![screenshot](documentation/validation/edittask.jpg) | |
-| project_manager | edit_task_status.html | ![screenshot](documentation/validation/edittaskstatus.jpg) | |
-| project_manager | home.html | ![screenshot](documentation/validation/home.jpg) | |
-| project_manager | my_tasks.html | ![screenshot](documentation/validation/mytasks.jpg) | |
-| project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/deleteprofile.jpg) | |
-| project_manager | profile_detail.html | ![screenshot](documentation/validation/profiledetail.jpg) | |
-| project_manager | profiles.html | ![screenshot](documentation/validation/profiles.jpg) | |
-| project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/deleteproject.jpg) | |
-| project_manager | project_detail.html | ![screenshot](documentation/validation/projectdetail.jpg) | |
-| project_manager | projects.html | ![screenshot](documentation/validation/projectdetail.jpg) | |
-| project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/deletetask.jpg) | |
-| project_manager | task_detail.html | ![screenshot](documentation/validation/taskdetail.jpg) | |
-| templates | 403.html | ![screenshot](documentation/validation/403.jpg) | |
+| project_manager | add_profile.html | ![screenshot](documentation/validation/addprofile.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2F |
+| project_manager | add_project.html | ![screenshot](documentation/validation/addproject.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fadd_project |
+| project_manager | add_task.html | ![screenshot](documentation/validation/addtask.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fadd_task%2F30%2F |
+| project_manager | edit_profile.html | ![screenshot](documentation/validation/editprofile.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fedit_profile%2F27 |
+| project_manager | edit_project.html | ![screenshot](documentation/validation/editproject.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fedit%2F30|
+| project_manager | edit_task.html | ![screenshot](documentation/validation/edittask.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fedit_task%2F73 |
+| project_manager | edit_task_status.html | ![screenshot](documentation/validation/edittaskstatus.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Ftask%2F73#textarea |
+| project_manager | home.html | ![screenshot](documentation/validation/home.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2F |
+| project_manager | my_tasks.html | ![screenshot](documentation/validation/mytasks.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fmy_tasks |
+| project_manager | profile_confirm_delete.html | ![screenshot](documentation/validation/deleteprofile.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fdelete_profile%2F27 |
+| project_manager | profile_detail.html | ![screenshot](documentation/validation/profiledetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprofile_detail%2F17%2F |
+| project_manager | profiles.html | ![screenshot](documentation/validation/profiles.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprofiles%2F |
+| project_manager | project_confirm_delete.html | ![screenshot](documentation/validation/deleteproject.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fdelete%2F30 |
+| project_manager | project_detail.html | ![screenshot](documentation/validation/projectdetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fproject_detail%2F30%2F |
+| project_manager | projects.html | ![screenshot](documentation/validation/projectdetail.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fprojects |
+| project_manager | task_confirm_delete.html | ![screenshot](documentation/validation/deletetask.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Fdelete_task%2F73 |
+| templates | 403.html | ![screenshot](documentation/validation/403.jpg) | https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fproject-management-tool-70101b30ec1e.herokuapp.com%2Ftask%2F73#textarea |
             
 ### CSS
 
