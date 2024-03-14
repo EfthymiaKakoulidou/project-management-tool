@@ -1,5 +1,9 @@
 # [PROJECT MANAGEMENT TOOL](https://project-management-tool-70101b30ec1e.herokuapp.com/)
 
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool)
+
 The Project Management Tool has as a purpose to help users and teams to organize their workload. 
 A user can add a project, add tasks to it and assign these tasks to colleagues. Information such as deadline-dates and when a project or task were created, helps them have controll of their work and prioritize their tasks. In addition the user can create his/hers profile and check others' profiles as well. This has a purpose to create a pool of proffessionals with information such as job-titles and bios to ensure that right people were chosen for every project.
 A quote on the landing page of the Project Management Tool is added to help start working motivated!
@@ -12,7 +16,7 @@ The purpose of the project is to organize work, so I want to have a clear and si
 
 ### Colour Scheme
 
-- --black : rgb(42, 52, 50) is used for all text.
+- `--black : rgb(42, 52, 50)` is used for all text.
 
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
@@ -189,15 +193,15 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 ![screenshot](documentation/feature131.jpg)
 ![screenshot](documentation/feature132.jpg)
 
-    -If the status of the task is set "To do" then the upper part of the background appears green.
-    -If the status of the task is set "In progress" then the upper part of the background appears orange.
-    -If the status of the task is set "Done" then the upper part of the background appears grey.
+    - If the status of the task is set "To do" then the upper part of the background appears green.
+    - If the status of the task is set "In progress" then the upper part of the background appears orange.
+    - If the status of the task is set "Done" then the upper part of the background appears grey.
 
 ![screenshot](documentation/feature13.jpg)
 ![screenshot](documentation/feature133.jpg)
 ![screenshot](documentation/feature134.jpg)
 
-    -The general rule is that if you own a project or task you can edit or delete them otherwise you cannot alter them. The eception is that if you are assigned a task, so you are the one working on it, you can update its status because you are the one that can provide this information.
+    - The general rule is that if you own a project or task you can edit or delete them otherwise you cannot alter them. The eception is that if you are assigned a task, so you are the one working on it, you can update its status because you are the one that can provide this information.
 
 - **Edit or Delete Task**
 
@@ -278,22 +282,22 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## Tools & Technologies Used
 
-- [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
-- [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [JavaScript](https://www.javascript.com) used for user interaction on the site.
-- [Python](https://www.python.org) used as the back-end programming language.
-- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
-- [GitHub](https://github.com) used for secure online code storage.
-- [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
-- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
-- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
+- [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (\`git add\`, \`git commit\`, \`git push\`)
+- [![Git](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
+- [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
+- [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
+- [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
+- [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
+- [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
+- [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
+- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) used as the relational database management.
+- [![ElephantSQL](https://img.shields.io/badge/ElephantSQL-grey?logo=postgresql&logoColor=36A6E2)](https://www.elephantsql.com) used as the Postgres database.
+- [![Cloudinary](https://img.shields.io/badge/Cloudinary-grey?logo=cloudinary&logoColor=3448C5)](https://cloudinary.com) used for online static file storage.
+- [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files with Heroku.
+- [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
+- [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 
 ## Database Design
 
@@ -406,19 +410,19 @@ There, I used my own **User Story Template** to manage user stories.
 
 It also helped with milestone iterations on a weekly basis.
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
 
 Consider adding a screenshot of your Open and Closed Issues.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-- [Open Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues)
+- [Open Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues) [![GitHub issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues)
 
-    ![screenshot](documentation/gh-issues-open.jpg)
+    ![screenshot](documentation/gh-issues-open.png)
 
-- [Closed Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed)
+- [Closed Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.jpg)
+    ![screenshot](documentation/gh-issues-closed.png)
 
 ### MoSCoW Prioritization
 
@@ -432,7 +436,8 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 
 ## Testing
 
-For all testing, please refer to the [TESTING.md](TESTING.md) file.
+> [!NOTE]  
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
@@ -472,9 +477,15 @@ Deployment steps are as follows, after account setup:
 - Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
 - From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
 
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
 | Key | Value |
 | --- | --- |
 | `CLOUDINARY_URL` | user's own value |
+| `CLOUDINARY_NAME` | user's own value |
+| `CLOUDINARY_API_KEY` | user's own value |
+| `CLOUDINARY_SECRET` | user's own value |
 | `DATABASE_URL` | user's own value |
 | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `SECRET_KEY` | user's own value |
@@ -523,12 +534,18 @@ For either method, you will need to install any applicable packages found within
 You will need to create a new file called `env.py` at the root-level,
 and include the same environment variables listed above from the Heroku deployment steps.
 
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
 Sample `env.py` file:
 
 ```python
 import os
 
 os.environ.setdefault("CLOUDINARY_URL", "user's own value")
+os.environ.setdefault("CLOUDINARY_NAME", "user's own value")
+os.environ.setdefault("CLOUDINARY_API_KEY", "user's own value")
+os.environ.setdefault("CLOUDINARY_SECRET", "user's own value")
 os.environ.setdefault("DATABASE_URL", "user's own value")
 os.environ.setdefault("SECRET_KEY", "user's own value")
 
@@ -590,9 +607,7 @@ https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-
 | [W3Schools](https://www.w3schools.com) | entire site | syntax |
-
 | [Cgpt](https://chat.openai.com/) | entire site | for everything |
 
 
