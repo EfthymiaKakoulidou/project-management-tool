@@ -4,7 +4,7 @@
 {% block title %}Task Details - {{task.title}}{% endblock %}
 
 {% block content %}
-{% if user is_authenticated %}
+{% if user.is_authenticated %}
 
 {% if request.user == task.assigned_to %}
 
