@@ -38,7 +38,6 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | --- | --- | --- | --- |
 | static | base.css | ![screenshot](documentation/validation/css.jpg) | |
 
-            
 ### JavaScript
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
@@ -46,8 +45,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
 | static | script.js | ![screenshot](documentation/validation/script.jpg) | |
-
-            
+    
 ### Python
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
@@ -62,7 +60,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | project_manager | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/models.py) | ![screenshot](documentation/validation/models.jpg) | |
 | project_manager | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/urls.py) | ![screenshot](documentation/validation/projectmanagerurls.jpg) | |
 | project_manager | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/EfthymiaKakoulidou/project-management-tool/main/project_manager/views.py) | ![screenshot](documentation/validation/views.jpg) | |
-
 
 ## Browser Compatibility
 
@@ -85,7 +82,6 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop (DevTools) | ![screenshot](documentation/responsive-desktop-home.jpg) | ![screenshot](documentation/responsive-desktop-home2.jpg) | ![screenshot](documentation/responsive-desktop-login.jpg) | ![screenshot](documentation/responsive-desktop-signup.jpg) | ![screenshot](documentation/responsive-desktop-signout.jpg) | ![screenshot](documentation/responsive-desktop-myprojects.jpg) | ![screenshot](documentation/responsive-desktop-mytasks.jpg) | ![screenshot](documentation/responsive-desktop-newproject.jpg) | ![screenshot](documentation/responsive-desktop-myprofileadd.jpg) |![screenshot](documentation/responsive-desktop-myprofile.jpg) | ![screenshot](documentation/responsive-desktop-profiles.jpg) | ![screenshot](documentation/responsive-desktop-profiledetail.jpg) | ![screenshot](documentation/responsive-desktop-editproject.jpg) | ![screenshot](documentation/responsive-desktop-deleteproject.jpg) |![screenshot](documentation/responsive-desktop-addtask.jpg) | ![screenshot](documentation/responsive-desktop-taskdetail.jpg) | ![screenshot](documentation/responsive-desktop-edittask.jpg) | ![screenshot](documentation/responsive-desktop-deletetask.jpg) | ![screenshot](documentation/responsive-desktop-updatetaskstatus.jpg) | ![screenshot](documentation/responsive-desktop-editprofile.jpg) | ![screenshot](documentation/responsive-desktop-deleteprofile.jpg) | Works as expected |
 
 ## Lighthouse Audit
-
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
@@ -144,7 +140,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-
 | User Story | Screenshot |
 | --- | --- |
 | As a new site user, I would like to sign up, so that I can enter the site. | ![screenshot](documentation/feature021.jpg) |
@@ -161,8 +156,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to be informed if I am not authorizes to access certain pages. | ![screenshot](documentation/feature22.jpg) |
 | As a returning site user, I would like to be informed if I the page that I am trying to access is unavaillable. | ![screenshot](documentation/feature23.jpg) |
 | As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature20.jpg) |
-
-
 
 ## Automated Testing
 
@@ -199,9 +192,7 @@ Below are the results from the various apps on my application that I've tested:
 | project_manager | test_urls.py | 100% | ![screenshot](documentation/py-test-project_manager-urls.jpg) |
 | project_manager | test_views.py | 71% | ![screenshot](documentation/py-test-project_manager-views.jpg) |
 
-
 #### Unit Test Issues
-
 
 ## Bugs
 
@@ -209,7 +200,7 @@ Below are the results from the various apps on my application that I've tested:
 
     - I encountered an error trying to to have 2 queries in one function separately and that did not work properly. 
 
-    - To fix this, I I restrustured the code to make one query for all.
+    - To fix this, I restrustured the code to make one query for all.
 
 - Django `TemplateDoesNotExist`
 
@@ -221,26 +212,8 @@ Below are the results from the various apps on my application that I've tested:
 
 ### GitHub **Issues**
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/EfthymiaKakoulidou/project-management-tool/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 **Fixed Bugs**
-
+(I left my issues open for better visual)
 
 - When validating HTML the validator warned that there were unclosed tags. This happened because the closing tag was before the closing tag of an if statement which was not executed so the validator did not see it. I fixed this by moving the closing tag after the is statement.
 
@@ -250,7 +223,6 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/Efthym
 
 | Bug | Status |
 | --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/1) | Closed |
 | [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/2) | Closed |
 | [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/3) | Closed |
 
@@ -263,14 +235,14 @@ Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakou
 
 | Bug | Status |
 | --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/4) | Open |
 | [Python `E501 line too long` (93 > 79 characters)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/5) | Open |
 
 ## Unfixed Bugs
 
 
-    ![screenshot](documentation/unfixed-bug03.jpg)
+![screenshot](documentation/unfixed-bug01.jpg)
+![screenshot](documentation/unfixed-bug02.jpg)
 
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
+- I have some long lines in my settings.py and views.py. Those in the settings.py are a known error and those in views are just plain text (my motivational quotes). I handled both in the same way adding   #noqa .
 
-There are no remaining bugs that I am aware of.
+
