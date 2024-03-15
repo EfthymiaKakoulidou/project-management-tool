@@ -153,7 +153,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to create, edit or delete tasks to the projects I have created, so that I can update the information of my work. | ![screenshot](documentation/feature13.jpg) |
 | As a returning site user, I would like to edit or delete my profile, so that I can update my information. | ![screenshot](documentation/feature19.jpg) |
 | As a returning site user, I would like to sign out, so that my work and information are secure. | ![screenshot](documentation/feature03.jpg) |
-| As a returning site user, I would like to be informed if I am not authorizes to access certain pages. | ![screenshot](documentation/feature22.jpg) |
+| As a returning site user, I would like to search through the projects I have created to isolate the one that I want to work with something that saves time. | ![screenshot](documentation/feature065.jpg) |
+| As a returning site user, I would like to be informed if I am not authorized to access certain pages. | ![screenshot](documentation/feature22.jpg) |
 | As a returning site user, I would like to be informed if I the page that I am trying to access is unavaillable. | ![screenshot](documentation/feature23.jpg) |
 | As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature20.jpg) |
 
