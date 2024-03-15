@@ -157,43 +157,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to be informed if I the page that I am trying to access is unavaillable. | ![screenshot](documentation/feature23.jpg) |
 | As a site administrator, I should be able to see, create, edit and delete all the projects, tasks and profiles on the site, so that I can control the information on the site. | ![screenshot](documentation/feature20.jpg) |
 
-## Automated Testing
-
-I have conducted a series of automated tests on my application.
-
-I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
-
-### Python (Unit Testing)
-
-I have used Django's built-in unit testing framework to test the application functionality.
-
-In order to run the tests, I ran the following command in the terminal each time:
-
-`python3 manage.py test project_manager `
-
-To create the coverage report, I would then run the following commands:
-
-`coverage run --source=name-of-app manage.py test`
-
-`coverage report`
-
-To see the HTML version of the reports, and find out whether some pieces of code were missing, I ran the following commands:
-
-`coverage html`
-
-`python3 -m http.server`
-
-Below are the results from the various apps on my application that I've tested:
-
-| App | File | Coverage | Screenshot |
-| --- | --- | --- | --- |
-| project_manager | test_forms.py | 99% | ![screenshot](documentation/py-test-project_manager-forms.jpg) |
-| project_manager | test_models.py | 89% | ![screenshot](documentation/py-test-project_manager-models.jpg) |
-| project_manager | test_urls.py | 100% | ![screenshot](documentation/py-test-project_manager-urls.jpg) |
-| project_manager | test_views.py | 71% | ![screenshot](documentation/py-test-project_manager-views.jpg) |
-
-#### Unit Test Issues
-
 ## Bugs
 
 - Python 
@@ -213,18 +176,11 @@ Below are the results from the various apps on my application that I've tested:
 ### GitHub **Issues**
 
 **Fixed Bugs**
-(I left my issues open for better visual)
 
 - When validating HTML the validator warned that there were unclosed tags. This happened because the closing tag was before the closing tag of an if statement which was not executed so the validator did not see it. I fixed this by moving the closing tag after the is statement.
 
 [![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AEfthymiaKakoulidou%2Fproject-management-tool%20label%3Abug&label=bugs)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
-All previously closed/fixed bugs can be tracked [here](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed).
-
-| Bug | Status |
-| --- | --- |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/3) | Closed |
 
 **Open Issues**
 
@@ -233,9 +189,6 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/Efthym
 
 Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakoulidou/project-management-tool/issues).
 
-| Bug | Status |
-| --- | --- |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues/5) | Open |
 
 ## Unfixed Bugs
 

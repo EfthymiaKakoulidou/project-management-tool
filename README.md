@@ -193,15 +193,15 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 ![screenshot](documentation/feature131.jpg)
 ![screenshot](documentation/feature132.jpg)
 
-    - If the status of the task is set "To do" then the upper part of the background appears green.
-    - If the status of the task is set "In progress" then the upper part of the background appears orange.
-    - If the status of the task is set "Done" then the upper part of the background appears grey.
+- If the status of the task is set "To do" then the upper part of the background appears green.
+- If the status of the task is set "In progress" then the upper part of the background appears orange.
+- If the status of the task is set "Done" then the upper part of the background appears grey.
 
 ![screenshot](documentation/feature13.jpg)
 ![screenshot](documentation/feature133.jpg)
 ![screenshot](documentation/feature134.jpg)
 
-    - The general rule is that if you own a project or task you can edit or delete them otherwise you cannot alter them. The eception is that if you are assigned a task, so you are the one working on it, you can update its status because you are the one that can provide this information.
+   - The general rule is that if you own a project or task you can edit or delete them otherwise you cannot alter them. The eception is that if you are assigned a task, so you are the one working on it, you can update its status because you are the one that can provide this information.
 
 - **Edit or Delete Task**
 
@@ -406,7 +406,7 @@ class Task(models.Model):
 [GitHub Projects](https://github.com/EfthymiaKakoulidou/project-management-tool/projects) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board. (I closed only the issues in the first iteration and left the rest open for better visual.)
 
 ![screenshot](documentation/gh-projects.jpg)
 
@@ -419,11 +419,9 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues) [![GitHub issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
 
 - [Closed Issues](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
 
 ### MoSCoW Prioritization
 
@@ -600,7 +598,7 @@ There are no differences between the local site and the deployed.
 
 ## Credits
 
-Though I did not get any code from this tutorial it helped me structure me project:
+Though I did not get any code from this tutorial it helped me structure my project:
 https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
 
 ### Content
@@ -610,6 +608,7 @@ https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [W3Schools](https://www.w3schools.com) | entire site | syntax |
 | [Cgpt](https://chat.openai.com/) | entire site | for everything |
+| [Code Institute's LMS ](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum) | entire site | for setting the base for the development |
 
 
 ### Media
