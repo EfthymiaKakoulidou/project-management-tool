@@ -5,14 +5,14 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/EfthymiaKakoulidou/project-management-tool)](https://github.com/EfthymiaKakoulidou/project-management-tool)
 
 The Project Management Tool has as a purpose to help users and teams to organize their workload. 
-A user can add a project, add tasks to it and assign these tasks to colleagues. Information such as deadline-dates and when a project or task were created, helps them have controll of their work and prioritize their tasks. In addition the user can create his/hers profile and check others' profiles as well. This has a purpose to create a pool of proffessionals with information such as job-titles and bios to ensure that right people were chosen for every project.
+A user can add a project, add tasks to it and assign these tasks to colleagues. Information such as deadline-dates and when a project or task were created, help them have controll of their work and prioritize their tasks. In addition the user can create his/hers profile and check out others' profiles as well. This has a purpose to create a pool of proffessionals that provides information such as job-titles and bios to ensure that right people were chosen for every project.
 A quote on the landing page of the Project Management Tool is added to help start working motivated!
 
 ![screenshot](documentation/mockup.jpg)
 
 ## UX
 
-The purpose of the project is to organize work, so I want to have a clear and simple structure so that one can navigate easily into the site. 
+The purpose of the project is to organize work, so I want it to have a clear and simple structure so that one can navigate easily into the site. My colour palette consists of earthy and calm tones . Different colours are chosen to indicate the progress of progress and tasks and gray tones for done tasks to make them fade so that the user can easily skip them.
 
 ### Colour Scheme
 
@@ -39,12 +39,12 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ### Typography
 
-- [Poppins](https://fonts.google.com/specimen/Poppins) was used for all text in various font-sizes and weights to emphasize when needed.
+- [Poppins](https://fonts.google.com/specimen/Poppins) was used for all text in various font-sizes and weights to emphasize when needed. I find that it is a quite clear font something that was needed for the project. All text is in an almost black colour to ensure that there is enough contrast for accessibility reasons.
 
 
 ## User Stories
 
-The user stories created in the beginning of the project helped to organize the structure of the site. The navigation bar was cretaed based on their needs. 
+The user stories created in the beginning of the project helped to organize the structure of the site. 
 
 ### New Site Users
 
@@ -406,7 +406,7 @@ class Task(models.Model):
 [GitHub Projects](https://github.com/EfthymiaKakoulidou/project-management-tool/projects) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board. (I closed only the issues in the first iteration and left the rest open for better visual.)
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board. The user stories made in the beginning of the project were distributed into flexible iterations based on their urgency and value for the project. 
 
 ![screenshot](documentation/gh-projects.jpg)
 
